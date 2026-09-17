@@ -1,0 +1,173 @@
+@use '../variables' as *;
+@use 'sass:color';
+
+body {
+    position: relative;
+}
+
+.main-screen {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.onboarding-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4); 
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Slaytların genel kapsayıcısı (Ekranı kaplamasın, ortada şık bir kutu olsun)
+.screen {
+    position: absolute;
+    width: 402px;
+    height: 874px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); // Pop-up gölgesi
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+
+    &--active {
+        display: flex;
+    }
+}
+
+.onboarding {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+    &__logo-area {
+        display: flex;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-bottom: 10px;
+    }
+
+    &__logo {
+        width:180px;
+        height:40px;
+        object-fit: contain;
+    }
+
+    // Görsel alanı
+    &__preview {
+        flex:1;
+        flex-shrink:1;
+        min-height: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        .onboarding__image {
+            width: 286px;
+            height: 574px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+        
+
+    }
+
+    &__content {
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__aciklama{
+        height:267px;
+        background-color: #dadada64;
+        padding-top:22px;
+        padding-bottom:22px;
+        padding-right:25px;
+        padding-left:25px;
+    }
+
+    &__title {
+        width:276px;
+        font-size: 25px;
+        font-weight: 700;
+        color: $text-main;
+        padding-bottom:25px;
+    }
+
+    &__desc {
+        font-size: 16px;
+        color: $text-muted;
+        line-height: 1.4;
+        margin-bottom: 56px;
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        flex-shrink: 0;
+    }
+}
+
+.dots {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+
+    &__item {
+        width: 8px;
+        height: 5px;
+        border-radius: 4px;
+        background-color: #d1d5db;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &--active {
+            width: 27px;
+            background-color: $primary-color;
+        }
+    }
+}
+
+.btn {
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    transition: background-color 0.2s;
+
+    &--skip {
+        background-color: transparent;
+        color: $text-muted;
+
+        &:hover {
+            color: $text-main;
+        }
+    }
+
+    &--primary {
+        background-color: $primary-color;
+        color: #ffffff;
+        min-width: 75px;
+
+        &:hover {
+            background-color: color.adjust($primary-color, $lightness: -10%);
+        }
+    }
+}

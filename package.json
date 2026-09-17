@@ -1,0 +1,24 @@
+{
+  "name": "haber7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass" : "sass --watch scss/main.scss:css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miraycobanoglu/HABER7.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miraycobanoglu/HABER7/issues"
+  },
+  "homepage": "https://github.com/miraycobanoglu/HABER7#readme",
+  "devDependencies": {
+    "sass": "^1.104.1"
+  }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haber7 Mobil Prototip</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- 402px Genişliğindeki Ana Mobil Viewport -->
+    <div class="mobile-container">
+        
+        <!-- 1. ARKA PLAN: ANASAYFA (Girişler kapanınca bu görünecek) -->
+        <main class="main-screen" id="mainScreen">
+            <div style="padding: 20px; text-align: center;">
+                <h2 style="color: #cc0000; margin-top: 40px;">Haber7 Anasayfa</h2>
+                <p style="color: #666; margin-top: 10px;">Uygulamanın ana akışı burada yer alacak.</p>
+                <!-- Test için tekrar başa sarma butonu -->
+                <button class="btn btn--primary" id="reopenOnboarding" style="margin-top: 30px;">Girişi Tekrar Göster</button>
+            </div>
+        </main>
+
+        <!-- 2. ÖN PLAN: GİRİŞ EKRANLARI KATMANI (Absolute ile üstte durur) -->
+        <div class="onboarding-overlay" id="onboardingOverlay">
+            
+            <!-- GİRİŞ 1 -->
+            <section class="screen screen--active" data-index="0">
+                <div class="onboarding">
+                    <div class="onboarding__preview">
+                        <img src="images/giris1.png" alt="Giriş 1 Önizleme" class="onboarding__image">
+                    </div>
+                    <div class="onboarding__aciklama">
+                    <div class="onboarding__content">
+                        <h2 class="onboarding__title">Diğer haberler için kaydırın.</h2>
+                        <p class="onboarding__desc">Önceki ve sonraki haberler için kaydırabilirsin veya ok butonlarına basıp kullanabilirsiniz.</p>
+                    </div>
+                    <div class="onboarding__footer">
+                        <div class="dots">
+                            <span class="dots__item dots__item--active"></span>
+                            <span class="dots__item"></span>
+                            <span class="dots__item"></span>
+                        </div>
+                        <div class="onboarding__actions">
+                            <button class="btn btn--skip skip-action">Atla</button>
+                            <button class="btn btn--primary" onclick="nextSlide()">İleri</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <!-- GİRİŞ 2 -->
+            <section class="screen" data-index="1">
+                <div class="onboarding">
+                    <div class="onboarding__logo-area">
+                        <img src="images/logo.png" alt="Haber7" class="onboarding__logo">
+                    </div>
+                    <div class="onboarding__preview preview-2">
+                        <img src="images/giris2.png" alt="Giriş 2 Önizleme" class="onboarding__image-2">
+                    </div>
+                    <div class="onboarding__aciklama">
+                    <div class="onboarding__content">
+                        <h2 class="onboarding__title">Diğer haberler için kaydırın.</h2>
+                        <p class="onboarding__desc">Önceki ve sonraki haberler için kaydırabilirsin veya ok butonlarına basıp kullanabilirsiniz.</p>
+                    </div>
+                    <div class="onboarding__footer">
+                        <div class="dots">
+                            <span class="dots__item dots__item--active"></span>
+                            <span class="dots__item"></span>
+                            <span class="dots__item"></span>
+                        </div>
+                        <div class="onboarding__actions">
+                            <button class="btn btn--skip skip-action">Atla</button>
+                            <button class="btn btn--primary" onclick="nextSlide()">İleri</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <!-- GİRİŞ 3 -->
+            <section class="screen" data-index="2">
+                <div class="onboarding">
+                    <div class="onboarding__logo-area">
+                        <img src="images/logo.png" alt="Haber7" class="onboarding__logo">
+                    </div>
+                    <div class="onboarding__preview preview-2">
+                        <img src="images/giris3.png" alt="Giriş 3 Önizleme" class="onboarding__image-3">
+                    </div>
+                    <div class="onboarding__aciklama">
+                    <div class="onboarding__content">
+                        <h2 class="onboarding__title">Diğer haberler için kaydırın.</h2>
+                        <p class="onboarding__desc">Önceki ve sonraki haberler için kaydırabilirsin veya ok butonlarına basıp kullanabilirsiniz.</p>
+                    </div>
+                    <div class="onboarding__footer">
+                        <div class="dots">
+                            <span class="dots__item dots__item--active"></span>
+                            <span class="dots__item"></span>
+                            <span class="dots__item"></span>
+                        </div>
+                        <div class="onboarding__actions">
+                            <button class="btn btn--skip skip-action">Atla</button>
+                            <button class="btn btn--primary" onclick="nextSlide()">İleri</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+        </div>
+
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
