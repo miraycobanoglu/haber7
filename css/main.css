@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,23 +6,41 @@
 }
 
 body {
-  background-color: white;
+  background-color: rgb(104, 103, 103);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
-.mobile-container {
-  width: 402px;
-  height: 100vh;
-  background-color: #ffffff;
+/* --- BOOTSTRAP GRID SYSTEM (Saf Kod) --- */
+.container, .container-fluid {
+  width: 100%;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -6px;
+  margin-left: -6px;
+}
+
+/* Sütun ortak özellikleri */
+.col-6 {
   position: relative;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-  border-radius: 24px;
+  width: 100%;
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
+/* 2'li Sütun (Mobil için col-6 karşılığı) */
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
 }
 
 body {
@@ -76,6 +95,7 @@ body {
   justify-content: center;
   flex-shrink: 0;
   margin-bottom: 10px;
+  margin-top: 128px;
 }
 .onboarding__logo {
   width: 180px;
@@ -97,6 +117,11 @@ body {
   object-fit: contain;
   border-radius: 8px;
 }
+.onboarding .preview-2 {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
 .onboarding__content {
   flex-shrink: 0;
   display: flex;
@@ -115,7 +140,15 @@ body {
   font-size: 25px;
   font-weight: 700;
   color: #111111;
-  padding-bottom: 25px;
+  margin-bottom: 21px;
+}
+.onboarding__title2 {
+  width: 189px;
+  margin-bottom: 23px;
+}
+.onboarding__title3 {
+  width: 96px;
+  margin-bottom: 23px;
 }
 .onboarding__desc {
   font-size: 16px;
@@ -173,6 +206,459 @@ body {
 }
 .btn--primary:hover {
   background-color: #990000;
+}
+
+/* --- GENEL MOBİL KONTEYNER --- */
+.mobile-container {
+  position: relative;
+  width: 402px;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- 1. SOL MENÜ (BURGER MENU) OVERLAY --- */
+.yan-menu-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+}
+.yan-menu-overlay .yan-menu-icerik {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.yan-menu-overlay .yan-menu-icerik .yan-menu-baslik {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.yan-menu-overlay .yan-menu-icerik .yan-menu-baslik .menu-logo {
+  width: 110px;
+}
+.yan-menu-overlay .yan-menu-icerik .yan-menu-baslik .menu-kapat-btn {
+  position: absolute;
+  right: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.yan-menu-overlay .yan-menu-icerik .yan-menu-baslik .menu-kapat-btn:hover svg path {
+  stroke: #da2027;
+}
+.yan-menu-overlay .yan-menu-icerik .arama-kutusu {
+  position: relative;
+  width: 100%;
+  margin-bottom: 25px;
+}
+.yan-menu-overlay .yan-menu-icerik .arama-kutusu input {
+  width: 100%;
+  padding: 10px 15px;
+  padding-left: 38px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+}
+.yan-menu-overlay .yan-menu-icerik .arama-kutusu svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.yan-menu-overlay .yan-menu-icerik .yan-menu-linkler {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.yan-menu-overlay .yan-menu-icerik .yan-menu-linkler a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 700;
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+.yan-menu-overlay .yan-menu-icerik .yan-menu-linkler a.active, .yan-menu-overlay .yan-menu-icerik .yan-menu-linkler a:hover {
+  color: #da2027;
+  border-bottom: 2px solid #da2027;
+}
+.yan-menu-overlay .yan-menu-icerik {
+  /* Çizgiden sonraki alt kısım en alta sabitlenir */
+}
+.yan-menu-overlay .yan-menu-icerik .yan-menu-alt {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+.yan-menu-overlay .yan-menu-icerik .yan-menu-alt .sosyal-ikonlar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.yan-menu-overlay .yan-menu-icerik .yan-menu-alt .sosyal-ikonlar span {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #da2027;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.yan-menu-overlay .yan-menu-icerik .yan-menu-alt .sosyal-ikonlar span svg {
+  width: 13px;
+  height: 13px;
+}
+.yan-menu-overlay .yan-menu-icerik .yan-menu-alt .telif-hakkında__metin1 {
+  font-size: 10px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 3px;
+}
+.yan-menu-overlay .yan-menu-icerik .yan-menu-alt .telif-hakkında__metin2 {
+  font-size: 9px;
+  color: #666;
+  line-height: 1.3;
+}
+.yan-menu-overlay .yan-menu-icerik .yan-menu-alt .market-butonlari {
+  display: flex;
+  gap: 8px;
+}
+.yan-menu-overlay .yan-menu-icerik .yan-menu-alt .market-butonlari img {
+  width: 100px;
+  cursor: pointer;
+}
+
+/* --- 2. ÜST BAR --- */
+.ust-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 16px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+}
+.ust-bar .burger-menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.ust-bar .ust-ikonlar {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.ust-bar .ust-ikonlar span {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.ust-bar .bildirim-ikonu {
+  margin-top: 5px;
+}
+
+/* --- 3. ANA İÇERİK ALANI (SCROLL) --- */
+.ana-icerik {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  /* Son Dakika Bandı */
+}
+.ana-icerik .son-dakika-bandi {
+  background-color: #FFEDA5;
+  display: flex;
+  align-items: center;
+  height: 47px;
+  padding: 8px 12px;
+  gap: 48px;
+}
+.ana-icerik .son-dakika-bandi .etiket {
+  color: #DA2027;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 3px 6px;
+  border-radius: 2px;
+  border-right: 1px solid #DDBD3D;
+  padding-right: 16px;
+}
+.ana-icerik .son-dakika-bandi p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+.ana-icerik {
+  /* Manşet Alanı */
+}
+.ana-icerik .manset-alani {
+  background-color: #000;
+}
+.ana-icerik .manset-alani .manset-kart {
+  position: relative;
+}
+.ana-icerik .manset-alani .manset-kart .manset-gorsel {
+  width: 100%;
+  display: block;
+}
+.ana-icerik {
+  /* Döviz ve Hava Durumu Bandı */
+}
+.ana-icerik .piyasa-alani {
+  display: flex;
+  background-color: #ffffff;
+  border-top: 1px solid #eee;
+  padding: 8px 0;
+  align-items: center;
+  height: 52px;
+}
+.ana-icerik .piyasa-alani .piyasa-kutu, .ana-icerik .piyasa-alani .havaDurumu-kutu, .ana-icerik .piyasa-alani .namaz-vakti {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 13px;
+  position: relative;
+}
+.ana-icerik .piyasa-alani .piyasa-kutu::after, .ana-icerik .piyasa-alani .havaDurumu-kutu::after, .ana-icerik .piyasa-alani .namaz-vakti::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 43px;
+  background-color: #e0e0e0;
+}
+.ana-icerik .piyasa-alani .piyasa-kutu.namaz-vakti::after, .ana-icerik .piyasa-alani .havaDurumu-kutu.namaz-vakti::after, .ana-icerik .piyasa-alani .namaz-vakti.namaz-vakti::after {
+  display: none;
+}
+.ana-icerik .piyasa-alani .dolar-fiyat {
+  font-weight: 700;
+  font-size: 15px;
+}
+.ana-icerik .piyasa-alani .havaDurumu-kutu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ana-icerik .piyasa-alani .havaDurumu-kutu__flex {
+  display: flex;
+  align-items: start;
+}
+.ana-icerik .piyasa-alani .havaDurumu-kutu__gorsel {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.ana-icerik .piyasa-alani .havaDurumu-kutu__gorsel-derece {
+  font-weight: 900;
+  font-size: 24px;
+}
+.ana-icerik .piyasa-alani .havaDurumu-kutu__sehir {
+  font-size: 8px;
+  font-weight: bold;
+  color: #666;
+}
+.ana-icerik .piyasa-alani .ezan {
+  display: flex;
+  flex-direction: column;
+}
+.ana-icerik .piyasa-alani .ezan__vakit {
+  font-weight: 700;
+  font-size: 12px;
+}
+.ana-icerik .piyasa-alani .ezan__saat {
+  font-size: 11px;
+  color: #666;
+}
+.ana-icerik {
+  /* Son Dakika Haberleri Bölümü */
+}
+.ana-icerik .haber-listesi-bolumu {
+  background-color: #ffffff;
+  padding: 15px;
+  margin-top: 10px;
+  gap: 14px;
+}
+.ana-icerik .haber-listesi-bolumu .bolum-baslik {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.ana-icerik .haber-listesi-bolumu .bolum-baslik h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #da2027;
+  margin: 0;
+}
+.ana-icerik .haber-listesi-bolumu .bolum-baslik .tumunu-gor {
+  font-size: 12px;
+  color: #da2027;
+  text-decoration: none;
+  font-weight: 600;
+}
+.ana-icerik .haber-listesi-bolumu .haber-kartlari-grid {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+.ana-icerik .haber-listesi-bolumu .haber-kartlari-grid .haber-karti {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ana-icerik .haber-listesi-bolumu .haber-kartlari-grid .haber-karti__gorsel {
+  width: 165px;
+  height: 100px;
+  border-radius: 4px;
+}
+.ana-icerik .haber-listesi-bolumu .haber-kartlari-grid .haber-karti__guncelDurum {
+  font-size: 10px;
+  color: #888;
+  margin: 0;
+  text-transform: uppercase;
+}
+.ana-icerik .haber-listesi-bolumu .haber-kartlari-grid .haber-karti__info {
+  font-size: 12px;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+  line-height: 1.3;
+  width: 132px;
+  height: 48px;
+  overflow: hidden;
+}
+.ana-icerik .haber-listesi-bolumu .slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 12px;
+}
+.ana-icerik .haber-listesi-bolumu .slider-dots .dot {
+  width: 6px;
+  height: 6px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+.ana-icerik .haber-listesi-bolumu .slider-dots .dot-active {
+  background-color: #da2027;
+}
+.ana-icerik {
+  /* İkinci Manşet / Banner */
+}
+.ana-icerik .ikinci-manset-alani {
+  margin-top: 10px;
+  background-color: #000;
+}
+.ana-icerik .ikinci-manset-alani .banner-slider-wrapper .banner-gorsel {
+  width: 100%;
+  display: block;
+}
+.ana-icerik {
+  /* Spor Bölümü (Tümspor) */
+}
+.ana-icerik .spor-bolumu {
+  background-color: #ffffff;
+  padding: 0px 15px;
+  margin-bottom: 20px;
+}
+.ana-icerik .spor-bolumu .tumspor-baslik {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  margin-top: 32px;
+}
+.ana-icerik .spor-bolumu .tumspor-baslik__gorsel {
+  height: 18px;
+}
+.ana-icerik .spor-bolumu .tumspor-baslik .tumunu-gor {
+  font-size: 12px;
+  color: #40761C;
+  text-decoration: none;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.ana-icerik .spor-bolumu .spor-karti {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.ana-icerik .spor-bolumu .spor-karti img {
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.ana-icerik .spor-bolumu .spor-karti p {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  line-height: 1.3;
+  width: 128px;
+  height: 54px;
+  overflow: hidden;
+}
+
+/* --- 4. ALT TAB BAR --- */
+.alt-tab-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  padding: 6px 0;
+  height: 100px;
+}
+.alt-tab-bar .tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  gap: 2px;
+}
+.alt-tab-bar .tab-item .tab-ikon {
+  width: 40px;
+  height: 40px;
+}
+.alt-tab-bar .tab-item .tab-metin {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+.alt-tab-bar .tab-item:first-child .tab-metin {
+  color: #da2027;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=main.css.map */
