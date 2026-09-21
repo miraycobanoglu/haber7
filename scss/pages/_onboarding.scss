@@ -4,6 +4,17 @@
 body {
     position: relative;
 }
+.mobile-container {
+    position: relative;
+    width: 402px;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
 
 .main-screen {
     width: 100%;
@@ -13,34 +24,39 @@ body {
     flex-direction: column;
 }
 
+/* Arka planı karartan ve gerektiğinde tüm sayfanın kaydırılmasını sağlayan perde */
 .onboarding-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6); /* Arkadaki siteyi bulanıklaştırır/karartır */
     z-index: 9999;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    overflow-y: auto; /* Ekran yüksekliği 874px'ten küçükse kutunun kesilmesini önler, kaydırma sağlar */
+    padding: 40px 0;  /* Üstten ve alttan güvenli boşluk bırakarak ortalar */
 }
 
+/* Tam istediğin sabit 402x874 ölçülerindeki pop-up kutusu */
 .screen {
-    position: relative; 
-    width: 402px;
-    height: 874px;
-    max-height: 90vh; 
+    position: relative;
+    width: 402px;   /* Kesin genişlik */
+    height: 874px;  /* Kesin yükseklik */
+    flex-shrink: 0; /* Ekran daralsa bile bu ölçünün küçülmesini engeller */
     background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     display: none;
     flex-direction: column;
-    overflow-y: auto; 
+    overflow-y: auto; /* 874px'e sığmayan kısımlar için mouse ile kaydırma çubuğu */
+    overflow-x: hidden;
+}
 
-    &--active {
-        display: flex;
-    }
+.screen--active {
+    display: flex;
 }
 
 .onboarding {
@@ -114,9 +130,10 @@ body {
         margin-bottom:23px;
     }
     &__title3{
-        width:96px;
+        width: 96px;
         margin-bottom:23px;
     }
+
 
     &__desc {
         font-size: 16px;
@@ -186,18 +203,6 @@ body {
 
 // -------- anasayfa ---------
 
-/* --- GENEL MOBİL KONTEYNER --- */
-.mobile-container {
-    position: relative;
-    width: 402px;
-    height: 100vh;
-    margin: 0 auto;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
 
 /* --- SOL MENÜ (BURGER MENU) OVERLAY --- */
 .yan-menu-overlay {
