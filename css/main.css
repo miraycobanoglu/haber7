@@ -69,7 +69,7 @@ body {
 
 /* Arka planı karartan ve gerektiğinde tüm sayfanın kaydırılmasını sağlayan perde */
 .onboarding-overlay {
-  position: fixed;
+  position: absolute; /* .mobile-container sınırları içinde kalır */
   top: 0;
   left: 0;
   width: 100vw;
@@ -91,7 +91,7 @@ body {
   flex-shrink: 0; /* Ekran daralsa bile bu ölçünün küçülmesini engeller */
   background-color: #ffffff;
   border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   display: none;
   flex-direction: column;
   overflow-y: auto; /* 874px'e sığmayan kısımlar için mouse ile kaydırma çubuğu */
