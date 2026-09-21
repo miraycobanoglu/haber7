@@ -101,7 +101,8 @@ body {
 .onboarding__logo {
   width: 180px;
   height: 40px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .onboarding__preview {
   flex: 1;
@@ -115,7 +116,8 @@ body {
 .onboarding__preview .onboarding__image {
   width: 286px;
   height: 574px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 8px;
 }
 .onboarding .preview-2 {
@@ -613,7 +615,8 @@ body {
 }
 .ana-icerik .spor-bolumu .spor-karti img {
   height: 100px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 4px;
   margin-bottom: 8px;
 }
@@ -657,6 +660,4 @@ body {
 .alt-tab-bar .tab-item:first-child .tab-metin {
   color: #da2027;
   font-weight: 700;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
