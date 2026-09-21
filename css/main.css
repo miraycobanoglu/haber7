@@ -415,9 +415,7 @@ body {
   color: #333;
   margin: 0;
 }
-.ana-icerik {
-  /* Manşet Alanı */
-}
+
 .ana-icerik .manset-alani {
   background-color: #000;
 }
@@ -428,9 +426,7 @@ body {
   width: 100%;
   display: block;
 }
-.ana-icerik {
-  /* Döviz ve Hava Durumu Bandı */
-}
+
 .ana-icerik .piyasa-alani {
   display: flex;
   background-color: #ffffff;

@@ -1,5 +1,5 @@
         <nav class="alt-tab-bar">
-            <a href="index.html" class="tab-item">
+            <a href="index.php" class="tab-item">
                 <svg class="tab-ikon tab-ikon-active" width="40" height="40" viewBox="0 0 40 40"  xmlns="http://www.w3.org/2000/svg">
                 <mask id="mask0_21_119" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
                 <rect width="40" height="40"/>
@@ -10,7 +10,7 @@
                 </svg>
                 <p class="tab-metin">Anasayfa</p>
             </a>
-            <a href="index.html" class="tab-item">
+            <a href="galeri.php" class="tab-item">
                 <svg class="tab-ikon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <mask id="mask0_21_131" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
                 <rect width="40" height="40" fill="#D9D9D9"/>
@@ -21,7 +21,7 @@
                 </svg>
                 <p class="tab-metin">Galeri</p>
             </a>
-            <a href="index.html" class="tab-item">
+            <a href="gazeteler.php" class="tab-item">
                 <svg class="tab-ikon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <mask id="mask0_21_89" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
                 <rect width="40" height="40" fill="#D9D9D9"/>
@@ -32,7 +32,7 @@
                 </svg>
                 <p class="tab-metin">Gazeteler</p>
             </a>
-            <a href="index.html" class="tab-item">
+            <a href="sayfam.php" class="tab-item">
                 <svg class="tab-ikon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <mask id="mask0_21_101" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
                 <rect width="40" height="40" fill="#D9D9D9"/>

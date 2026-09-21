@@ -72,8 +72,8 @@ body {
   position: absolute; /* .mobile-container sınırları içinde kalır */
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.6); /* Arkadaki siteyi bulanıklaştırır/karartır */
   z-index: 9999;
   display: flex;
@@ -665,4 +665,80 @@ body {
 .alt-tab-bar .tab-item:first-child .tab-metin {
   color: #da2027;
   font-weight: 700;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 12px 16px;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.gallery-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 16px;
+  margin-bottom: 8px;
+}
+.gallery-card__image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #000;
+}
+.gallery-card__image-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery-card__content {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.gallery-card__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111111;
+  line-height: 1.35;
+  margin: 0;
+}
+.gallery-card__date {
+  font-size: 12px;
+  color: #999999;
+  font-weight: 400;
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #111;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+.badge img, .badge svg {
+  width: 14px;
+  height: 14px;
+}
+.badge--video {
+  color: #d32f2f;
+}
+.badge--photo {
+  color: #d32f2f;
 }/*# sourceMappingURL=main.css.map */
