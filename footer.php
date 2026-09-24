@@ -18,9 +18,7 @@
         <p class="tab-metin">Gazeteler</p>
     </a>
     <a href="sayfam.php" class="tab-item">
-        <svg class="tab-ikon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8.33334 35V7.63871C8.33334 6.88871 8.60876 6.23829 9.15959 5.68746C9.7107 5.13662 10.3613 4.86121 11.1113 4.86121H28.8888C29.6388 4.86121 30.2893 5.13662 30.8404 5.68746C31.3913 6.23829 31.6667 6.88871 31.6667 7.63871V35L20 30L8.33334 35ZM11.1113 30.7779H20 27L28.8888 30.7779V7.63871H11.1113V30.7779Z" fill="#afafaf" fill-opacity="0.8"/>
-        </svg>
+        <svg class="tab-ikon" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#AFAFAF"><path d="M200-120v-656.67q0-27 19.83-46.83 19.84-19.83 46.84-19.83h426.66q27 0 46.84 19.83Q760-803.67 760-776.67V-120L480-240 200-120Zm66.67-101.33L480-312l213.33 90.67v-555.34H266.67v555.34Zm0-555.34h426.66-426.66Z"/></svg>
         <p class="tab-metin">Sayfam</p>
     </a>
 </nav>

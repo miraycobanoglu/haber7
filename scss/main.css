@@ -361,7 +361,6 @@ body {
   align-items: center;
   padding: 22px 16px;
   background-color: #ffffff;
-  border-bottom: 1px solid #f0f0f0;
 }
 .ust-bar .burger-menu-btn {
   background: none;
@@ -1105,4 +1104,221 @@ body.detay-body {
 }
 .gazete-icerik-alani .gazete-nav-buttons .gazete-btn:active {
   transform: scale(0.95);
+}
+
+.page-content {
+  background-color: #ffffff;
+  height: 100%;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.page-content .saved-page {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.page-content .saved-page .saved-section {
+  display: flex;
+  flex-direction: column;
+}
+.page-content .saved-page .saved-section__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 12px;
+}
+.page-content .saved-page .saved-section__icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-content .saved-page .saved-section__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+}
+.page-content .saved-page .saved-section .saved-list {
+  display: flex;
+  flex-direction: column;
+}
+.page-content .saved-page .saved-section .saved-list .saved-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+}
+.page-content .saved-page .saved-section .saved-list .saved-item:last-child {
+  border-bottom: none;
+}
+.page-content .saved-page .saved-section .saved-list .saved-item__bullet {
+  width: 7px;
+  height: 7px;
+  background-color: #e11d48;
+  border-radius: 50%;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+.page-content .saved-page .saved-section .saved-list .saved-item__content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.page-content .saved-page .saved-section .saved-list .saved-item__text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.4;
+}
+.page-content .saved-page .saved-section .saved-list .saved-item__time {
+  font-size: 12px;
+  color: #888888;
+  font-weight: 400;
+}
+
+.kesfet-sayfa {
+  width: 402px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.kesfet-sayfa .mobil-cerceve {
+  width: 100%;
+  max-width: 402px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.kesfet-sayfa .mobil-cerceve .kesfet-ust-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  z-index: 10;
+}
+.kesfet-sayfa .mobil-cerceve .kesfet-ust-bar .kesfet-geri-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.kesfet-sayfa .mobil-cerceve .kesfet-kart {
+  background-image: url("../images/cumhurbaskani.png");
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.kesfet-sayfa .mobil-cerceve .kesfet-kart::-webkit-scrollbar {
+  display: none;
+}
+.kesfet-sayfa .mobil-cerceve .kesfet-kart::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.85) 85%, rgb(0, 0, 0) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+.kesfet-sayfa .mobil-cerceve .kesfet-kart__icerik {
+  position: relative;
+  z-index: 2;
+  padding: 30px 20px 20px 20px;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.kesfet-sayfa .mobil-cerceve .kesfet-kart__icerik .kesfet-kart__etiket {
+  align-self: flex-start;
+  background-color: #c55a11;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+.kesfet-sayfa .mobil-cerceve .kesfet-kart__icerik .kesfet-kart__baslik {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+}
+.kesfet-sayfa .mobil-cerceve .kesfet-kart__icerik .kesfet-kart__tarih {
+  color: #b0b0b0;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.kesfet-sayfa .mobil-cerceve .kesfet-kart__icerik .kesfet-kart__metin-alani {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 339px;
+  height: 198px;
+  overflow: hidden;
+}
+.kesfet-sayfa .mobil-cerceve .kesfet-kart__icerik .kesfet-kart__metin-alani .kesfet-kart__paragraf {
+  color: #e0e0e0;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+}
+.kesfet-sayfa .mobil-cerceve .kesfet-kart__kaydirma-ipucu {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0 25px 0;
+  color: #ffffff;
+  font-size: 11px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  animation: hafifSallanma 2s infinite;
+}
+.kesfet-sayfa .mobil-cerceve .kesfet-kart__kaydirma-ipucu svg {
+  margin-bottom: 2px;
+}
+
+@keyframes hafifSallanma {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
 }/*# sourceMappingURL=main.css.map */
