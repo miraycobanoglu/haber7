@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haber7 Mobil Prototip</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap-grid.min.css" rel="stylesheet">
 </head>
 <body>
@@ -37,11 +37,11 @@
                     </svg>
                 </div>
                 <nav class="yan-menu-linkler">
-                    <a href="index.html" class="yan-menu-link active">ANASAYFA</a>
-                    <a href="galeri.html"class="yan-menu-link ">GALERİ</a>
-                    <a href="gazeteler.html" class="yan-menu-link ">GAZETELER</a>
-                    <a href="kesfet.html" class="yan-menu-link">KEŞFET</a>
-                    <a href="spor.html" class="yan-menu-link">SPOR</a>
+                    <a href="index.php" class="yan-menu-link active">ANASAYFA</a>
+                    <a href="galeri.php"class="yan-menu-link ">GALERİ</a>
+                    <a href="gazeteler.php" class="yan-menu-link ">GAZETELER</a>
+                    <a href="kesfet.php" class="yan-menu-link">KEŞFET</a>
+                    <a href="spor.php" class="yan-menu-link">SPOR</a>
                 </nav>
                 
                 <div class="yan-menu-alt">
@@ -114,7 +114,7 @@
             </svg>
             </button>
             <div class="header-title">
-                <?php echo isset($pageTitle) ? $pageTitle : 'Haber7'; ?>
+    <?php echo isset($pageTitle) ? $pageTitle : ''; ?>
             </div>
             <div class="ust-ikonlar">
                 <span class="canli-yayin-ikonu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

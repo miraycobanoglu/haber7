@@ -1,5 +1,10 @@
 @use '../variables' as *;
 
+.content-container {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    height: 100%; 
+}
 .gallery-container {
     display: flex;
     flex-direction: column;
@@ -13,17 +18,23 @@
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
-    border-bottom: 1px solid #f0f0f0;
+    border-top: 5px solid #f0f0f0;
     padding-bottom: 16px;
     margin-bottom: 8px;
+    align-items: center;
+    justify-content: center;
 
     &__image-wrapper {
         position: relative;
-        width: 100%;
-        height: 210px;
-        border-radius: 12px;
+        width: 363px;
+        height: 173px;
         overflow: hidden;
         background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top:20px;
+        border-radius: 4px;
 
         img {
             width: 100%;
@@ -37,6 +48,9 @@
         display: flex;
         flex-direction: column;
         gap: 4px;
+        width:360px;
+        height:40px;
+        margin-bottom:22px;
     }
 
     &__title {
@@ -68,6 +82,8 @@
     font-weight: 600;
     color: #111;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    
 
     img, svg {
         width: 14px;
@@ -81,4 +97,9 @@
     &--photo {
         color: #d32f2f; 
     }
+}
+.header-title{
+    font-weight: 700;
+    margin-top:5px;
+    margin-left:20px;
 }

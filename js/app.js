@@ -1,13 +1,16 @@
+console.log("app.js başarıyla yüklendi ve güncellendi!");
 const screens = document.querySelectorAll('.screen');
 const overlay = document.getElementById('onboardingOverlay');
 
 let currentIndex = parseInt(localStorage.getItem('onboardingIndex')) || 0;
 const isCompleted = localStorage.getItem('onboardingCompleted');
 
-if (isCompleted === 'true') {
-    overlay.style.display = 'none';
-} else {
-    showScreen(currentIndex); 
+if (overlay) {
+    if (isCompleted === 'true') {
+        overlay.style.display = 'none';
+    } else {
+        showScreen(currentIndex); 
+    }
 }
 
 function showScreen(index) {
@@ -36,7 +39,7 @@ function showScreen(index) {
     });
 }
 
-// İleri Butonları
+// ileri butonu
 const nextButtons = document.querySelectorAll('.btn--primary:not(#finishBtn)');
 nextButtons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -51,7 +54,7 @@ function completeOnboarding() {
     localStorage.setItem('onboardingCompleted', 'true');
 }
 
-// Başlat ve Atla butonları
+// başlat ve atla butonu
 const finishBtn = document.getElementById('finishBtn');
 if (finishBtn) {
     finishBtn.addEventListener('click', completeOnboarding);
@@ -70,31 +73,63 @@ screens.forEach((screen) => {
     });
 });
 
-// anasayfa
 
-// Sol Menü Açma ve Kapatma İşlemleri
-const yanMenuOverlay = document.getElementById('yanMenuOverlay');
-const menuAcBtn = document.getElementById('menuAcBtn');
-const menuKapatBtn = document.getElementById('menuKapatBtn');
-
-if (menuAcBtn) {
-    menuAcBtn.addEventListener('click', () => {
-        yanMenuOverlay.style.display = 'flex';
-    });
-}
-if (menuKapatBtn) {
-    menuKapatBtn.addEventListener('click', () => {
-        yanMenuOverlay.style.display = 'none';
-    });
-}
+// sol menü
+    const menuAcBtn = document.getElementById('menuAcBtn');
+    const menuKapatBtn = document.getElementById('menuKapatBtn');
+    const yanMenuOverlay = document.getElementById('yanMenuOverlay');
 
 
-const menuLinks = document.querySelectorAll('.yan-menu-link');
-menuLinks.forEach(link => {
-    link.addEventListener('click', function() {
-        // Önce hepsinden 'active' sınıfını sök
-        menuLinks.forEach(item => item.classList.remove('active'));
-        // Tıklananın kendisine 'active' ekle
-        this.classList.add('active');
+    if (menuAcBtn && yanMenuOverlay) {
+        menuAcBtn.addEventListener('click', () => {
+            yanMenuOverlay.style.display = 'flex';
+        });
+    }
+
+    if (menuKapatBtn && yanMenuOverlay) {
+        menuKapatBtn.addEventListener('click', () => {
+            yanMenuOverlay.style.display = 'none';
+        });
+    }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const currentUrl = window.location.href;
+
+    const tabItems = document.querySelectorAll('.alt-tab-bar .tab-item');
+
+    tabItems.forEach(item => {
+        const itemHref = item.getAttribute('href');
+
+        if (currentUrl.includes(itemHref)) {
+            tabItems.forEach(el => el.classList.remove('active'));
+            item.classList.add('active');
+        }
     });
 });
+
+
+    const gazeteContainer = document.getElementById('gazeteContainer');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    if (gazeteContainer && prevBtn && nextBtn) {
+        // İleri butonuna basıldığında
+        nextBtn.addEventListener('click', () => {
+            const slideWidth = gazeteContainer.clientWidth;
+            gazeteContainer.scrollBy({
+                left: slideWidth,
+                behavior: 'smooth'
+            });
+        });
+
+        // Geri butonuna basıldığında
+        prevBtn.addEventListener('click', () => {
+            const slideWidth = gazeteContainer.clientWidth;
+            gazeteContainer.scrollBy({
+                left: -slideWidth,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+
