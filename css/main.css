@@ -1432,7 +1432,7 @@ body.detay-body {
   display: flex;
   justify-content: space-around;
   padding: 24px 20px;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 6px solid #f2f2f2;
 }
 .gorunum-icerik .tema-secim__kart {
   display: flex;
@@ -1440,10 +1440,12 @@ body.detay-body {
   align-items: center;
   cursor: pointer;
   gap: 10px;
+  width: 129px;
+  height: 251px;
 }
 .gorunum-icerik .tema-secim__kart__gorsel {
-  width: 90px;
-  height: 140px;
+  width: 128px;
+  height: 228px;
   border-radius: 8px;
   border: 2px solid #e0e0e0;
   overflow: hidden;
@@ -1508,7 +1510,7 @@ body.detay-body {
   justify-content: space-between;
   padding: 18px 20px;
   text-decoration: none;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 6px solid #f2f2f2;
 }
 .gorunum-icerik .gorunum-liste .ayar-item__sol {
   display: flex;

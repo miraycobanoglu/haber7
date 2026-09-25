@@ -11,7 +11,7 @@ include 'ayarlarHeader.php';
 
                 <div class="tema-secim__kart tema-secim__kart--aktif" data-tema="acik" id="kartAcik">
                     <div class="tema-secim__gorsel acik-ornek">
-                        <img src="images/lightMode.png" alt="Açık Mod Örnek">
+                        <img src="images/lightMode.png" alt="Açık Mod Örnek" >
                     </div>
                     <span class="tema-secim__isim">Açık</span>
                     <label class="tema-secim__radio-label">

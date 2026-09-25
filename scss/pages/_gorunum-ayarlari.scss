@@ -14,7 +14,7 @@
                 display: flex;
                 justify-content: space-around;
                 padding: 24px 20px;
-                border-bottom: 1px solid #f2f2f2;
+                border-bottom: 6px solid #f2f2f2;
 
                 &__kart {
                     display: flex;
@@ -22,10 +22,12 @@
                     align-items: center;
                     cursor: pointer;
                     gap: 10px;
+                    width:129px;
+                    height:251px;
 
                     &__gorsel {
-                        width: 90px;
-                        height: 140px;
+                        width: 128px;
+                        height: 228px;
                         border-radius: 8px;
                         border: 2px solid #e0e0e0;
                         overflow: hidden;
@@ -104,7 +106,7 @@
                     justify-content: space-between;
                     padding: 18px 20px;
                     text-decoration: none;
-                    border-bottom: 1px solid #f2f2f2;
+                    border-bottom: 6px solid #f2f2f2;
 
                     &__sol {
                         display: flex;
