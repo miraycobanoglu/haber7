@@ -29,22 +29,18 @@ include 'ayarlarHeader.php';
     const slider = document.getElementById('puntoSlider');
     const solHarf = document.getElementById('solHarfA');
     const metinParagraf = document.getElementById('metinParagraf');
-
-    // Fonksiyon: Puntoyu hem harfe hem metne uygular ve kaydeder
     function puntoyuGuncelle(boyut) {
         solHarf.style.fontSize = boyut + 'px';
         metinParagraf.style.fontSize = boyut + 'px';
         localStorage.setItem('secilenPunto', boyut);
     }
-
-    // 1. Sayfa açıldığında localStorage'da kayıtlı punto var mı bak
     const kaydedilenPunto = localStorage.getItem('secilenPunto');
     if (kaydedilenPunto) {
         slider.value = kaydedilenPunto;
         puntoyuGuncelle(kaydedilenPunto);
     }
 
-    // 2. Slider kaydırıldıkça çalışacak fonksiyon
+    //Slider kaydırıldıkça çalışacak fonksiyon
     slider.addEventListener('input', function() {
         puntoyuGuncelle(this.value);
     });
