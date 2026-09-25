@@ -1,0 +1,104 @@
+.ayarlar-sayfa {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111111;
+    overflow: hidden;
+
+    .mobil-cerceve {
+        width: 100%;
+        max-width: 402px;
+        height: 100%;
+        background-color: #ffffff;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+
+        .ayarlar-ust-bar {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 20px;
+            background-color: #ffffff;
+            border-bottom: 8px solid #f2f2f2;
+            box-sizing: border-box;
+            height: 81px;
+
+            .ayarlar-sol-btn {
+                position: absolute;
+                left: 15px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+            }
+
+            .ayarlar-baslik {
+                font-size: 17px;
+                font-weight: 700;
+                color: #111111;
+                margin: 0;
+            }
+        }
+        .ayarlar-liste {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            overflow-y: auto;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .ayar-item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0px 20px;
+                text-decoration: none;
+                border-bottom: 8px solid #f2f2f2;
+                transition: background-color 0.2s ease;
+                height: 78px;
+
+                &:hover {
+                    background-color: #fafafa;
+                }
+
+                &__sol {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                }
+
+                &__ikon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #111111;
+                }
+
+                &__metin {
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: #1a1a1a;
+                }
+
+                &__ok {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #b0b0b0;
+                }
+            }
+        }
+    }
+}

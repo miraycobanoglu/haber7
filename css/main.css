@@ -359,6 +359,7 @@ body {
   align-items: center;
   padding: 22px 16px;
   background-color: #ffffff;
+  height: 73px;
 }
 .ust-bar .burger-menu-btn {
   background: none;
@@ -667,6 +668,10 @@ body {
   color: #da2027 !important;
 }
 
+.ayar-ikonu {
+  color: black;
+}
+
 .content-container {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -761,7 +766,6 @@ body {
 .header-title {
   font-weight: 700;
   margin-top: 5px;
-  margin-left: 20px;
 }
 
 body.detay-body {
@@ -1275,7 +1279,7 @@ body.detay-body {
   transition: height 0.3s ease;
 }
 .kesfet-sayfa .mobil-cerceve .kesfet-kart__icerik .kesfet-kart__metin-alani.is-expanded {
-  height: 500px;
+  height: 530px;
   overflow-y: auto;
   scrollbar-width: thin;
 }
@@ -1321,6 +1325,99 @@ body.detay-body {
   60% {
     transform: translateY(-3px);
   }
+}
+.ayarlar-sayfa {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111111;
+  overflow: hidden;
+}
+.ayarlar-sayfa .mobil-cerceve {
+  width: 100%;
+  max-width: 402px;
+  height: 100%;
+  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.ayarlar-sayfa .mobil-cerceve .ayarlar-ust-bar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 20px;
+  background-color: #ffffff;
+  border-bottom: 8px solid #f2f2f2;
+  box-sizing: border-box;
+  height: 81px;
+}
+.ayarlar-sayfa .mobil-cerceve .ayarlar-ust-bar .ayarlar-sol-btn {
+  position: absolute;
+  left: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.ayarlar-sayfa .mobil-cerceve .ayarlar-ust-bar .ayarlar-baslik {
+  font-size: 17px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+}
+.ayarlar-sayfa .mobil-cerceve .ayarlar-liste {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.ayarlar-sayfa .mobil-cerceve .ayarlar-liste::-webkit-scrollbar {
+  display: none;
+}
+.ayarlar-sayfa .mobil-cerceve .ayarlar-liste .ayar-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  text-decoration: none;
+  border-bottom: 8px solid #f2f2f2;
+  transition: background-color 0.2s ease;
+  height: 78px;
+}
+.ayarlar-sayfa .mobil-cerceve .ayarlar-liste .ayar-item:hover {
+  background-color: #fafafa;
+}
+.ayarlar-sayfa .mobil-cerceve .ayarlar-liste .ayar-item__sol {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.ayarlar-sayfa .mobil-cerceve .ayarlar-liste .ayar-item__ikon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111111;
+}
+.ayarlar-sayfa .mobil-cerceve .ayarlar-liste .ayar-item__metin {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+.ayarlar-sayfa .mobil-cerceve .ayarlar-liste .ayar-item__ok {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b0b0b0;
 }
 
 /*# sourceMappingURL=main.css.map */

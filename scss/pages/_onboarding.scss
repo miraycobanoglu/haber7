@@ -354,6 +354,7 @@ body {
     align-items: center;
     padding: 22px 16px;
     background-color: #ffffff;
+    height:73px;
 
     .burger-menu-btn {
         background: none;
@@ -368,6 +369,7 @@ body {
         display: flex;
         gap: 18px;
         align-items: center;
+
         span {
             cursor: pointer;
             display: flex;
@@ -694,4 +696,7 @@ body {
 
     }
 }
+}
+.ayar-ikonu{
+    color:black;
 }
