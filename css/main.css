@@ -1353,7 +1353,6 @@ body.detay-body {
   justify-content: center;
   padding: 18px 20px;
   background-color: #ffffff;
-  border-bottom: 8px solid #f2f2f2;
   box-sizing: border-box;
   height: 81px;
 }
@@ -1390,7 +1389,7 @@ body.detay-body {
   justify-content: space-between;
   padding: 0px 20px;
   text-decoration: none;
-  border-bottom: 8px solid #f2f2f2;
+  border-top: 8px solid #f2f2f2;
   transition: background-color 0.2s ease;
   height: 78px;
 }
@@ -1418,6 +1417,125 @@ body.detay-body {
   align-items: center;
   justify-content: center;
   color: #b0b0b0;
+}
+
+.gorunum-icerik__grup-baslik {
+  background-color: #f2f2f2;
+  height: 54px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  padding-left: 35px;
+  font-weight: 700;
+}
+.gorunum-icerik .tema-secim {
+  display: flex;
+  justify-content: space-around;
+  padding: 24px 20px;
+  border-bottom: 1px solid #f2f2f2;
+}
+.gorunum-icerik .tema-secim__kart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+}
+.gorunum-icerik .tema-secim__kart__gorsel {
+  width: 90px;
+  height: 140px;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+.gorunum-icerik .tema-secim__kart__gorsel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gorunum-icerik .tema-secim__kart__isim {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+}
+.gorunum-icerik .tema-secim__kart .tema-secim__radio-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.gorunum-icerik .tema-secim__kart .tema-secim__radio-label .tema-secim__input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.gorunum-icerik .tema-secim__kart .tema-secim__radio-label .tema-secim__input:checked + .tema-secim__custom-radio {
+  border-color: #da2027;
+}
+.gorunum-icerik .tema-secim__kart .tema-secim__radio-label .tema-secim__input:checked + .tema-secim__custom-radio::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #da2027;
+  border-radius: 50%;
+}
+.gorunum-icerik .tema-secim__kart .tema-secim__radio-label .tema-secim__custom-radio {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #cccccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease;
+}
+.gorunum-icerik .tema-secim__kart--aktif .tema-secim__gorsel {
+  border-color: #da2027;
+}
+.gorunum-icerik .gorunum-liste {
+  display: flex;
+  flex-direction: column;
+}
+.gorunum-icerik .gorunum-liste .ayar-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  text-decoration: none;
+  border-bottom: 1px solid #f2f2f2;
+}
+.gorunum-icerik .gorunum-liste .ayar-item__sol {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.gorunum-icerik .gorunum-liste .ayar-item__ikon {
+  color: #111111;
+  display: flex;
+}
+.gorunum-icerik .gorunum-liste .ayar-item__metin {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+.gorunum-icerik .gorunum-liste .ayar-item__sag-detay {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.gorunum-icerik .gorunum-liste .ayar-item__deger {
+  font-size: 14px;
+  color: #888888;
+}
+.gorunum-icerik .gorunum-liste .ayar-item__ok {
+  color: #b0b0b0;
+  display: flex;
 }
 
 /*# sourceMappingURL=main.css.map */
