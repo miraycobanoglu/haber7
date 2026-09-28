@@ -88,6 +88,11 @@ include 'ayarlarHeader.php';
                 this.classList.add('tema-secim__kart--aktif');
                 radioInput.checked = true;
                 localStorage.setItem('secilenTema', temaTuru);
+                if (temaTuru === 'koyu') {
+        document.documentElement.classList.add('dark-mode');
+    } else {
+        document.documentElement.classList.remove('dark-mode');
+    }
             });
         });
 

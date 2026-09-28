@@ -113,7 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = document.getElementById('nextBtn');
 
     if (gazeteContainer && prevBtn && nextBtn) {
-        // İleri butonuna basıldığında
         nextBtn.addEventListener('click', () => {
             const slideWidth = gazeteContainer.clientWidth;
             gazeteContainer.scrollBy({
@@ -122,7 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Geri butonuna basıldığında
         prevBtn.addEventListener('click', () => {
             const slideWidth = gazeteContainer.clientWidth;
             gazeteContainer.scrollBy({

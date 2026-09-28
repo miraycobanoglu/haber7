@@ -300,7 +300,7 @@ body {
   font-size: 14px;
   padding-bottom: 5px;
 }
-.yan-menu-overlay .yan-menu-icerik .yan-menu-linkler a.active, .yan-menu-overlay .yan-menu-icerik .yan-menu-linkler a:hover {
+.yan-menu-overlay .yan-menu-icerik .yan-menu-linkler a:hover {
   color: #da2027;
   border-bottom: 2px solid #da2027;
 }
@@ -1332,7 +1332,6 @@ body.detay-body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #111111;
   overflow: hidden;
 }
 .ayarlar-sayfa .mobil-cerceve {
@@ -1547,14 +1546,16 @@ body.detay-body {
   flex-direction: column;
   align-items: center;
   gap: 40px;
+  overflow-y: scroll;
+  overflow: hidden;
 }
 .metin-puntosu-kapsayıcı .metin-puntosu-metini {
   overflow: hidden;
   overflow-y: auto;
   width: 300px;
-  height: 600px;
+  height: 500px;
   margin-top: 40px;
-  background-color: #b4b4b4;
+  background-color: #e4e4e4;
   border-radius: 4px;
 }
 .metin-puntosu-kapsayıcı .metin-puntosu-metini__buyukluk {
@@ -1623,6 +1624,182 @@ body.detay-body {
   background: #ffffff;
   border: 3px solid #da2027;
   cursor: pointer;
+}
+
+.bildirim-icerik__grup-baslik {
+  background-color: #f2f2f2;
+  height: 54px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  padding-left: 18px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+.kategori {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 35px;
+  padding: 0px 20px;
+}
+.kategori__ikon-baslik {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.kategori__baslik {
+  font-size: 16px;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+.toggle__input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.toggle__input:checked + .toggle__slider {
+  background-color: #2ecc71;
+}
+.toggle__input:checked + .toggle__slider::after {
+  transform: translateX(22px);
+}
+.toggle__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s ease;
+  border-radius: 28px;
+}
+.toggle__slider::after {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s ease;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0%, 0.0784313725%, 0.0784313725%, 0.2);
+}
+
+.spor-sayfa {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.spor-sayfa .mobil-cerceve {
+  width: 100%;
+  max-width: 402px;
+  height: 100vh;
+  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+.spor-sayfa .mobil-cerceve .spor-ust-bar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 20px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  height: 81px;
+}
+.spor-sayfa .mobil-cerceve .spor-ust-bar .spor-sol-btn {
+  position: absolute;
+  left: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.spor-sayfa .mobil-cerceve .spor-ust-bar .spor-baslik {
+  font-size: 17px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+}
+
+.ligler {
+  width: 100%;
+  max-width: 402px;
+  background-color: #ffffff;
+  border-bottom: 6px solid #f0f0f0;
+  border-top: 6px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+.ligler__baslik {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  cursor: pointer;
+  user-select: none;
+}
+.ligler__metin {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111111;
+}
+.ligler__ikon {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.ligler__icerik {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: #ffffff;
+}
+.ligler__liste {
+  list-style: none;
+  padding: 0 20px 16px 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ligler__liste-eleman {
+  font-size: 15px;
+  font-weight: 500;
+  color: #444444;
+  cursor: pointer;
+  padding: 6px 0;
+  transition: color 0.2s ease;
+}
+.ligler__liste-eleman:hover {
+  color: #da2027;
+}
+.ligler--acik .ligler__ikon {
+  transform: rotate(180deg);
+}
+.ligler--acik .ligler__icerik {
+  max-height: 250px;
 }
 
 /*# sourceMappingURL=main.css.map */

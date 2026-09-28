@@ -37,7 +37,7 @@
                     </svg>
                 </div>
                 <nav class="yan-menu-linkler">
-                    <a href="index.php" class="yan-menu-link active">ANASAYFA</a>
+                    <a href="index.php" class="yan-menu-link">ANASAYFA</a>
                     <a href="galeri.php"class="yan-menu-link ">GALERİ</a>
                     <a href="gazeteler.php" class="yan-menu-link ">GAZETELER</a>
                     <a href="kesfet.php" class="yan-menu-link">KEŞFET</a>

@@ -3,23 +3,19 @@
         include 'header.php'; 
         ?>
 
-        <!-- ANA SAYFA İÇERİK AKIŞI -->
         <main class="ana-icerik" id="mainScreen">
-            
-            <!-- Son Dakika-->
+
             <div class="son-dakika-bandi">
                 <span class="etiket">SON DAKİKA</span>
                 <p>Muğla'da korkutan deprem!</p>
             </div>
 
-            <!-- Manşet Slider Alanı -->
             <section class="manset-alani">
                 <div class="manset-kart">
                     <img src="images/Manşet.png" alt="Manset" class="manset-gorsel" >
                 </div>
             </section>
 
-            <!-- Döviz ve Hava Durumu -->
             <section class="piyasa-alani">
                 <div class="piyasa-kutu">
                     <span class="dolar"><svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -77,7 +73,7 @@
                 </div>
             </section>
 
-            <!-- Son Dakika Haberleri Bölümü (Slider Noktalı) -->
+            <!-- Son dakika haberleri -->
             <section class="haber-listesi-bolumu">
                 <div class="bolum-baslik">
                     <h3>Son Dakika Haberleri</h3>
@@ -95,7 +91,6 @@
                         <p class="haber-karti__info">BBP'li yönetici ters kelepçeyle gözaltına alınmıştı</p>
                     </div>
                 </div>
-                <!-- Son Dakika Slider Noktaları -->
                 <div class="slider-dots">
                     <span class="dot dot-active"></span>
                     <span class="dot"></span>
@@ -103,7 +98,6 @@
                 </div>
             </section>
 
-            <!-- İkinci Manşet / Kaydırmalı Banner Alanı -->
             <section class="ikinci-manset-alani">
                 <div class="banner-slider-wrapper">
                     <div class="banner-slide">
@@ -112,7 +106,7 @@
                 </div>
             </section>
 
-            <!-- Spor Bölümü (Tümspor) -->
+            <!-- spor bölümü -->
             <section class="spor-bolumu">
                 <div class="bolum-baslik tumspor-baslik">
                     <img src="images/tumspor.png" class="tumspor-baslik__gorsel">
@@ -123,8 +117,6 @@
                     </a>
                 </div>
 
-
-    <!-- Bootstrap row ve col-6 yapısı -->
     <div class="row spor-grid">
         <div class="col-6">
             <div class="spor-karti">
@@ -243,7 +235,6 @@
             </section>
 
         </div>
-                <!-- ALT TAB BAR (SAYFA GEÇİŞ ÇUBUĞU) -->
         <?php 
         include 'footer.php'; 
         ?>
