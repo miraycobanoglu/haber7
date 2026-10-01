@@ -15,6 +15,10 @@
         display: flex;
         flex-direction: column;
         box-sizing: border-box;
+        html.dark-mode & {
+            background-color:black;
+            color: white;
+        }
 
         .ayarlar-ust-bar {
             position: relative;
@@ -26,6 +30,9 @@
             background-color: #ffffff;
             box-sizing: border-box;
             height: 81px;
+            html.dark-mode & {
+                background-color: #121214;
+            }
 
             .ayarlar-sol-btn {
                 position: absolute;
@@ -37,6 +44,11 @@
                 align-items: center;
                 justify-content: center;
                 padding: 0;
+                html.dark-mode & {
+                    svg{
+                        stroke:white;
+                    }
+                }
             }
 
             .ayarlar-baslik {
@@ -44,6 +56,9 @@
                 font-weight: 700;
                 color: #111111;
                 margin: 0;
+                html.dark-mode & {
+                    color:white;
+                 }
             }
         }
         .ayarlar-liste {
@@ -70,6 +85,10 @@
                 &:hover {
                     background-color: #fafafa;
                 }
+                html.dark-mode & {
+                    background-color: #121214;
+                    border-top: 8px solid black;
+                }
 
                 &__sol {
                     display: flex;
@@ -82,12 +101,18 @@
                     align-items: center;
                     justify-content: center;
                     color: #111111;
+                    html.dark-mode & {
+                        color:white;
+                    }
                 }
 
                 &__metin {
                     font-size: 15px;
                     font-weight: 500;
                     color: #1a1a1a;
+                    html.dark-mode & {
+                        color:white;
+                    }
                 }
 
                 &__ok {

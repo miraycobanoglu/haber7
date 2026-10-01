@@ -8,7 +8,22 @@
         align-items: center;
         padding-left:18px;
         font-weight:700;
-        margin-bottom:35px;
+        margin-bottom:5px;
+        html.dark-mode & {
+            background-color: black;
+            color: white;
+        }
+    }
+
+    &__kategoriler{
+        padding:15px 0px;
+        display: flex;
+        flex-direction: column;
+        gap:25px;
+        html.dark-mode & {
+            background-color: #121214;
+
+        }
     }
 
 }
@@ -17,7 +32,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom:35px;
     padding:0px 20px;
 
     &__ikon-baslik{

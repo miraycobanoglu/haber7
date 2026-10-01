@@ -7,6 +7,9 @@
     gap:40px;
     overflow-y: scroll;
     overflow: hidden;
+    html.dark-mode &{
+        background-color: black;
+    }
 
     .metin-puntosu-metini{
         overflow: hidden;
@@ -16,6 +19,9 @@
         margin-top: 40px;
         background-color: #e4e4e4;
         border-radius: 4px;
+        html.dark-mode &{
+            background-color: #121214;
+        }   
 
 
         &__buyukluk{
@@ -39,7 +45,6 @@
         justify-content: space-between;
         background-color: #fcfcfc;
         border: 1px solid #f0f0f0;
-        border-radius: 8px;
         padding: 20px;
         width: 402px;
 

@@ -19,6 +19,9 @@
         border-radius: 12px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         box-sizing: border-box;
+        html.dark-mode & {
+            background-color: #121214;
+        }
 
         &::before {
             content: '';
@@ -30,6 +33,11 @@
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             z-index: 1;
+            html.dark-mode & {
+                background-color: #121214;
+                box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+
+            }
         }
         &::after {
             content: '';
@@ -41,6 +49,10 @@
             background: #ffffff;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            html.dark-mode & {
+                background-color: #121214;
+                box-shadow: 0 4px 15px rgba(255, 255, 255, 0.03);
+            }
 
         }
 
@@ -96,6 +108,14 @@
             justify-content: center;
             cursor: pointer;
             transition: all 0.2s ease;
+
+            html.dark-mode & {
+                background-color: #121214;
+                box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+                svg {
+                    stroke: white;
+                }
+            }
 
             &:hover {
                 transform: scale(1.08);

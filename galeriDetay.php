@@ -9,6 +9,7 @@ $baslik = ($tip == 'foto') ? 'Fotoğraf Galeri' : 'Video Galeri';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $baslik; ?> - Haber7</title>
     <link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
+    <script src="js/tema.js"></script>
 </head>
 <body class="detay-body">
     <div class="app-container">

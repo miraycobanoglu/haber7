@@ -18,17 +18,27 @@ body.detay-body {
     display: flex;
     align-items: center;
     padding: 15px 20px;
-    background: #ffffff;
+    background-color: #ffffff;
     border-bottom: alt 1px solid #eee;
     position: sticky;
     top: 0;
     z-index: 10;
+
+    html.dark-mode & {
+        background-color: #121214;
+    }
 
     .geri-btn {
         display: flex;
         align-items: center;
         justify-content: center;
         text-decoration: none;
+        html.dark-mode & {
+            svg path{
+                stroke:white;
+            }
+            
+        }
     }
 
     .detay-baslik-ust {
@@ -36,6 +46,10 @@ body.detay-body {
         font-weight: 600;
         margin: 0;
         margin-left:100px;
+
+        html.dark-mode & {
+            color: white;
+        }
     }
 }
 
@@ -54,6 +68,11 @@ body.detay-body {
 .haber-detay-metin {
     padding: 20px;
 
+    html.dark-mode &{
+        background-color: #121214;
+        color: white;
+    }
+
     h2 {
         font-size: 24px;
         line-height: 1.4;
@@ -67,6 +86,11 @@ body.detay-body {
         line-height: 1.6;
         color: #555;
         width:368px;
+        font-weight:100;
+
+        html.dark-mode &{
+            color:white;
+        }
     }
 }
 
@@ -76,6 +100,11 @@ body.detay-body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    html.dark-mode & {
+        background-color: #121214;
+        border-top: 6px solid black;
+
+    }
 
     .yorum-header {
         display: flex;
@@ -89,6 +118,10 @@ body.detay-body {
             gap: 8px;
             font-weight: 600;
             font-size: 15px;
+
+            html.dark-mode & {
+                color: white;
+            }
 
             .yorum-sayi {
                 background: #da2027;
@@ -113,6 +146,9 @@ body.detay-body {
 
     .yorum-kart {
         background: #fcfcfc;
+        html.dark-mode & {
+            background-color: #121214;
+        }
 
         .yorum-user-info {
             display: flex;
@@ -123,6 +159,9 @@ body.detay-body {
             .user-name {
                 font-weight: 600;
                 font-size: 12px;
+                html.dark-mode & {
+                    color: white;
+                }
             }
 
             .yorum-zaman {
@@ -140,11 +179,17 @@ body.detay-body {
             width:362px;
             font-weight:500;
             margin-bottom:18px;
+            html.dark-mode & {
+                color: white;
+            }
         }
 
         .yorum-aksiyonlar {
             display: flex;
             gap: 25px;
+            html.dark-mode & {
+                color: white;
+            }
 
             .action-btn {
                 background: none;
@@ -157,6 +202,12 @@ body.detay-body {
                 cursor: pointer;
                 padding: 0;
                 font-weight:600;
+                html.dark-mode & {
+                    color: white;
+                    svg {
+                        fill: white;
+                    }
+                }
             }
         }
     }
@@ -165,6 +216,11 @@ body.detay-body {
 .yorum-yap-alani {
     padding: 20px;
     border-top: 2px solid #f4f4f4;
+    html.dark-mode & {
+        background-color: #121214;
+        color: white;
+        border-top: 2px solid black;
+    }
 
     p {
         font-size: 14px;

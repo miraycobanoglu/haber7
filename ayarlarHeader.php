@@ -6,6 +6,8 @@
     <title>Ayarlar</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap-grid.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
+    <script src="js/tema.js"></script>
+
 </head>
 <body>
 

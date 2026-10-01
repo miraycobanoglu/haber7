@@ -6,6 +6,7 @@
     <title>Haber7 Mobil Prototip</title>
     <link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap-grid.min.css" rel="stylesheet">
+    <script src="js/tema.js"></script>
 </head>
 <body>
 
@@ -15,7 +16,8 @@
          <div class="yan-menu-overlay" id="yanMenuOverlay">
             <div class="yan-menu-icerik">
                 <div class="yan-menu-baslik">
-                    <img src="images/logo.png" alt="Haber7" class="menu-logo">
+                    <img src="images/logo.png" alt="Haber7" class="menu-logo menu-logo--light">
+                    <img src="images/logo-dark.png" alt="Haber7" class="menu-logo menu-logo--dark">
                     <button class="menu-kapat-btn" id="menuKapatBtn">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M18 6L6 18M6 6L18 18" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -118,7 +120,7 @@
             </div>
 <div class="ust-ikonlar">
     <?php if (isset($pageTitle) && $pageTitle == 'Sayfam'): ?>
-        <!-- Sayfam sayfasındaysak Ayar (Dişli) İkonu gösterilir -->
+        <!-- Sayfam sayfasındaysak Ayar İkonu gösterilir -->
         <a href="ayarlar.php" class="ayar-ikonu" style="cursor: pointer;">
             <svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="3"></circle>

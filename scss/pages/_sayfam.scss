@@ -6,6 +6,10 @@
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 
+    html.dark-mode & {
+        background-color: #121214;
+    }
+
     .saved-page {
         display: flex;
         flex-direction: column;
@@ -35,6 +39,9 @@
                 font-weight: 700;
                 color: #111111;
                 margin: 0;
+                html.dark-mode & {
+                    color: white;
+                }
             }
 
             .saved-list {
@@ -72,6 +79,9 @@
                         color: #1a1a1a;
                         margin: 0;
                         line-height: 1.4;
+                        html.dark-mode & {
+                            color: white;
+                        }
                     }
 
                     &__time {
@@ -84,3 +94,4 @@
         }
     }
 }
+
