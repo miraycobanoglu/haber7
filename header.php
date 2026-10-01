@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap-grid.min.css" rel="stylesheet">
     <script src="js/tema.js"></script>
+    <script src="js/arama.js"></script>
 </head>
 <body>
 
@@ -25,7 +26,7 @@
                     </button>
                 </div>
                 <div class="arama-kutusu">
-                    <input type="text"  placeholder="">
+                    <input type="text" class="menu-arama-input" placeholder="Arama yap...">
                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_428_147)">
                         <path d="M6.875 11.875C9.63642 11.875 11.875 9.63642 11.875 6.875C11.875 4.11358 9.63642 1.875 6.875 1.875C4.11358 1.875 1.875 4.11358 1.875 6.875C1.875 9.63642 4.11358 11.875 6.875 11.875Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
