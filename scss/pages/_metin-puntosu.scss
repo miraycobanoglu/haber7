@@ -47,18 +47,28 @@
         border: 1px solid #f0f0f0;
         padding: 20px;
         width: 402px;
+        html.dark-mode & {
+            background-color: #272728;
+            border: 1px solid #121214;
+        }
 
         .kucuk-a {
             font-size: 15px;
             font-weight: 700;
             color: #111111;
             transition: font-size 0.1s ease;
+            html.dark-mode & {
+                color: white;
+            }
         }
 
         .buyuk-a {
             font-size: 25px;
             font-weight: 700;
             color: #111111;
+            html.dark-mode & {
+                color: white;
+            }
         }
         
         .slider-konteyner {
