@@ -29,10 +29,23 @@
                         </defs>
                         </svg>
                     </span> 
-                    <span class="artisAzalis-icon"><svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.00004 4.14634L5.00004 1L1.00004 4.14634" fill="#63CE94"/>
-                    <path d="M9.00004 4.14634L5.00004 1L1.00004 4.14634" stroke="#63CE94" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                    <span class="artisAzalis-icon">
+                        <div class="artis-icon">
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 4.90274L5 1L1 4.90274" fill="#63CE94"/>
+                        <path d="M9 4.90274L5 1L1 4.90274" stroke="#63CE94" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <line x1="1.12365" y1="4.90274" x2="9.12365" y2="4.90274" stroke="#63CE94" stroke-width="2"/>
+                        </svg>
+                        </div>
+                        <div class="azalis-icon"> 
+                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1.07295L5.03542 4.93906L8.99967 1.00001" fill="#DA2027"/>
+                            <path d="M1 1.07295L5.03542 4.93906L8.99967 1.00001" stroke="#DA2027" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="8.87603" y1="1.00115" x2="0.876363" y2="1.07409" stroke="#DA2027" stroke-width="2"/>
+                            </svg>
+
+                        </div>
+
                     </span>
                     <strong class="dolar-fiyat">8,77</strong>
                 </div>

@@ -456,13 +456,13 @@ body {
     }
 }
 
-/* --- ANA İÇERİK ALANI (SCROLL) --- */
+/* --- ANA İÇERİK ALANI --- */
 .ana-icerik {
     flex: 1;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 
-    /* Son Dakika Bandı */
+    /* Son Dakika */
     .son-dakika-bandi {
         background-color: #FFEDA5;
         display: flex;
@@ -488,7 +488,7 @@ body {
             margin: 0;
         }
     }
-    /* Manşet Alanı */
+    /* manşet alani */
     .manset-alani {
         background-color: #000;
         .manset-kart {
@@ -500,7 +500,7 @@ body {
         }
     }
 
-    /* Döviz ve Hava Durumu Bandı */
+    /* döviz ve hava durumu */
     .piyasa-alani {
         display: flex;
         background-color: #ffffff;
@@ -542,12 +542,6 @@ body {
 
         }
 
-        .dolar{
-            svg rect {
-                
-            }
-        }
-
         .dolar-fiyat {
             font-weight: 700;
             font-size: 15px;
@@ -561,6 +555,7 @@ body {
             display: flex;
             flex-direction: column;
             align-items: center;
+
             html.dark-mode & {
                 color: white;
             }
@@ -833,5 +828,13 @@ body {
 
     html.dark-mode & {
         color: white;
+    }
+}
+.artisAzalis-icon{
+    .artis-icon{
+        display: block;
+    }
+    .azalis-icon{
+        display: none;;
     }
 }
