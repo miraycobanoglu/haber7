@@ -130,4 +130,101 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+// dolar
+async function fetchDolarKuru() {
+    try {
+        let response = await fetch('https://open.er-api.com/v6/latest/USD');
+        let data = await response.json();
+        
+        let tryRate = data.rates.TRY;
+        let formattedRate = tryRate.toFixed(2).replace('.', ',');
+        
+        document.getElementById('dolarFiyat').textContent = formattedRate;
+    } catch (error) {
+        console.error('Döviz kuru alınamadı:', error);
+    }
+}
 
+document.addEventListener('DOMContentLoaded', () => {
+    fetchDolarKuru();
+});
+
+async function fetchHavaDurumu(sehir) {
+    try {
+        let response = await fetch(`https://wttr.in/${sehir}?format=j1`);
+        let data = await response.json();
+
+        let currentCondition = data.current_condition[0];
+        let tempC = currentCondition.temp_C; 
+        let weatherDesc = currentCondition.weatherDesc[0].value.toLowerCase(); 
+
+        document.getElementById('havaDerece').textContent = tempC;
+
+        updateWeatherIcon(weatherDesc);
+
+    } catch (error) {
+        console.error('Hava durumu bilgisi alınamadı:', error);
+    }
+}
+
+function updateWeatherIcon(condition) {
+    let ikonElementi = document.getElementById('havaDurumuIkon');
+
+    if (condition.includes('rain') || condition.includes('yağmur') || condition.includes('shower')) {
+        ikonElementi.src = 'images/yagmurlu.png';
+    } else if (condition.includes('sun') || condition.includes('clear')) {
+        ikonElementi.src = 'images/gunesli.png';
+    } else {
+        ikonElementi.src = 'images/bulutlu.png';
+    }
+}
+// namaz vakti
+async function fetchNamazVakitleri(sehir) {
+    try {
+        let response = await fetch(`https://api.aladhan.com/v1/timingsByCity?city=${sehir}&country=Turkey&method=13`);
+        let data = await response.json();
+        let timings = data.data.timings;
+
+        let vakitlerListesi = [
+            { ad: 'İmsak', saat: timings.Fajr },
+            { ad: 'Güneş', saat: timings.Sunrise },
+            { ad: 'Öğle', saat: timings.Dhuhr },
+            { ad: 'İkindi', saat: timings.Asr },
+            { ad: 'Akşam', saat: timings.Maghrib },
+            { ad: 'Yatsı', saat: timings.Isha }
+        ];
+
+        let simdi = new Date();
+        let simdikiDakika = simdi.getHours() * 60 + simdi.getMinutes();
+
+        let secilenVakit = vakitlerListesi[0]; 
+
+        for (let i = 0; i < vakitlerListesi.length; i++) {
+            let [saat, dakika] = vakitlerListesi[i].saat.split(':').map(Number);
+            let vakitDakika = saat * 60 + dakika;
+
+            if (simdikiDakika <= vakitDakika) {
+                secilenVakit = vakitlerListesi[i];
+                break;
+            }
+        }
+
+        document.getElementById('namazVakitAdi').textContent = secilenVakit.ad;
+        document.getElementById('namazVakitSaat').textContent = secilenVakit.saat;
+
+    } catch (error) {
+        console.error('Namaz vakitleri alınamadı:', error);
+    }
+}
+
+document.getElementById('sehirSecim').addEventListener('change', (e) => {
+    let secilenSehir = e.target.value;
+    fetchHavaDurumu(secilenSehir);
+    fetchNamazVakitleri(secilenSehir);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    let baslangicSehri = document.getElementById('sehirSecim').value;
+    fetchHavaDurumu(baslangicSehri);
+    fetchNamazVakitleri(baslangicSehri);
+});

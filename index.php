@@ -7,7 +7,9 @@
 
             <div class="son-dakika-bandi">
                 <span class="etiket">SON DAKİKA</span>
+                <div class="son-dakika-kayan-alan">
                 <p>Muğla'da korkutan deprem!</p>
+                </div>
             </div>
 
             <section class="manset-alani">
@@ -29,7 +31,7 @@
                         </defs>
                         </svg>
                     </span> 
-                    <span class="artisAzalis-icon">
+                    <span class="artisAzalis-icon" id="dovizIconContainer">
                         <div class="artis-icon">
                         <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9 4.90274L5 1L1 4.90274" fill="#63CE94"/>
@@ -47,24 +49,22 @@
                         </div>
 
                     </span>
-                    <strong class="dolar-fiyat">8,77</strong>
+                    <strong class="dolar-fiyat" id="dolarFiyat"></strong>
                 </div>
                 <div class="havaDurumu-kutu">
                     <div class="hava-durumu-kutu__flex">
                     <div class="havaDurumu-kutu__gorsel">
-                        <svg width="27" height="19" viewBox="0 0 27 19" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <rect width="27" height="19" fill="url(#pattern0_12_201)"/>
-                        <defs>
-                        <pattern id="pattern0_12_201" patternContentUnits="objectBoundingBox" width="1" height="1">
-                        <use xlink:href="#image0_12_201" transform="scale(0.037037 0.0526316)"/>
-                        </pattern>
-                        <image id="image0_12_201" width="27" height="19" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAATCAYAAABhh3Y4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAjhJREFUeAGtVL1uE0EQ/nbvcjEmKKYIDRKynwAjoETYiuj9BrYjUUDjvIFJSwN5AWwqykAPcigQHUlBjymQEI3PwfHZ8e4Os2dh4bPvdMb5pL3T7vx8M7MzC6wJ+rB3lFZXYl0IyqVVTUVGnVqeVy6G7CDJbmUyGJRAohMlpJP9PLYy7PRxcZForwmF2lxcSAl6X6uA4ItH7WM6edoA0TM+npIbAka6i7F+C2kOwnOFCuu+/C+yGemXJx3+lZYKxwoYqi4klUW53Y2K3TinQRDkHdINaFWkydAXavxu48fz25xdKc4Gm+yOkMdItXhXjoqXZqaCQVUbas8dXgwhht/h/nrDPTFCLLii6I8Bbcq25P+K5LKMFogsvCwocxPm2l0kwobv8keKSlS0UEah1X7sTboZ6K37cM4+IZlQTMuJcOhbXIo8d/PrGZnNSOiLihR4SHFOHFaXmyB3G0L148mILGEv5N19Vf97HJZxcv67KY36JoR8wWrF+IhZXbowV+8hEdqGaz4umAeDs5oUooVVYMy0STQvUuzkJ+TgFPL8K7e/5vafdMVuqxA1cx0hGoQVISVfSZbLmg235O3AeLfgkAen/9m3c7bULLFsaWEbwuPm2X7AG3MnDCDyLoZkvHxcBuQGZ5rh0Jt+6JPEEXXq1Xkyg0NcBoyy3664XvD5qfL5Usv8Zs4NkaBeLzfx3M5a5bStHlj/uu7dKLTj1GbMtisdiCrZAVwFStnZOTWkDq/sFI6TVP8AzA7rcUaNm1sAAAAASUVORK5CYII="/>
-                        </defs>
-                        </svg>
-                        <p class="havaDurumu-kutu__gorsel-derece">22</p>
+                        <img id="havaDurumuIkon" src="" alt="Hava Durumu" width="27" height="20">
+                        <p class="havaDurumu-kutu__gorsel-derece" id="havaDerece"></p>
                     </div>
                     <div class="havaDurumu-kutu__sehir">
-                        <p>İstanbul</p>
+                        <select id="sehirSecim" class="sehir-select">
+                            <option value="Istanbul" selected>İstanbul</option>
+                            <option value="Ankara">Ankara</option>
+                            <option value="Izmir">İzmir</option>
+                            <option value="Antalya">Antalya</option>
+                            <option value="Bursa">Bursa</option>
+                        </select>
                     </div>
                     </div>
                 </div>
@@ -80,7 +80,8 @@
                     </svg>
                     </span> 
                     <div class="ezan">
-                        <strong class="ezan__vakit">İkindi</strong> <small class="ezan__saat">17:13</small>
+                        <strong class="ezan__vakit" id="namazVakitAdi"></strong>
+                         <small class="ezan__saat" id="namazVakitSaat"></small>
                     </div>
                     
                 </div>
@@ -90,7 +91,7 @@
             <section class="haber-listesi-bolumu">
                 <div class="bolum-baslik">
                     <h3>Son Dakika Haberleri</h3>
-                    <a href="#" class="tumunu-gor">Tümü > </a>
+                    <a href="#" class="tumunu-gor">Tümü</a>
                 </div>
                 <div class="haber-kartlari-grid">
                     <div class="haber-karti">

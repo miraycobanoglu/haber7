@@ -74,7 +74,7 @@
     });
 
     cerceve.addEventListener('click', (e) => {
-        if (e.target === cerceve || e.target.classList.contains('kesfet-ust-bar')) {
+        if (e.target === cerceve || e.target.classList.contains('kesfet-kart')) {
             metinAlani.classList.remove('is-expanded');
             ipucu.style.opacity = '0.8';
         }

@@ -460,7 +460,7 @@ body {
 .ana-icerik {
     flex: 1;
     overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    
 
     /* Son Dakika */
     .son-dakika-bandi {
@@ -469,7 +469,8 @@ body {
         align-items: center;
         height:47px;
         padding: 8px 12px;
-        gap: 48px;
+        gap: 10px;
+        overflow: hidden;
 
         .etiket {
             color: #DA2027;
@@ -479,13 +480,23 @@ body {
             border-radius: 2px;
             border-right: 1px solid #DDBD3D;
             padding-right:16px;
+            white-space: nowrap;
+        }
+        .son-dakika-kayan-alan{
+            width:100%;
+            overflow: hidden;
+            white-space: nowrap;
+            position:relative;
         }
 
         p {
+            display: inline-block;
             font-size: 14px;
             font-weight: 600;
             color: #333;
             margin: 0;
+            padding-left: 100%;
+            animation: kaydirmaAnimasyonu 5s linear infinite;
         }
     }
     /* manşet alani */
@@ -836,5 +847,25 @@ body {
     }
     .azalis-icon{
         display: none;;
+    }
+}
+.sehir-select {
+    background: transparent;
+    border: none;
+    font-size: 11px;
+    cursor: pointer;
+    outline: none;
+    font-family: inherit;
+
+    html.dark-mode & {
+        color: white;
+    }
+}
+@keyframes kaydirmaAnimasyonu {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
     }
 }
