@@ -4,14 +4,17 @@ body.detay-body {
     color: #111;
     display: flex;
     justify-content: center;
+    align-items: center;
+
 }
 .app-container {
     width: 100%;
     max-width: 402px;
-    background: #ffffff;
     min-height: 100vh;
     box-shadow: 0 0 20px rgba(0,0,0,0.05);
     position: relative;
+    overflow-y: auto;
+    height:100vh;
 }
 
 .detay-header {
@@ -23,6 +26,7 @@ body.detay-body {
     position: sticky;
     top: 0;
     z-index: 10;
+    flex-shrink:0;
 
     html.dark-mode & {
         background-color: #121214;
@@ -289,7 +293,7 @@ body.detay-body {
         }
 
         .slider-img {
-            flex: 0 0 100%; /* Her resim kutunun %100 genişliğini kaplamalı */
+            flex: 0 0 100%;
             width: 100%;
             height: 100%;
             object-fit: cover;

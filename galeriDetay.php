@@ -45,7 +45,6 @@ $baslik = ($tip == 'foto') ? 'Fotoğraf Galeri' : 'Video Galeri';
                 </div>
             <?php endif; ?>
 
-            <!-- Haber Başlığı ve Metni -->
             <section class="haber-detay-metin">
                 <h2>Sultangazi'de motokuryelerin çarpıştığı feci kaza kamerada</h2>
                 <p>
