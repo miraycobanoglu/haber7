@@ -46,3 +46,16 @@ function initSlider() {
 
     });
 });
+
+$(document).ready(function(){
+    $('.banner-slide').slick({
+        dots: false,             // Noktalar olmayacak
+        arrows: true,            // Oklar aktif olacak
+        infinite: false,          // Sürmanşet döngüsel dönsün
+        slidesToShow: 1,         // Ekranda tek bir sürmanşet görseli görünecek
+        slidesToScroll: 1,
+        autoplay: false,          // Sürmanşet olduğu için otomatik dönebilir
+        swipe: true,
+        draggable: true
+    });
+});

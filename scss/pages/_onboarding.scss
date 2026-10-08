@@ -786,12 +786,69 @@ body {
 
 
     .ikinci-manset-alani {
+        position:relative;
+        width:100%;
         background-color: #000;
+
         .banner-slider-wrapper {
+            position:relative;
+            overflow:hidden;
+            width:100%;
+
+            .banner-slide {
+                display: flex !important;
+            
             .banner-gorsel {
                 width: 100%;
                 display: block;
+                object-fit: cover;
+                
             }
+            }
+
+            .slick-prev,
+        .slick-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            width: 32px;
+            height: 32px;
+            background-color: rgba(0, 0, 0, 0.5); // Şık bir yarı saydam siyah arka plan
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            // Slick'in varsayılan ok işaretlerini temizleyip kendi ok ikonumuzu veya rengimizi veriyoruz
+            &::before {
+                font-size: 16px;
+                color: #ffffff;
+                font-family: sans-serif;
+                opacity: 1;
+            }
+        }
+
+        .slick-prev {
+            left: 10px; // Sol okun görselin sol kenarından mesafesi
+            &::before {
+                content: '❮'; // Sol ok işareti
+            }
+        }
+
+        .slick-next {
+            right: 10px; // Sağ okun görselin sağ kenarından mesafesi
+            &::before {
+                content: '❯'; // Sağ ok işareti
+            }
+        }
         }
     }
 

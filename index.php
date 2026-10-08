@@ -144,6 +144,13 @@
                 <div class="banner-slider-wrapper">
                     <div class="banner-slide">
                         <img src="images/Sürmanşet.png" alt="" class="banner-gorsel">
+                        <img src="images/Sürmanşet.png" alt="" class="banner-gorsel">
+                        <img src="images/Sürmanşet.png" alt="" class="banner-gorsel">
+                        <img src="images/Sürmanşet.png" alt="" class="banner-gorsel">
+                        <img src="images/Sürmanşet.png" alt="" class="banner-gorsel">
+                        <img src="images/Sürmanşet.png" alt="" class="banner-gorsel">
+                        <img src="images/Sürmanşet.png" alt="" class="banner-gorsel">
+                        <img src="images/Sürmanşet.png" alt="" class="banner-gorsel">
                     </div>
                 </div>
             </section>

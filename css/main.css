@@ -757,11 +757,62 @@ html.dark-mode .ana-icerik .haber-listesi-bolumu .haber-kartlari-grid .haber-kar
   border-radius: 4px !important;
 }
 .ana-icerik .ikinci-manset-alani {
+  position: relative;
+  width: 100%;
   background-color: #000;
 }
-.ana-icerik .ikinci-manset-alani .banner-slider-wrapper .banner-gorsel {
+.ana-icerik .ikinci-manset-alani .banner-slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.ana-icerik .ikinci-manset-alani .banner-slider-wrapper .banner-slide {
+  display: flex !important;
+}
+.ana-icerik .ikinci-manset-alani .banner-slider-wrapper .banner-slide .banner-gorsel {
   width: 100%;
   display: block;
+  object-fit: cover;
+}
+.ana-icerik .ikinci-manset-alani .banner-slider-wrapper .slick-prev,
+.ana-icerik .ikinci-manset-alani .banner-slider-wrapper .slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+.ana-icerik .ikinci-manset-alani .banner-slider-wrapper .slick-prev:hover,
+.ana-icerik .ikinci-manset-alani .banner-slider-wrapper .slick-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.ana-icerik .ikinci-manset-alani .banner-slider-wrapper .slick-prev::before,
+.ana-icerik .ikinci-manset-alani .banner-slider-wrapper .slick-next::before {
+  font-size: 16px;
+  color: #ffffff;
+  font-family: sans-serif;
+  opacity: 1;
+}
+.ana-icerik .ikinci-manset-alani .banner-slider-wrapper .slick-prev {
+  left: 10px;
+}
+.ana-icerik .ikinci-manset-alani .banner-slider-wrapper .slick-prev::before {
+  content: "❮";
+}
+.ana-icerik .ikinci-manset-alani .banner-slider-wrapper .slick-next {
+  right: 10px;
+}
+.ana-icerik .ikinci-manset-alani .banner-slider-wrapper .slick-next::before {
+  content: "❯";
 }
 .ana-icerik {
   /* Spor */
