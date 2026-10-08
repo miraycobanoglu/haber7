@@ -7,6 +7,9 @@ body.detay-body {
     align-items: center;
 
 }
+.detay-icerik{
+    background-color: white;
+}
 .app-container {
     width: 100%;
     max-width: 402px;
@@ -308,7 +311,7 @@ body.detay-body {
         right: 12px;
         background: rgba(0, 0, 0, 0.6);
         color: #fff;
-        padding: 3px 8px;
+        padding: 5px 8px;
         border-radius: 10px;
         font-size: 11px;
         font-weight: 600;

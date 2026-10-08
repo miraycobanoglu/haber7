@@ -28,12 +28,17 @@ $baslik = ($tip == 'foto') ? 'Fotoğraf Galeri' : 'Video Galeri';
             <?php if ($tip == 'foto'): ?>
                 <div class="foto-slider-wrapper">
                     <div class="slider-container">
-                        <img src="images/manşet-sürm2.png" alt="Fotoğraf 1" class="slider-img">
-                        <img src="images/slider-gorsel1.png" alt="Fotoğraf 2" class="slider-img">
-                        <img src="images/slider-gorsel2.png" alt="Fotoğraf 2" class="slider-img">
-                        <img src="images/slider-gorsel3.png" alt="Fotoğraf 2" class="slider-img">
+                        <img src="images/manşet-sürm2.png" alt="görsel1" class="slider-img">
+                        <img src="images/slider-gorsel1.png" alt="görsel2" class="slider-img">
+                        <img src="images/slider-gorsel2.png" alt="görsel3" class="slider-img">
+                        <img src="images/slider-gorsel3.png" alt="görsel4" class="slider-img">
+                        <img src="images/slider-gorsel3.png" alt="görsel4" class="slider-img">
                     </div>
-                    <div class="foto-sayac"><span id="aktifIndex">1</span>/<span class=toplam-foto>4</span></div>
+                    <div class="foto-sayac">
+                        <span id="aktifIndex">1</span>
+                        <span>/</span>
+                        <span class=toplam-foto id="toplamFoto"></span>
+                    </div>
                 </div>
             <?php else: ?>
                 <!-- video -->
@@ -101,6 +106,6 @@ $baslik = ($tip == 'foto') ? 'Fotoğraf Galeri' : 'Video Galeri';
 
         </main>
     </div>
-    <script src="js/app.js?v=<?php echo time(); ?>"></script>
+    <script src="js/galeriDetay.js?v=<?php echo time(); ?>"></script>
 </body>
 </html>

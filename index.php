@@ -13,8 +13,16 @@
             </div>
 
             <section class="manset-alani">
-                <div class="manset-kart">
-                    <img src="images/Manşet.png" alt="Manset" class="manset-gorsel" >
+                <div class="manset-kart" id="manset-kart-slider">
+                    <img src="images/Manşet.png" alt="Manset" class="manset-gorsel" >
+                    <img src="images/Manşet.png" alt="Manset" class="manset-gorsel" >
+                    <img src="images/Manşet.png" alt="Manset" class="manset-gorsel" >
+                    <img src="images/Manşet.png" alt="Manset" class="manset-gorsel" >
+                </div>
+                 <div class="foto-sayac">
+                    <span id="aktifIndex">1</span>
+                    <span>/</span>
+                    <span class="toplam-foto" id="toplamFoto"></span>
                 </div>
             </section>
 
@@ -115,7 +123,7 @@
             <section class="ikinci-manset-alani">
                 <div class="banner-slider-wrapper">
                     <div class="banner-slide">
-                        <img src="images/manşet-sürmanşet.png" alt="" class="banner-gorsel">
+                        <img src="images/Sürmanşet.png" alt="" class="banner-gorsel">
                     </div>
                 </div>
             </section>

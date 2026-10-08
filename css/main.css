@@ -23,13 +23,13 @@ html.dark-mode ::-webkit-scrollbar-track {
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #da2027;
+  background: black;
 }
 html.dark-mode ::-webkit-scrollbar-thumb {
   background: #444;
 }
 html.dark-mode ::-webkit-scrollbar-thumb:hover {
-  background: #da2027;
+  background: black;
 }
 
 body {
@@ -508,13 +508,42 @@ html.dark-mode .ust-bar .header-title {
 }
 .ana-icerik .manset-alani {
   background-color: #000;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 .ana-icerik .manset-alani .manset-kart {
   position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.ana-icerik .manset-alani .manset-kart::-webkit-scrollbar {
+  display: none;
 }
 .ana-icerik .manset-alani .manset-kart .manset-gorsel {
   width: 100%;
   display: block;
+  flex: 0 0 100%;
+  height: 100%;
+  object-fit: cover;
+  scroll-snap-align: start;
+}
+.ana-icerik .foto-sayac {
+  position: absolute;
+  bottom: 190px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 .ana-icerik {
   /* döviz ve hava durumu */
@@ -690,7 +719,6 @@ html.dark-mode .ana-icerik .haber-listesi-bolumu .haber-kartlari-grid .haber-kar
   background-color: #da2027;
 }
 .ana-icerik .ikinci-manset-alani {
-  margin-top: 10px;
   background-color: #000;
 }
 .ana-icerik .ikinci-manset-alani .banner-slider-wrapper .banner-gorsel {
@@ -939,6 +967,10 @@ body.detay-body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.detay-icerik {
+  background-color: white;
 }
 
 .app-container {
@@ -1210,7 +1242,7 @@ html.dark-mode .yorum-yap-alani {
   right: 12px;
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
-  padding: 3px 8px;
+  padding: 5px 8px;
   border-radius: 10px;
   font-size: 11px;
   font-weight: 600;

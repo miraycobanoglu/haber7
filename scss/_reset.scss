@@ -25,13 +25,13 @@
     border-radius: 4px;
 
     &:hover {
-        background: #da2027; 
+        background: black; 
     }
 
     html.dark-mode & {
         background: #444;
         &:hover {
-            background: #da2027;
+            background: black;
         }
     }
 }
