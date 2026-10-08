@@ -99,26 +99,46 @@
             <section class="haber-listesi-bolumu">
                 <div class="bolum-baslik">
                     <h3>Son Dakika Haberleri</h3>
-                    <a href="#" class="tumunu-gor">Tümü</a>
+                     <a href="#" class="tumunu-gor">Tümü</a>
                 </div>
-                <div class="haber-kartlari-grid">
-                    <div class="haber-karti">
-                        <img class="haber-karti__gorsel" src="images/sondakika1.png" alt="Haber">
-                        <p class="haber-karti__guncelDurum" >Güncel</p>
-                        <p class="haber-karti__info">Son dakika: Hükümetten kamu işçilerine zam teklıfı..</p>
-                    </div>
-                    <div class="haber-karti">
-                        <img class="haber-karti__gorsel" src="images/sondakika2.png" alt="Haber">
-                        <p class="haber-karti__guncelDurum" >Güncel</p>
-                        <p class="haber-karti__info">BBP'li yönetici ters kelepçeyle gözaltına alınmıştı</p>
-                    </div>
+
+            <!-- Slick Slider buradaki grid yapısını ikili ikili kaydıracak -->
+            <div class="haber-kartlari-grid">
+   
+                <div class="haber-karti">
+                 <img class="haber-karti__gorsel" src="images/sondakika1.png" alt="Haber">
+                    <p class="haber-karti__guncelDurum">Güncel</p>
+            <p class="haber-karti__info">Son dakika: Hükümetten kamu işçilerine zam teklifi..</p>
                 </div>
-                <div class="slider-dots">
-                    <span class="dot dot-active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-            </section>
+                <div class="haber-karti">
+                    <img class="haber-karti__gorsel" src="images/sondakika2.png" alt="Haber">
+                    <p class="haber-karti__guncelDurum">Güncel</p>
+                    <p class="haber-karti__info">BBP'li yönetici ters kelepçeyle gözaltına alınmıştı</p>
+             </div>
+
+        <div class="haber-karti">
+            <img class="haber-karti__gorsel" src="images/sondakika1.png" alt="Haber">
+            <p class="haber-karti__guncelDurum">Güncel</p>
+            <p class="haber-karti__info">İstanbul'da beklenen sağanak yağış başladı</p>
+        </div>
+        <div class="haber-karti">
+            <img class="haber-karti__gorsel" src="images/sondakika2.png" alt="Haber">
+            <p class="haber-karti__guncelDurum">Güncel</p>
+            <p class="haber-karti__info">Merkez Bankası yeni faiz kararını açıkladı</p>
+        </div>
+
+        <div class="haber-karti">
+            <img class="haber-karti__gorsel" src="images/sondakika1.png" alt="Haber">
+            <p class="haber-karti__guncelDurum">Güncel</p>
+            <p class="haber-karti__info">Teknoloji devinden çığır açan yapay zeka hamlesi</p>
+        </div>
+        <div class="haber-karti">
+            <img class="haber-karti__gorsel" src="images/sondakika2.png" alt="Haber">
+            <p class="haber-karti__guncelDurum">Güncel</p>
+            <p class="haber-karti__info">Süper Lig'de haftanın en kritik maçı oynanıyor</p>
+        </div>
+    </div>
+</section>
 
             <section class="ikinci-manset-alani">
                 <div class="banner-slider-wrapper">

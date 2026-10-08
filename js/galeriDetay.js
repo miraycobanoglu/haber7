@@ -1,4 +1,3 @@
-
 function initSlider() {
     const sliderContainer = document.querySelector('.slider-container');
     const images = document.querySelectorAll('.slider-img');

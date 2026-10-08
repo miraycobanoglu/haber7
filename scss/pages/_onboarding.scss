@@ -680,64 +680,109 @@ body {
             }
         }
 
-        .haber-kartlari-grid {
-            display: flex;
-            gap: 10px;
-            justify-content: space-between;
+       .haber-kartlari-grid {
+        display: block !important;
+        width: 100% !important; // Alanın tamamını kaplamasını sağlar
 
-            .haber-karti {
-                display: flex;
-                flex-direction: column;
-                gap: 6px;
-
-                &__gorsel {
-                    width: 165px;
-                    height:100px;
-                    border-radius: 4px;
-                }
-
-                &__guncelDurum {
-                    font-size: 10px;
-                    color: #888;
-                    margin: 0;
-                    text-transform: uppercase;
-                }
-
-                &__info {
-                    font-size: 12px;
-                    font-weight: 600;
-                    color: #222;
-                    margin: 0;
-                    line-height: 1.3;
-                    width:132px;
-                    height: 48px;                        
-                    overflow: hidden;  
-                    
-                    html.dark-mode &{
-                        color: white;
-                    }
-                }
-            }
+        // Slick'in kendi ürettiği track ve list kapsayıcılarının genişlik taşmasını önler
+        .slick-list, .slick-track {
+            width: 100% !important;
+            display: flex !important;
         }
 
-        .slider-dots {
-            display: flex;
-            justify-content: center;
+        .slick-slide {
+            flex: 0 0 50% !important; // Her bir slayt alanını tam %50 (iki kart olacağı için) yapar
+            max-width: 50% !important;
+            padding: 0 4px; // Kartlar arası mikro boşluk
+            box-sizing: border-box;
+        }
+
+        .haber-karti {
+            display: flex !important;
+            flex-direction: column;
             gap: 6px;
-            margin-top: 12px;
+            width: 100% !important;
 
-            .dot {
-                width: 6px;
-                height: 6px;
-                background-color: #ccc;
-                border-radius: 50%;
+            &__gorsel {
+                width: 100% !important; // Görselin kart genişliğine tam oturmasını sağlar
+                height: 100px;
+                border-radius: 6px;
+                object-fit: cover;
+            }
 
-                &-active {
-                    background-color: #da2027;
+            &__guncelDurum {
+                font-size: 10px;
+                color: #888;
+                margin: 0;
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+
+            &__info {
+                font-size: 12px;
+                font-weight: 600;
+                color: #222;
+                margin: 0;
+                line-height: 1.3;
+                height: 36px;                        
+                overflow: hidden;  
+                
+                html.dark-mode & {
+                    color: white;
                 }
             }
         }
     }
+
+
+    .slick-dots {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 6px !important;
+        margin: 14px 0 0 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+
+        li {
+            display: inline-block !important;
+            position: relative !important;
+            width: 6px !important;
+            height: 6px !important;
+            margin: 0 !important; 
+            padding: 0 !important;
+            background: none !important;
+
+            button {
+                display: block !important;
+                font-size: 0 !important;
+                line-height: 0 !important;
+                width: 6px !important;
+                height: 6px !important;
+                padding: 0 !important;
+                background-color: #ccc !important;
+                border-radius: 50% !important;
+                border: none !important;
+                cursor: pointer !important;
+                transition: all 0.3s ease !important;
+
+                &:before {
+                    display: none !important;
+                }
+            }
+        }
+
+        li.slick-active {
+            width: 16px !important; 
+
+            button {
+                background-color: #da2027 !important;
+                width: 16px !important;
+                border-radius: 4px !important;
+            }
+        }
+    }
+}       
 
 
     .ikinci-manset-alani {
