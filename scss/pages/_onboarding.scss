@@ -682,18 +682,17 @@ body {
 
        .haber-kartlari-grid {
         display: block !important;
-        width: 100% !important; // Alanın tamamını kaplamasını sağlar
+        width: 100% !important; 
 
-        // Slick'in kendi ürettiği track ve list kapsayıcılarının genişlik taşmasını önler
         .slick-list, .slick-track {
             width: 100% !important;
             display: flex !important;
         }
 
         .slick-slide {
-            flex: 0 0 50% !important; // Her bir slayt alanını tam %50 (iki kart olacağı için) yapar
+            flex: 0 0 50% !important; 
             max-width: 50% !important;
-            padding: 0 4px; // Kartlar arası mikro boşluk
+            padding: 0 4px;
             box-sizing: border-box;
         }
 
@@ -704,7 +703,7 @@ body {
             width: 100% !important;
 
             &__gorsel {
-                width: 100% !important; // Görselin kart genişliğine tam oturmasını sağlar
+                width: 100% !important; 
                 height: 100px;
                 border-radius: 6px;
                 object-fit: cover;
@@ -814,7 +813,7 @@ body {
             z-index: 10;
             width: 32px;
             height: 32px;
-            background-color: rgba(0, 0, 0, 0.5); // Şık bir yarı saydam siyah arka plan
+            background-color: rgba(0, 0, 0, 0.5); 
             border-radius: 50%;
             cursor: pointer;
             border: none;
@@ -827,7 +826,7 @@ body {
                 background-color: rgba(0, 0, 0, 0.8);
             }
 
-            // Slick'in varsayılan ok işaretlerini temizleyip kendi ok ikonumuzu veya rengimizi veriyoruz
+        
             &::before {
                 font-size: 16px;
                 color: #ffffff;
@@ -837,16 +836,16 @@ body {
         }
 
         .slick-prev {
-            left: 10px; // Sol okun görselin sol kenarından mesafesi
+            left: 10px; 
             &::before {
-                content: '❮'; // Sol ok işareti
+                content: '❮'; 
             }
         }
 
         .slick-next {
-            right: 10px; // Sağ okun görselin sağ kenarından mesafesi
+            right: 10px; 
             &::before {
-                content: '❯'; // Sağ ok işareti
+                content: '❯';
             }
         }
         }
