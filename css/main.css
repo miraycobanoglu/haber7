@@ -11,7 +11,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #ffffff;
   border-radius: 4px;
 }
 html.dark-mode ::-webkit-scrollbar-track {
@@ -23,13 +23,13 @@ html.dark-mode ::-webkit-scrollbar-track {
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: black;
+  background: rgb(143, 142, 142);
 }
 html.dark-mode ::-webkit-scrollbar-thumb {
   background: #444;
 }
 html.dark-mode ::-webkit-scrollbar-thumb:hover {
-  background: black;
+  background: rgb(143, 142, 142);
 }
 
 body {
@@ -639,9 +639,6 @@ html.dark-mode .ana-icerik .piyasa-alani .ezan {
 html.dark-mode .ana-icerik .piyasa-alani .ezan__saat {
   color: white;
 }
-.ana-icerik {
-  /* Son Dakika Haberleri Bölümü */
-}
 .ana-icerik .haber-listesi-bolumu {
   background-color: #ffffff;
   padding: 15px;
@@ -680,8 +677,10 @@ html.dark-mode .ana-icerik .haber-listesi-bolumu {
 .ana-icerik .haber-listesi-bolumu .haber-kartlari-grid .slick-slide {
   flex: 0 0 50% !important;
   max-width: 50% !important;
-  padding: 0 4px;
   box-sizing: border-box;
+}
+.ana-icerik .haber-listesi-bolumu .haber-kartlari-grid .slick-slide + .slick-slide {
+  padding-left: 8px !important;
 }
 .ana-icerik .haber-listesi-bolumu .haber-kartlari-grid .haber-karti {
   display: flex !important;
@@ -701,6 +700,7 @@ html.dark-mode .ana-icerik .haber-listesi-bolumu {
   margin: 0;
   text-transform: uppercase;
   font-weight: 600;
+  width: 100% !important;
 }
 .ana-icerik .haber-listesi-bolumu .haber-kartlari-grid .haber-karti__info {
   font-size: 12px;
@@ -710,6 +710,7 @@ html.dark-mode .ana-icerik .haber-listesi-bolumu {
   line-height: 1.3;
   height: 36px;
   overflow: hidden;
+  width: 100% !important;
 }
 html.dark-mode .ana-icerik .haber-listesi-bolumu .haber-kartlari-grid .haber-karti__info {
   color: white;
@@ -748,12 +749,8 @@ html.dark-mode .ana-icerik .haber-listesi-bolumu .haber-kartlari-grid .haber-kar
 .ana-icerik .haber-listesi-bolumu .slick-dots li button:before {
   display: none !important;
 }
-.ana-icerik .haber-listesi-bolumu .slick-dots li.slick-active {
-  width: 16px !important;
-}
 .ana-icerik .haber-listesi-bolumu .slick-dots li.slick-active button {
   background-color: #da2027 !important;
-  width: 16px !important;
   border-radius: 4px !important;
 }
 .ana-icerik .ikinci-manset-alani {

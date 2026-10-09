@@ -36,7 +36,8 @@ function initSlider() {
         slidesToShow: 2,         // Ekranda aynı anda 2 kart görünecek
         slidesToScroll: 2,       // Kaydırdığında 2'şer 2'şer ilerleyecek (Böylece 3 nokta oluşur)
         arrows: false,           // Ok tuşlarını gizle, sadece kaydırarak/noktalarla ilerlensin
-        autoplay: false,         // Otomatik dönmesin
+        autoplay: false,    
+       // variableWidth: true,   // Değişken genişlikte kaydırma
 
         swipe: true,
         touchMove: true,

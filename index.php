@@ -159,7 +159,7 @@
             <section class="spor-bolumu">
                 <div class="bolum-baslik tumspor-baslik">
                     <img src="images/tumspor.png" class="tumspor-baslik__gorsel">
-                    <a href="#" class="tumunu-gor">Tümü <span class="tumspor-ok"><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <a href="#" class="tumunu-gor">Tümü <span class="tumspor-ok"><svg width="7" height="10" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 11.0063L6 6.00315L1 1" stroke="#40761C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     </span>

@@ -12,7 +12,7 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #ffffff;
     border-radius: 4px;
 
     html.dark-mode & {
@@ -25,13 +25,13 @@
     border-radius: 4px;
 
     &:hover {
-        background: black; 
+        background: rgb(143, 142, 142); 
     }
 
     html.dark-mode & {
         background: #444;
         &:hover {
-            background: black;
+            background: rgb(143, 142, 142);
         }
     }
 }
