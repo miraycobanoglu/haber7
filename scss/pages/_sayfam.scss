@@ -1,7 +1,11 @@
+a{
+    text-decoration: none;
+}
+
 .page-content {
     background-color: #ffffff;
     height:100%;
-    padding: 15px 20px;
+    padding: 0px 20px;
     box-sizing: border-box;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -26,6 +30,16 @@
                 padding-bottom: 12px;
                 border-bottom: 1px solid #f0f0f0;
                 margin-bottom: 12px;
+                position:sticky;
+                top:0;
+                z-index:10;
+                background-color: #ffffff;
+                padding-top:15px;
+
+                html.dark-mode & {
+                    background-color: #121214;
+
+                }
             }
 
             &__icon-wrapper {

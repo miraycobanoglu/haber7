@@ -1460,10 +1460,14 @@ html.dark-mode .gazete-icerik-alani .gazete-nav-buttons .gazete-btn svg {
   transform: scale(0.95);
 }
 
+a {
+  text-decoration: none;
+}
+
 .page-content {
   background-color: #ffffff;
   height: 100%;
-  padding: 15px 20px;
+  padding: 0px 20px;
   box-sizing: border-box;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -1487,6 +1491,14 @@ html.dark-mode .page-content {
   padding-bottom: 12px;
   border-bottom: 1px solid #f0f0f0;
   margin-bottom: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #ffffff;
+  padding-top: 15px;
+}
+html.dark-mode .page-content .saved-page .saved-section__header {
+  background-color: #121214;
 }
 .page-content .saved-page .saved-section__icon-wrapper {
   display: flex;
