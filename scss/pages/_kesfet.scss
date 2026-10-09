@@ -17,9 +17,6 @@
 
         .kesfet-ust-bar {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
             display: flex;
             align-items: center;
             padding: 15px 20px;
@@ -70,7 +67,7 @@
             &__icerik {
                 position: relative;
                 z-index: 2;
-                padding: 20px 20px 10px 20px;
+                padding: 0px 20px 0px 20px;
                 margin-top: auto;
                 display: flex;
                 flex-direction: column;

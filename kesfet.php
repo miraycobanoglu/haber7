@@ -33,6 +33,10 @@
                         Katıldığımız tüm programlarda aşı meselesinin yeni adaletsizliklere yol açmaması gerektiğinin altını çiziyoruz. Yıl sonuna doğru kullanıma hazır hale getirmeyi planladığımız milli aşı çalışmalarımızı da bu hassasiyetle yürütüyoruz.
                         Türkiye’nin sağlık alanındaki bağımsızlığı ve yerli üretim gücü, uluslararası alanda örnek teşkil etmeye devam ediyor. İlgili bakanlıklarımız ve bilim insanlarımız süreçleri titizlikle takip ediyor.
                         Katıldığımız tüm programlarda aşı meselesinin yeni adaletsizliklere yol açmaması gerektiğinin altını çiziyoruz. Yıl sonuna doğru kullanıma hazır hale getirmeyi planladığımız milli aşı çalışmalarımızı da bu hassasiyetle yürütüyoruz. Türkiye’nin geliştirdiği COVID-19 aşısının inşallah milletimizle birlikte tüm insanlığın da aşısı olacağının müjdesini buradan paylaşmak istiyorum.
+                        Katıldığımız tüm programlarda aşı meselesinin yeni adaletsizliklere yol açmaması gerektiğinin altını çiziyoruz. Yıl sonuna doğru kullanıma hazır hale getirmeyi planladığımız milli aşı çalışmalarımızı da bu hassasiyetle yürütüyoruz. Türkiye’nin geliştirdiği COVID-19 aşısının inşallah milletimizle birlikte tüm insanlığın da aşısı olacağının müjdesini buradan paylaşmak istiyorum.
+                        Katıldığımız tüm programlarda aşı meselesinin yeni adaletsizliklere yol açmaması gerektiğinin altını çiziyoruz. Yıl sonuna doğru kullanıma hazır hale getirmeyi planladığımız milli aşı çalışmalarımızı da bu hassasiyetle yürütüyoruz.
+                        Türkiye’nin sağlık alanındaki bağımsızlığı ve yerli üretim gücü, uluslararası alanda örnek teşkil etmeye devam ediyor. İlgili bakanlıklarımız ve bilim insanlarımız süreçleri titizlikle takip ediyor.
+                        Katıldığımız tüm programlarda aşı meselesinin yeni adaletsizliklere yol açmaması gerektiğinin altını çiziyoruz.
                     </p>
                 </div>
             </div>

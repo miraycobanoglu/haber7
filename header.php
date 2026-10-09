@@ -48,6 +48,12 @@
                     <a href="gazeteler.php" class="yan-menu-link ">GAZETELER</a>
                     <a href="kesfet.php" class="yan-menu-link">KEŞFET</a>
                     <a href="spor.php" class="yan-menu-link">SPOR</a>
+                    <a href="ekonomi.php" class="yan-menu-link">EKONOMİ</a>
+                    <a href="saglik.php" class="yan-menu-link">SAĞLIK</a>
+                    <a href="teknoloji.php" class="yan-menu-link">OTOMOBİL</a>
+                    <a href="yasam.php" class="yan-menu-link">YAŞAM</a>
+                    <a href="yazarlar.php" class="yan-menu-link">YAZARLAR</a>
+
                 </nav>
                 
                 <div class="yan-menu-alt">

@@ -83,11 +83,11 @@ $baslik = ($tip == 'foto') ? 'Fotoğraf Galeri' : 'Video Galeri';
                         Bazı konularda bence de haklı, ülkeler arası ilişkilere duygusallık karıştırılması gerekir, karışsa da fazla uzatılmamalı. Mısır olayında toparladım neyseki
                     </p>
                     <div class="yorum-aksiyonlar">
-                        <button class="action-btn">
+                        <button class="action-btn" id="beğen-btn">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                             Beğen <span class="begeni-sayisi">(12)</span>
                         </button>
-                        <button class="action-btn">
+                        <button class="action-btn" id="cevapla-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="black"><path d="M744-210v-144q0-50-35-85t-85-35H282l123 123-51 51-210-210 210-210 51 51-123 123h342q80 0 136 56t56 136v144h-72Z"/></svg>
                             Cevapla
                         </button>
