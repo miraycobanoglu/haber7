@@ -47,7 +47,7 @@
                     <a href="galeri.php"class="yan-menu-link ">GALERİ</a>
                     <a href="gazeteler.php" class="yan-menu-link ">GAZETELER</a>
                     <a href="kesfet.php" class="yan-menu-link">KEŞFET</a>
-                    <a href="spor.php" class="yan-menu-link">SPOR</a>
+                    <a href="kategoriSpor.php" class="yan-menu-link">SPOR</a>
                     <a href="ekonomi.php" class="yan-menu-link">EKONOMİ</a>
                     <a href="saglik.php" class="yan-menu-link">SAĞLIK</a>
                     <a href="teknoloji.php" class="yan-menu-link">OTOMOBİL</a>

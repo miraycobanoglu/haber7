@@ -100,6 +100,7 @@ include 'ayarlarHeader.php';
     </div>
 </main>
 
+<!-- pop up -->
 <div class="yazar-modal" id="yazarModal">
     <div class="yazar-modal__overlay" id="modalKapatOverlay"></div>
     <div class="yazar-modal__icerikKutu">
