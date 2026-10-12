@@ -53,6 +53,8 @@
                     <a href="teknoloji.php" class="yan-menu-link">OTOMOBİL</a>
                     <a href="yasam.php" class="yan-menu-link">YAŞAM</a>
                     <a href="yazarlar.php" class="yan-menu-link">YAZARLAR</a>
+                    <a href="spor.php" class="yan-menu-link">PUAN DURUMU</a>
+                    
 
                 </nav>
                 

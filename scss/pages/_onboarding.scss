@@ -307,6 +307,17 @@ body {
             display: flex;
             flex-direction: column;
             gap: 20px;
+            overflow-y: auto;
+            &::-webkit-scrollbar {
+        display: none;
+    }
+
+    // Firefox için scroll çubuğunu gizler
+    scrollbar-width: none; 
+
+    // IE ve Edge için scroll çubuğunu gizler
+    -ms-overflow-style: none;
+        flex-grow: 1;
 
             a {
                 text-decoration: none;
