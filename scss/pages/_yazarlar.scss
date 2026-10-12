@@ -1,0 +1,399 @@
+.yazarlar-icerik {
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    html.dark-mode & {
+        background-color: #121214; // Dark mode desteği
+    }
+
+    .yazarlar-baslik-haber7 {
+        padding-bottom: 12px;
+        padding-top: 12px;
+        padding-left: 10px;
+        font-weight: 600;
+        font-size: 15px;
+        border-bottom: 4px solid #f2f2f2;
+        color: brown;
+
+    }
+
+    .yazarlar-listesi {
+        display: flex;
+        flex-direction: column;
+
+        .yazar-karti {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 14px 0;
+            border-bottom: 3px solid #f2f2f2; 
+
+            html.dark-mode & {
+                border-bottom: 1px solid #2a2a2e;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &__sol {
+                flex-shrink: 0;
+
+                .yazar-karti__profil {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    background-color: #e5e5ea;
+                    display: block;
+                    margin-left:10px;
+
+                    html.dark-mode & {
+                        background-color: #2c2c2e; 
+                    }
+                }
+            }
+
+            &__sag {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                overflow: hidden;
+
+                .yazar-karti__isim {
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: #111111; 
+                    margin: 0;
+
+                    html.dark-mode & {
+                        color: #ffffff;
+                    }
+                }
+
+                .yazar-karti__sonYazi {
+                    font-size: 13px;
+                    font-weight: 400;
+                    color: #555555; 
+                    margin: 0;
+                    line-height: 1.4;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    html.dark-mode & {
+                        color: #d1d1d6;
+                    }
+                }
+            }
+        }
+    }
+
+    .yazarlar-baslik-konuk{
+        padding-bottom: 12px;
+        padding-top: 12px;
+        padding-left: 10px;
+        font-weight: 600;
+        font-size: 15px;
+        border-bottom: 4px solid #f2f2f2;
+        border-top: 5px solid #f2f2f2;
+        color: rgb(122, 75, 75);
+    }
+
+    .yazarlar-baslik-alinti {
+        padding-bottom: 12px;
+        padding-top: 12px;
+        padding-left: 10px;
+        font-weight: 600;
+        font-size: 15px;
+        border-bottom: 4px solid #f2f2f2;
+        border-top: 5px solid #f2f2f2;
+        color: rgb(237, 190, 35);
+    }
+}
+
+.yazar-karti {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.02);
+        
+        html.dark-mode & {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+    }
+}
+
+
+.yazar-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+
+    &.aktif {
+        opacity: 1;
+        visibility: visible;
+
+        .yazar-modal__icerikKutu {
+            transform: scale(1);
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__icerikKutu {
+        position: relative;
+        width: 90%;
+        max-width: 420px;
+        max-height: 70vh;
+        background-color: #ffffff;
+        border-radius: 10px; 
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        transform: scale(0.96);
+        transition: transform 0.25s ease;
+        z-index: 2;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+
+        html.dark-mode & {
+            background-color: #1e1e24;
+            color: #ffffff;
+        }
+    }
+
+    &__ustBar {
+        position: absolute;
+        top: 3px;
+        left: 10px;
+        z-index: 10;
+        display: flex;
+        justify-content: flex-end;
+
+        .yazar-modal__kapatBtn {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 700;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+    }
+
+    &__profilKarti {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 40px 20px 20px 20px;
+        background: rgb(236, 205, 205);
+        border-bottom: 1px solid #eeeeee;
+
+
+        html.dark-mode & {
+            border-bottom: 1px solid #2a2a2e;
+        }
+
+        .yazar-modal__avatar {
+            width: 67px;
+            height: 75px;
+            border-radius: 20%;
+            object-fit: cover;
+            background-color: #e5e5ea;
+            border: 2px solid #ffffff;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+
+            html.dark-mode & {
+                border-color: #2c2c32;
+            }
+        }
+
+        .yazar-modal__profilBilgi {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+
+            .yazar-modal__yazarAdi {
+                font-size: 14px;
+                font-weight: 800;
+                color: #ffffff;
+                margin: 0;
+                letter-spacing: -0.2px;
+                html.dark-mode & { color: #ffffff; }
+                background-color: #866263;
+                padding:3px;
+            }
+
+            .yazar-modal__unvan {
+                font-size: 11px;
+                font-weight: 700;
+                color: #8c8c8c;
+                letter-spacing: 0.8px;
+                margin-bottom:5px;
+            }
+
+            .yazar-modal__tumYazilari {
+                font-size: 11px;
+                font-weight: 700;
+                color: #866263; 
+            
+                text-decoration: none;
+                margin-top: 2px;
+                display: inline-block;
+                &:hover { text-decoration: underline; }
+            }
+        }
+    }
+
+    &__yaziAlani {
+        padding: 22px 20px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        flex-grow: 1;
+
+        .yazar-modal__yaziBaslik {
+            font-size: 18px;
+            font-weight: 800;
+            color: #111111;
+            margin: 0 0 14px 0;
+            line-height: 1.35;
+            letter-spacing: -0.3px;
+            html.dark-mode & { color: #ffffff; }
+        }
+
+        .yazar-modal__yaziMetni {
+            font-size: 13.5px;
+            font-weight: 400;
+            color: #333333;
+            line-height: 1.65;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            
+            p {
+                margin: 0;
+            }
+
+            html.dark-mode & { color: #d1d1d6; }
+        }
+    }
+}
+
+.tum-yazilar-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    &.aktif {
+        visibility: visible;
+        opacity: 1;
+
+        .tum-yazilar-modal__container {
+            transform: translateY(0);
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    &__container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        max-height: 55vh; 
+        background-color: #ffffff; 
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(100%);
+        transition: transform 0.5s cubic-bezier(0.1, 0.9, 0.2, 1);
+        box-shadow: 0 -6px 25px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        overflow-y: auto;
+
+        html.dark-mode & {
+            background-color: #1e1e24;
+            color: #ffffff;
+        }
+    }
+
+    &__body {
+        padding: 5px 20px 20px 20px;
+        overflow-y: auto; 
+        -webkit-overflow-scrolling: touch;
+        flex-grow: 1;
+
+        .yazi-item {
+            padding: 14px 0;
+            border-bottom: 1px solid #f2f2f2;
+            cursor: pointer;
+
+            html.dark-mode & {
+                border-bottom-color: #2a2a2e;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &__tarih {
+                display: block;
+                font-size: 11px;
+                font-weight: 700;
+                color: #866263;
+                margin-bottom: 4px;
+            }
+
+            &__baslik {
+                margin: 0;
+                font-size: 14px;
+                font-weight: 600;
+                color: #111111;
+                line-height: 1.4;
+
+                html.dark-mode & {
+                    color: #ffffff;
+                }
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}

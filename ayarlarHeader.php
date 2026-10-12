@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayarlar</title>
+    <title><?php echo $titleBaslik; ?></title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap-grid.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
     <script src="js/tema.js"></script>
@@ -14,7 +14,7 @@
 
 <main class="ayarlar-sayfa">
     <div class="mobil-cerceve">
-        <div class="ayarlar-ust-bar">
+        <div class="ayarlar-ust-bar" style="background-color: <?php echo isset($ustBarRengi) ? $ustBarRengi : '#ffffff'; ?>">
             <button type="button" onclick="history.back()" class="ayarlar-sol-btn">
                 <?php if ($ikonTuru === 'close'): ?>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -27,5 +27,5 @@
                     </svg>
                 <?php endif; ?>
             </button>
-            <h1 class="ayarlar-baslik"><?php echo $ayarBaslik; ?></h1>
+            <h1 class="ayarlar-baslik"><?php echo $ayarBaslik;?></h1>
         </div>

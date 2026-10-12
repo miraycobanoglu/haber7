@@ -1,6 +1,8 @@
 <?php
 $ayarBaslik = isset($ayarBaslik) ? $ayarBaslik : "Ayarlar";
 $ikonTuru = isset($ikonTuru) ? $ikonTuru : "back";
+$titleBaslik = isset($titleBaslik) ? $titleBaslik : "Ayarlar";
+
 include 'ayarlarHeader.php';
 ?>
 
