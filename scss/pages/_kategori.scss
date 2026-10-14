@@ -26,7 +26,7 @@
             .manset-slayt {
                 position: relative;
                 display: block;
-                height: 233px;
+                height: 300px;
                 overflow: hidden;
                 text-decoration: none;
 
@@ -46,6 +46,7 @@
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
+                    object-position: center;
                 }
 
                 .manset-baslik {
