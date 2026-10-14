@@ -14,18 +14,18 @@
 
 <main class="ayarlar-sayfa">
     <div class="mobil-cerceve">
-        <div class="ayarlar-ust-bar" style="background-color: <?php echo isset($ustBarRengi) ? $ustBarRengi : '#ffffff'; ?>">
+        <div class="ayarlar-ust-bar" style="background-color: <?php echo isset($ustBarRengi) ? $ustBarRengi : '#ffffff'; ?>; <?php if (isset($ustBarYuksekligi)) { echo 'height: ' . $ustBarYuksekligi . ';'; } ?>">
             <button type="button" onclick="history.back()" class="ayarlar-sol-btn">
                 <?php if ($ikonTuru === 'close'): ?>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="<?php echo isset($ayarlarSolBtnRengi) ? $ayarlarSolBtnRengi : '#111111'; ?>" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                      <line x1="18" y1="6" x2="6" y2="18"></line>
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
                 <?php else: ?>
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="<?php echo isset($ayarlarSolBtnRengi) ? $ayarlarSolBtnRengi : '#111111'; ?>" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M15 18l-6-6 6-6"/>
                     </svg>
                 <?php endif; ?>
             </button>
-            <h1 class="ayarlar-baslik"><?php echo $ayarBaslik;?></h1>
+            <h1 class="ayarlar-baslik" <?php if (isset($ayarBaslikRengi)) { echo 'style="color: ' . $ayarBaslikRengi . '"'; } ?>><?php echo $ayarBaslik; ?></h1>
         </div>

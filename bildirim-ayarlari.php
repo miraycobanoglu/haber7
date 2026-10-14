@@ -3,7 +3,11 @@ $ayarBaslik = "Bildirim Ayarları";
 $ikonTuru = "back"; 
 include 'ayarlarHeader.php';
 ?>
-
+<style>
+    html.dark-mode .ayarlar-ust-bar {
+        background-color: #1e1e24 !important; 
+    }
+</style>
 <div class="bildirim-icerik">
     <div class="bildirim-icerik__grup-baslik">Bildirim Alınacak Kategoriler</div>
     <div class="bildirim-icerik__kategoriler">

@@ -6,7 +6,7 @@
     position:relative;
 
     html.dark-mode & {
-        background-color: #121214; // Dark mode desteği
+        background-color: #121214; 
     }
 
     .yazarlar-baslik-haber7 {
@@ -17,6 +17,9 @@
         font-size: 15px;
         border-bottom: 4px solid #f2f2f2;
         color: brown;
+                    html.dark-mode & {
+                border-bottom-color: #2a2a2e;
+            }
 
     }
 
@@ -101,6 +104,11 @@
         border-bottom: 4px solid #f2f2f2;
         border-top: 5px solid #f2f2f2;
         color: rgb(122, 75, 75);
+
+                html.dark-mode & {
+                border-bottom-color: #2a2a2e;
+                border-top: #2a2a2e;
+            }
     }
 
     .yazarlar-baslik-alinti {
@@ -112,6 +120,10 @@
         border-bottom: 4px solid #f2f2f2;
         border-top: 5px solid #f2f2f2;
         color: rgb(237, 190, 35);
+        html.dark-mode & {
+                border-bottom-color: #2a2a2e;
+                border-top: #2a2a2e;
+            }
     }
 }
 

@@ -2,9 +2,14 @@
 $ayarBaslik = isset($ayarBaslik) ? $ayarBaslik : "Ayarlar";
 $ikonTuru = isset($ikonTuru) ? $ikonTuru : "back";
 $titleBaslik = isset($titleBaslik) ? $titleBaslik : "Ayarlar";
-
+$ustBarRengi = "#ffffff";
 include 'ayarlarHeader.php';
 ?>
+<style>
+    html.dark-mode .ayarlar-ust-bar {
+        background-color: #1e1e24 !important; 
+    }
+</style>
 
         <div class="ayarlar-liste">
             <a href="gorunum-ayarlari.php" class="ayar-item">

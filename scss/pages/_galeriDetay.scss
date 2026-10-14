@@ -39,7 +39,9 @@ body.detay-body {
         display: flex;
         align-items: center;
         justify-content: center;
-        text-decoration: none;
+        background-color: transparent;
+        border: none;
+
         html.dark-mode & {
             svg path{
                 stroke:white;

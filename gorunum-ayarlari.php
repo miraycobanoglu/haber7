@@ -3,6 +3,11 @@ $ayarBaslik = "Görünüm Ayarları";
 $ikonTuru = "back"; 
 include 'ayarlarHeader.php';
 ?>
+<style>
+    html.dark-mode .ayarlar-ust-bar {
+        background-color: #1e1e24 !important; 
+    }
+</style>
 
         <div class="gorunum-icerik">
             <div class="gorunum-icerik__grup-baslik">Görünüş</div>

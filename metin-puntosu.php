@@ -3,6 +3,11 @@ $ayarBaslik = "Metin Puntosu";
 $ikonTuru = "close"; 
 include 'ayarlarHeader.php';
 ?>
+<style>
+    html.dark-mode .ayarlar-ust-bar {
+        background-color: #1e1e24 !important; 
+    }
+</style>
 
 <div class="metin-puntosu-kapsayıcı"> 
     <div class="metin-puntosu-metini">
