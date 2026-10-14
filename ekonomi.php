@@ -7,7 +7,6 @@ $ayarlarSolBtnRengi = "#ffffff";
 $ustBarYuksekligi = "55px";
 $ikonTuru = "back";
 
-// Ekonomi Manşetleri
 $mansetler = [
     ['id' => 101, 'tip' => 'foto',  'resim' => 'images/cumhurbaskani.png',    'baslik' => "Merkez Bankası faiz kararını açıkladı! İşte piyasalara ilk yansıması"],
     ['id' => 102, 'tip' => 'foto',  'resim' => 'images/manset-sürm.png',      'baslik' => "Altın fiyatlarında rekor üstüne rekor! Gram ve çeyrek altında son durum"],
@@ -21,7 +20,6 @@ $mansetler = [
     ['id' => 110, 'tip' => 'video', 'resim' => 'images/Sürmanşet.png',        'baslik' => "Otomotiv piyasasında sıfır ve ikinci el dengeleri değişiyor"],
 ];
 
-// Ekonomi Haberleri
 $haberler = [
     ['id' => 111, 'tip' => 'foto',  'resim' => 'images/sondakika1.png',     'tarih' => '14 Ekim 2026, 14:15', 'baslik' => "Piyasalarda kritik gün! Gözler FED ve TCMB'nin açıklamalarında"],
     ['id' => 112, 'tip' => 'video', 'resim' => 'images/sondakika2.png',     'tarih' => '14 Ekim 2026, 13:40', 'baslik' => "Altın borcu olanlar dikkat! Uzman isimden flaş uyarı geldi"],
@@ -31,6 +29,5 @@ $haberler = [
     ['id' => 116, 'tip' => 'video', 'resim' => 'images/cumhurbaskani.png',  'tarih' => '14 Ekim 2026, 09:10', 'baslik' => "Sanayi üretiminde pozitif ivme: Üretim ve istihdam rakamları açıklandı"],
 ];
 
-// Ortak şablonu dahil ediyoruz
 include 'kategoriSablon.php';
 

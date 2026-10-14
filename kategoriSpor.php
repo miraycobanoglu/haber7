@@ -7,7 +7,6 @@ $ayarlarSolBtnRengi = "#ffffff";
 $ustBarYuksekligi = "55px";
 $ikonTuru = "back";
 
-// Spor Manşetleri
 $mansetler = [
     ['id' => 1,  'tip' => 'foto',  'resim' => 'images/manşet-sürm.png',      'baslik' => "Hoffenheim maçı öncesi Beşiktaş'ta Dusan Vlahovic şoku!"],
     ['id' => 2,  'tip' => 'foto',  'resim' => 'images/manşet-sürm2.png',     'baslik' => "Fotoğraflarla Aston Villa - Fenerbahçe maçının öncesi"],
@@ -21,7 +20,6 @@ $mansetler = [
     ['id' => 10, 'tip' => 'video', 'resim' => 'images/sondakika2.png',       'baslik' => "Basketbolda milli maç heyecanı başlıyor"],
 ];
 
-// Spor Haberleri
 $haberler = [
     ['id' => 11, 'tip' => 'foto',  'resim' => 'images/sondakika1.png',     'tarih' => '14 Ekim 2026, 09:54', 'baslik' => "G.Saray, Barcelona'ya kaybetti! Türkiye ilk 8'e ne kadar yakın? Ülke puanında son durum"],
     ['id' => 12, 'tip' => 'video', 'resim' => 'images/sondakika2.png',     'tarih' => '14 Ekim 2026, 10:52', 'baslik' => "Tümer Metin'den maç sonrası Galatasaraylı yıldız için flaş sözler! 'Gırtlağına yapışırım'"],
@@ -31,5 +29,4 @@ $haberler = [
     ['id' => 16, 'tip' => 'video', 'resim' => 'images/Manşet.png',         'tarih' => '14 Ekim 2026, 08:20', 'baslik' => "Trabzonspor'da yeni sezon hedefleri belirlendi"],
 ];
 
-// Ortak şablonu dahil ediyoruz
 include 'kategoriSablon.php';

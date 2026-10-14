@@ -1,15 +1,11 @@
 <?php
-// Bu dosya kategori sayfalarının (Spor, Ekonomi, Sağlık vb.) ortak HTML şablonudur.
-// Sayfalarda ($ayarBaslik, $ustBarRengi, $mansetler, $haberler vb.) tanımlandıktan sonra çağrılır.
 include 'ayarlarHeader.php';
 ?>
 
-<!-- Slick slider css -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
 
 <div class="kategori-icerik">
 
-    <!-- Manşet slider -->
     <div class="kategori-manset">
         <div class="manset-slider">
             <?php foreach ($mansetler as $manset): ?>
@@ -32,7 +28,6 @@ include 'ayarlarHeader.php';
         </div>
     </div>
 
-    <!-- Haber listesi -->
     <div class="haber-listesi">
         <?php foreach ($haberler as $haber): ?>
             <a href="galeriDetay.php?tip=<?php echo $haber['tip']; ?>&id=<?php echo $haber['id']; ?>" class="haber-satir">
