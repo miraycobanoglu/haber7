@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    // Manşet slider
+    // manşet slider
     $('.manset-slider').slick({
         arrows: true,
         prevArrow: $('.manset-ok-sol'),

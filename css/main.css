@@ -1079,8 +1079,9 @@ body.detay-body {
 
 .detay-header {
   display: flex;
+  height: 55px;
   align-items: center;
-  padding: 15px 20px;
+  padding: 15px 14px;
   background-color: #ffffff;
   border-bottom: alt 1px solid #eee;
   position: sticky;
