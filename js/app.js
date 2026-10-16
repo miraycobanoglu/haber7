@@ -212,8 +212,151 @@ async function fetchNamazVakitleri(sehir) {
         document.getElementById('namazVakitAdi').textContent = secilenVakit.ad;
         document.getElementById('namazVakitSaat').textContent = secilenVakit.saat;
 
+        // Modal içindeki vakitleri ve detayları güncelle
+        guncelleEzanModal(vakitlerListesi, timings, data.data.date);
+
     } catch (error) {
         console.error('Namaz vakitleri alınamadı:', error);
+    }
+}
+
+// namaz vakti modal
+let ezanSayacInterval = null;
+
+function guncelleEzanModal(vakitler, timings, dateInfo) {
+    const elImsak   = document.getElementById('ezanVakitImsak');
+    const elGunes   = document.getElementById('ezanVakitGunes');
+    const elOgle    = document.getElementById('ezanVakitOgle');
+    const elIkindi  = document.getElementById('ezanVakitIkindi');
+    const elAksam   = document.getElementById('ezanVakitAksam');
+    const elYatsi   = document.getElementById('ezanVakitYatsi');
+
+    if (elImsak && timings) elImsak.textContent = timings.Fajr;
+    if (elGunes && timings) elGunes.textContent = timings.Sunrise;
+    if (elOgle && timings) elOgle.textContent = timings.Dhuhr;
+    if (elIkindi && timings) elIkindi.textContent = timings.Asr;
+    if (elAksam && timings) elAksam.textContent = timings.Maghrib;
+    if (elYatsi && timings) elYatsi.textContent = timings.Isha;
+
+    const simdi = new Date();
+    const simdikiDakika = simdi.getHours() * 60 + simdi.getMinutes();
+
+    let aktifVakit = vakitler[vakitler.length - 1]; 
+    let sonrakiVakit = vakitler[0]; 
+
+    for (let i = 0; i < vakitler.length; i++) {
+        let [s, d] = vakitler[i].saat.split(':').map(Number);
+        let vakitDakika = s * 60 + d;
+
+        if (simdikiDakika < vakitDakika) {
+            sonrakiVakit = vakitler[i];
+            aktifVakit = i === 0 ? vakitler[vakitler.length - 1] : vakitler[i - 1];
+            break;
+        }
+    }
+
+    const elAktifAd = document.getElementById('ezanModalAktifVakitAdi');
+    const elAktifSaat = document.getElementById('ezanModalAktifSaat');
+    if (elAktifAd) elAktifAd.textContent = aktifVakit.ad;
+    if (elAktifSaat) elAktifSaat.textContent = aktifVakit.saat;
+
+    document.querySelectorAll('.ezan-vakit-satir').forEach(satir => {
+        if (satir.getAttribute('data-vakit') === aktifVakit.ad) {
+            satir.classList.add('ezan-vakit-satir--aktif');
+            const svg = satir.querySelector('svg');
+            if (svg) svg.setAttribute('stroke', '#da2027');
+        } else {
+            satir.classList.remove('ezan-vakit-satir--aktif');
+            const svg = satir.querySelector('svg');
+            if (svg) svg.removeAttribute('stroke');
+        }
+    });
+
+    const aylar = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+    const gunler = ['Pazar', 'Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi'];
+    const elMiladi = document.getElementById('ezanModalMiladiTarih');
+
+    if (elMiladi) {
+        elMiladi.textContent = `${simdi.getDate()} ${aylar[simdi.getMonth()]} ${gunler[simdi.getDay()]}`;
+    }
+
+
+    const elKalanBaslik = document.getElementById('ezanKalanBaslik');
+    const elKalanSayac = document.getElementById('ezanKalanSayac');
+    if (elKalanBaslik) {
+        elKalanBaslik.textContent = `${sonrakiVakit.ad} Vaktine Kalan Süre`;
+    }
+
+    if (ezanSayacInterval) clearInterval(ezanSayacInterval);
+
+    function sayaciGuncelle() {
+        if (!elKalanSayac) return;
+        const suan = new Date();
+        let [hedefSaat, hedefDakika] = sonrakiVakit.saat.split(':').map(Number);
+        
+        let hedefTarih = new Date(suan);
+        hedefTarih.setHours(hedefSaat, hedefDakika, 0, 0);
+
+        // Eğer hedef saat geçmişse yarına aittir (örneğin gece vakti İmsak)
+        if (hedefTarih <= suan) {
+            hedefTarih.setDate(hedefTarih.getDate() + 1);
+        }
+
+        let farkSn = Math.floor((hedefTarih - suan) / 1000);
+        if (farkSn < 0) farkSn = 0;
+
+        let saat = Math.floor(farkSn / 3600);
+        let dakika = Math.floor((farkSn % 3600) / 60);
+        let saniye = farkSn % 60;
+
+        elKalanSayac.textContent = 
+            String(saat).padStart(2, '0') + ':' +
+            String(dakika).padStart(2, '0') + ':' +
+            String(saniye).padStart(2, '0');
+    }
+
+    sayaciGuncelle();
+    ezanSayacInterval = setInterval(sayaciGuncelle, 1000);
+}
+
+function initEzanModal() {
+    const namazVaktiAlani = document.querySelector('.namaz-vakti');
+    const modal = document.getElementById('ezanVaktiModal');
+    const overlay = document.getElementById('ezanVaktiOverlay');
+    const kapatBtn = document.getElementById('ezanModalKapatBtn');
+    const modalSehirSecim = document.getElementById('ezanModalSehirSecim');
+    const anasayfaSehirSecim = document.getElementById('sehirSecim');
+
+    if (!modal) return;
+
+    if (namazVaktiAlani) {
+        namazVaktiAlani.style.cursor = 'pointer';
+        namazVaktiAlani.addEventListener('click', () => {
+            modal.classList.add('aktif');
+            if (modalSehirSecim && anasayfaSehirSecim) {
+                modalSehirSecim.value = anasayfaSehirSecim.value;
+            }
+        });
+    }
+
+    const modalKapat = () => modal.classList.remove('aktif');
+
+    if (overlay) overlay.addEventListener('click', modalKapat);
+    if (kapatBtn) kapatBtn.addEventListener('click', modalKapat);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('aktif')) {
+            modalKapat();
+        }
+    });
+
+    if (modalSehirSecim && anasayfaSehirSecim) {
+        modalSehirSecim.addEventListener('change', (e) => {
+            const yeniSehir = e.target.value;
+            anasayfaSehirSecim.value = yeniSehir;
+            fetchHavaDurumu(yeniSehir);
+            fetchNamazVakitleri(yeniSehir);
+        });
     }
 }
 
@@ -223,13 +366,13 @@ document.getElementById('sehirSecim').addEventListener('change', (e) => {
     fetchNamazVakitleri(secilenSehir);
 });
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
     let baslangicSehri = document.getElementById('sehirSecim').value;
     fetchHavaDurumu(baslangicSehri);
     fetchNamazVakitleri(baslangicSehri);
+    initEzanModal();
 });
+
 
 
 

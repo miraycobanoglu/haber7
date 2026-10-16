@@ -77,7 +77,7 @@
                     </div>
                     </div>
                 </div>
-                <div class="namaz-vakti">
+                <div class="namaz-vakti" id="namazVaktiAlani" style="cursor: pointer;">
                     <span><svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <rect width="27" height="27" fill="url(#pattern0_13_269)"/>
                     <defs>
@@ -285,6 +285,182 @@
             </section>
 
         </div>
+
+<!-- ezan vakti popup -->
+
+<div class="ezan-vakti-modal" id="ezanVaktiModal">
+    <div class="ezan-vakti-modal__container">
+
+        <div class="ezan-sehir-bar">
+            <div class="ezan-sehir-secim-sarmal">
+                <select class="ezan-sehir-select" id="ezanModalSehirSecim">
+                    <option value="Istanbul" selected>İstanbul</option>
+                    <option value="Ankara">Ankara</option>
+                    <option value="Izmir">İzmir</option>
+                    <option value="Bursa">Bursa</option>
+                </select>
+                <svg class="ezan-sehir-ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
+            <button type="button" class="ezan-modal-kapat" id="ezanModalKapatBtn" aria-label="Kapat">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <div class="ezan-vakti-modal__body">
+            <div class="ezan-aktif-kart">
+                <div class="ezan-aktif-kart__sol">
+                    <div class="ezan-aktif-kart__vakit-baslik">
+                        <span class="ezan-hilal-ikon">☾</span>
+                        <span id="ezanModalAktifVakitAdi">Yatsı</span>
+                    </div>
+                    <div class="ezan-aktif-kart__saat-alani">
+                        <svg class="ezan-saat-ikon" viewBox="0 0 24 24" fill="none" stroke="#da2027" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span class="ezan-aktif-saat" id="ezanModalAktifSaat">21:43</span>
+                    </div>
+                    <div class="ezan-aktif-kart__tarih" id="ezanModalMiladiTarih">12 Temmuz Pazartesi</div>
+                </div>
+                <div class="ezan-aktif-kart__sag">
+                    <svg class="ezan-cami-svg" width="105" height="105" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="48" fill="#BFE8FA"/>
+                        <path d="M20 38c0-4 4-7 8-6 2-5 8-8 13-5 3-2 8-2 11 1 3-1 6 0 7 2 3 0 5 3 5 6H20z" fill="#E6F6FD" opacity="0.8"/>
+                        <path d="M48 28c0-3 3-5 6-4 2-4 6-6 10-4 2-2 6-2 9 1 2-1 5 0 6 2 2 0 4 2 4 5H48z" fill="#E6F6FD" opacity="0.8"/>
+                        <rect x="23" y="28" width="3" height="45" fill="#88B8CE"/>
+                        <polygon points="23,28 24.5,21 26,28" fill="#88B8CE"/>
+                        <rect x="74" y="28" width="3" height="45" fill="#88B8CE"/>
+                        <polygon points="74,28 75.5,21 77,28" fill="#88B8CE"/>
+                        <rect x="33" y="24" width="3.5" height="48" fill="#A8CADB"/>
+                        <polygon points="33,24 34.75,17 36.5,24" fill="#A8CADB"/>
+                        <rect x="64" y="24" width="3.5" height="48" fill="#A8CADB"/>
+                        <polygon points="64,24 65.75,17 67.5,24" fill="#A8CADB"/>
+                        <rect x="28" y="56" width="44" height="26" fill="#DDD5C8"/>
+                        <rect x="24" y="66" width="52" height="18" fill="#CFC4B5"/>
+                        <rect x="20" y="74" width="60" height="12" fill="#BFAF9E"/>
+                        <path d="M46 72c0-3 1.8-5 4-5s4 2 4 5v12h-8V72z" fill="#8C7D6E"/>
+                        <path d="M36 74c0-2.2 1.3-4 3-4s3 1.8 3 4v8h-6V74z" fill="#9C8D7E"/>
+                        <path d="M58 74c0-2.2 1.3-4 3-4s3 1.8 3 4v8h-6V74z" fill="#9C8D7E"/>
+                        <circle cx="34" cy="62" r="2.2" fill="#8C7D6E"/>
+                        <circle cx="42" cy="61" r="2.2" fill="#8C7D6E"/>
+                        <circle cx="50" cy="60" r="2.2" fill="#8C7D6E"/>
+                        <circle cx="58" cy="61" r="2.2" fill="#8C7D6E"/>
+                        <circle cx="66" cy="62" r="2.2" fill="#8C7D6E"/>
+                        <path d="M26 80c0-2 1-3 2.5-3s2.5 1 2.5 3v4h-5v-4z" fill="#8C7D6E"/>
+                        <path d="M70 80c0-2 1-3 2.5-3s2.5 1 2.5 3v4h-5v-4z" fill="#8C7D6E"/>
+                        <path d="M30 56c0-7 6-12 13-12v12H30z" fill="#8FAAB8"/>
+                        <path d="M57 56c0-7 6-12 13-12v12H57z" fill="#7E9AA8"/>
+                        <path d="M37 54c0-10 6-18 13-18s13 8 13 18H37z" fill="#698B9E"/>
+                        <line x1="50" y1="36" x2="50" y2="31" stroke="#9A8570" stroke-width="1.2"/>
+                        <circle cx="50" cy="30" r="1.5" fill="#9A8570"/>
+                        <rect x="25" y="32" width="4" height="42" fill="#C5B8A7"/>
+                        <polygon points="25,32 27,22 29,32" fill="#5F7F91"/>
+                        <rect x="24" y="44" width="6" height="2" fill="#9A8570"/>
+                        <rect x="71" y="32" width="4" height="42" fill="#C5B8A7"/>
+                        <polygon points="71,32 73,22 75,32" fill="#5F7F91"/>
+                        <rect x="70" y="44" width="6" height="2" fill="#9A8570"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="ezan-kalan-kutu">
+                <div class="ezan-kalan-kutu__baslik" id="ezanKalanBaslik">İmsak Vaktine Kalan Süre</div>
+                <div class="ezan-kalan-kutu__sayac" id="ezanKalanSayac">04:54:36</div>
+            </div>
+
+            <div class="ezan-vakitler-bolumu">
+                <div class="ezan-vakitler-bolumu__baslik">Vakitler</div>
+
+
+                <div class="ezan-vakit-satir" data-vakit="İmsak">
+                    <div class="ezan-vakit-satir__sol">
+                        <span class="ezan-vakit-satir__ikon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2v4M4.93 7.93l2.83 2.83M19.07 7.93l-2.83 2.83M2 18h20M5 18a7 7 0 0 1 14 0"/>
+                            </svg>
+                        </span>
+                        <span class="ezan-vakit-satir__isim">İmsak</span>
+                    </div>
+                    <span class="ezan-vakit-satir__saat" id="ezanVakitImsak">03:44</span>
+                </div>
+
+                <div class="ezan-vakit-satir" data-vakit="Güneş">
+                    <div class="ezan-vakit-satir__sol">
+                        <span class="ezan-vakit-satir__ikon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 3v3M4 14h16M2 18h20M6 14a6 6 0 0 1 12 0"/>
+                            </svg>
+                        </span>
+                        <span class="ezan-vakit-satir__isim">Güneş</span>
+                    </div>
+                    <span class="ezan-vakit-satir__saat" id="ezanVakitGunes">05:25</span>
+                </div>
+
+                <!-- öğle -->
+                <div class="ezan-vakit-satir" data-vakit="Öğle">
+                    <div class="ezan-vakit-satir__sol">
+                        <span class="ezan-vakit-satir__ikon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="4"/>
+                                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+                            </svg>
+                        </span>
+                        <span class="ezan-vakit-satir__isim">Öğle</span>
+                    </div>
+                    <span class="ezan-vakit-satir__saat" id="ezanVakitOgle">12:52</span>
+                </div>
+
+                <div class="ezan-vakit-satir" data-vakit="İkindi">
+                    <div class="ezan-vakit-satir__sol">
+                        <span class="ezan-vakit-satir__ikon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 18a5 5 0 0 0-10 0M2 18h20M12 4v4M6.3 7.3l2.8 2.8M17.7 7.3l-2.8 2.8"/>
+                            </svg>
+                        </span>
+                        <span class="ezan-vakit-satir__isim">İkindi</span>
+                    </div>
+                    <span class="ezan-vakit-satir__saat" id="ezanVakitIkindi">16:42</span>
+                </div>
+
+                <div class="ezan-vakit-satir" data-vakit="Akşam">
+                    <div class="ezan-vakit-satir__sol">
+                        <span class="ezan-vakit-satir__ikon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 18h20M7 18a5 5 0 0 1 10 0M12 9v3M6 9l2 2M18 9l-2 2"/>
+                            </svg>
+                        </span>
+                        <span class="ezan-vakit-satir__isim">Akşam</span>
+                    </div>
+                    <span class="ezan-vakit-satir__saat" id="ezanVakitAksam">20:09</span>
+                </div>
+
+                <div class="ezan-vakit-satir ezan-vakit-satir--aktif" data-vakit="Yatsı">
+                    <div class="ezan-vakit-satir__sol">
+                        <span class="ezan-vakit-satir__ikon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#da2027" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                            </svg>
+                        </span>
+                        <span class="ezan-vakit-satir__isim">Yatsı</span>
+                    </div>
+                    <span class="ezan-vakit-satir__saat" id="ezanVakitYatsi">21:43</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
         <?php 
         include 'footer.php'; 
         ?>
