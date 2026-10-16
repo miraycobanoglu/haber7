@@ -1,5 +1,6 @@
 
             <?php 
+            $pageTitle = '<img src="images/logo.png" alt="Haber7 Logo" class="site-logo">'; 
         include 'header.php'; 
         ?>
 

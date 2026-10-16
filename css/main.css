@@ -952,6 +952,12 @@ html.dark-mode .sehir-select {
     transform: translate(-100%, 0);
   }
 }
+.site-logo {
+  width: 130px;
+  height: 28px;
+  margin-left: 25px;
+}
+
 .content-container {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
