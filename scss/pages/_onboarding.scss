@@ -1013,8 +1013,24 @@ body {
         transform: translate(-100%, 0);
     }
 }
-.site-logo{
-    width:130px;
-    height:28px;
-    margin-left:25px;
+.site-logo {
+    width: 130px;
+    height: 28px;
+    margin-left: 25px;
+
+    &--dark {
+        display: none;
+    }
+    &--light {
+        display: block;
+    }
+}
+
+html.dark-mode {
+    .site-logo--dark {
+        display: block;
+    }
+    .site-logo--light {
+        display: none;
+    }
 }

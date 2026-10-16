@@ -957,6 +957,19 @@ html.dark-mode .sehir-select {
   height: 28px;
   margin-left: 25px;
 }
+.site-logo--dark {
+  display: none;
+}
+.site-logo--light {
+  display: block;
+}
+
+html.dark-mode .site-logo--dark {
+  display: block;
+}
+html.dark-mode .site-logo--light {
+  display: none;
+}
 
 .content-container {
   overflow-y: auto;

@@ -1,6 +1,9 @@
 
             <?php 
-            $pageTitle = '<img src="images/logo.png" alt="Haber7 Logo" class="site-logo">'; 
+            $pageTitle = '
+                <img src="images/logo.png" alt="Haber7 Logo" class="site-logo site-logo--light">
+                <img src="images/logo-dark.png" alt="Haber7 Logo" class="site-logo site-logo--dark">
+            '; 
         include 'header.php'; 
         ?>
 
