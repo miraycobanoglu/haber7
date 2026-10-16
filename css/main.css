@@ -2765,4 +2765,220 @@ html.dark-mode .kategori-icerik .haber-listesi .haber-satir .haber-baslik {
   color: #c8c8c8;
 }
 
+.arama-sayfa {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  background-color: #ffffff;
+}
+.arama-sayfa::-webkit-scrollbar {
+  display: none;
+}
+html.dark-mode .arama-sayfa {
+  background-color: #121214;
+}
+
+.arama-kapsayici {
+  padding: 16px 14px 24px 14px;
+}
+
+.arama-form {
+  margin-bottom: 12px;
+}
+.arama-form__kutu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.arama-form__input {
+  width: 100%;
+  height: 42px;
+  padding: 0 44px 0 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  background-color: #f8f9fa;
+  color: #111111;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+.arama-form__input:focus {
+  border-color: #da2027;
+  background-color: #ffffff;
+}
+html.dark-mode .arama-form__input {
+  background-color: #1e1e24;
+  border-color: #2a2a2e;
+  color: #ffffff;
+}
+html.dark-mode .arama-form__input:focus {
+  border-color: #da2027;
+  background-color: #25252b;
+}
+.arama-form__buton {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 42px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #777777;
+  transition: color 0.2s;
+}
+.arama-form__buton:hover {
+  color: #da2027;
+}
+html.dark-mode .arama-form__buton {
+  color: #aaaaaa;
+}
+html.dark-mode .arama-form__buton:hover {
+  color: #da2027;
+}
+
+.arama-bilgi {
+  padding: 18px 10px;
+  text-align: center;
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 8px;
+}
+html.dark-mode .arama-bilgi {
+  border-bottom-color: #2a2a2e;
+}
+.arama-bilgi__metin {
+  margin: 0;
+  font-size: 14px;
+  color: #555555;
+  line-height: 1.5;
+  font-weight: 500;
+}
+html.dark-mode .arama-bilgi__metin {
+  color: #a1a1a6;
+}
+.arama-bilgi__kelime {
+  font-style: italic;
+  font-weight: 700;
+  color: #222222;
+}
+html.dark-mode .arama-bilgi__kelime {
+  color: #ffffff;
+}
+.arama-bilgi__sayi {
+  font-weight: 700;
+  color: #222222;
+}
+html.dark-mode .arama-bilgi__sayi {
+  color: #ffffff;
+}
+
+.arama-liste {
+  display: flex;
+  flex-direction: column;
+}
+
+.arama-kart {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid #f0f0f0;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s;
+}
+.arama-kart:hover {
+  opacity: 0.88;
+}
+html.dark-mode .arama-kart {
+  border-bottom-color: #222226;
+}
+.arama-kart__resim-alani {
+  flex: 0 0 120px;
+  width: 120px;
+  height: 80px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+html.dark-mode .arama-kart__resim-alani {
+  background-color: #2a2a2e;
+}
+.arama-kart__resim {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.arama-kart__detay {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.arama-kart__ust {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.arama-kart__kategori {
+  color: #0b57d0;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+html.dark-mode .arama-kart__kategori {
+  color: #4dabf7;
+}
+.arama-kart__zaman {
+  color: #8e8e93;
+  font-weight: 600;
+}
+.arama-kart__baslik {
+  margin: 2px 0 0 0;
+  font-size: 13.5px;
+  font-weight: 800;
+  line-height: 1.35;
+  color: #111111;
+  letter-spacing: -0.2px;
+}
+html.dark-mode .arama-kart__baslik {
+  color: #ffffff;
+}
+.arama-kart__ozet {
+  margin: 3px 0 0 0;
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: #555555;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+html.dark-mode .arama-kart__ozet {
+  color: #a0a0a5;
+}
+
+.arama-bos {
+  padding: 40px 15px;
+  text-align: center;
+  color: #888888;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+html.dark-mode .arama-bos {
+  color: #777777;
+}
+
 /*# sourceMappingURL=main.css.map */

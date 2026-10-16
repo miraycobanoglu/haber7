@@ -28,20 +28,22 @@
                     </svg>
                     </button>
                 </div>
-                <div class="arama-kutusu">
-                    <input type="text" class="menu-arama-input" placeholder="Arama yap...">
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_428_147)">
-                        <path d="M6.875 11.875C9.63642 11.875 11.875 9.63642 11.875 6.875C11.875 4.11358 9.63642 1.875 6.875 1.875C4.11358 1.875 1.875 4.11358 1.875 6.875C1.875 9.63642 4.11358 11.875 6.875 11.875Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M13.125 13.125L10.4062 10.4062" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_428_147">
-                        <rect width="15" height="15" fill="white"/>
-                        </clipPath>
-                        </defs>
-                    </svg>
-                </div>
+                <form action="arama.php" method="GET" class="arama-kutusu">
+                    <input type="text" name="q" class="menu-arama-input" placeholder="Arama yap..." value="<?php echo isset($_GET['q']) ? htmlspecialchars($_GET['q']) : ''; ?>">
+                    <button type="submit" class="menu-arama-btn" aria-label="Ara" style="position: absolute; left: 3px; top: 50%; transform: translateY(-50%); background: none; border: none; padding: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_428_147)">
+                            <path d="M6.875 11.875C9.63642 11.875 11.875 9.63642 11.875 6.875C11.875 4.11358 9.63642 1.875 6.875 1.875C4.11358 1.875 1.875 4.11358 1.875 6.875C1.875 9.63642 4.11358 11.875 6.875 11.875Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.125 13.125L10.4062 10.4062" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_428_147">
+                            <rect width="15" height="15" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </form>
                 <nav class="yan-menu-linkler">
                     <a href="index.php" class="yan-menu-link">ANASAYFA</a>
                     <a href="galeri.php"class="yan-menu-link ">GALERİ</a>
