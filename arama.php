@@ -2,7 +2,7 @@
 $pageTitle = '<img src="images/logo.png" alt="Haber7 Logo" class="site-logo">';
 include 'header.php';
 
-// URL'den aranan kelimeyi alıyoruz (örn: arama.php?q=Murat+Kurum)
+// URL'den aranan kelimeyi alıyoruz
 $arananKelime = isset($_GET['q']) ? trim($_GET['q']) : '';
 
 // Türkçe karakter uyumlu küçük harfe çevirme yardımcı fonksiyonu
@@ -10,7 +10,7 @@ function kucukHarfYap($metin) {
     return mb_strtolower(str_replace(['I', 'İ'], ['ı', 'i'], (string)$metin), 'UTF-8');
 }
 
-// Tüm haberlerin havuzu (Normalde backendci burayı veritabanından çeker)
+// Tüm haberler
 $tumHaberler = [
     [
         'id' => 1,
@@ -94,7 +94,7 @@ $tumHaberler = [
     ]
 ];
 
-// Aranan kelimeye göre filtreleme yapıyoruz
+
 $sonuclar = [];
 if ($arananKelime !== '') {
     $arananKucuk = kucukHarfYap($arananKelime);
@@ -112,7 +112,7 @@ $sonucSayisi = count($sonuclar);
 <main class="arama-sayfa">
     <div class="arama-kapsayici">
 
-        <!-- Sayfa içi hızlı arama kutusu -->
+        <!-- sayfanın içindeki arama kutusu -->
         <form action="arama.php" method="GET" class="arama-form">
             <div class="arama-form__kutu">
                 <input type="text" name="q" class="arama-form__input" placeholder="Haberlerde ara..." value="<?php echo htmlspecialchars($arananKelime); ?>">
@@ -125,7 +125,7 @@ $sonucSayisi = count($sonuclar);
             </div>
         </form>
 
-        <!-- Sonuç Başlığı (Görseldeki ile birebir) -->
+        <!-- aranan kelime başlığı -->
         <?php if ($arananKelime !== ''): ?>
             <div class="arama-bilgi">
                 <p class="arama-bilgi__metin">
@@ -138,7 +138,7 @@ $sonucSayisi = count($sonuclar);
             </div>
         <?php endif; ?>
 
-        <!-- Haber Listesi (Görseldeki tasarımla birebir) -->
+        <!-- haber listesi -->
         <div class="arama-liste">
             <?php if ($sonucSayisi > 0): ?>
                 <?php foreach ($sonuclar as $haber): ?>
