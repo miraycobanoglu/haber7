@@ -7,7 +7,7 @@ include 'ayarlarHeader.php';
 ?>
 <style>
     html.dark-mode .ayarlar-ust-bar {
-        background-color: #1e1e24 !important; 
+        background-color: #000000ff !important; 
     }
 </style>
 

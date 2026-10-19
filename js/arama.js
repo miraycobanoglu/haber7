@@ -23,4 +23,17 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    // TümSpor header: arama butonuna basınca alttaki paneli aç/kapat
+    const tumSporAramaBtn = document.getElementById('tumSporAramaBtn');
+    const tumSporAramaPanel = document.getElementById('tumSporAramaPanel');
+    if (tumSporAramaBtn && tumSporAramaPanel) {
+        tumSporAramaBtn.addEventListener('click', function () {
+            tumSporAramaBtn.classList.toggle('aktif');
+            tumSporAramaPanel.classList.toggle('acik');
+            if (tumSporAramaPanel.classList.contains('acik')) {
+                tumSporAramaPanel.querySelector('input').focus();
+            }
+        });
+    }
 });
