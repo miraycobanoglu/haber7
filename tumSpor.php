@@ -29,6 +29,76 @@ include 'tumSporVeri.php'; // haber listesi
         <div class="tumSpor-noktalar-alan"></div>
     </div>
 
+    <div class="top-headline row">
+        <div class="col-md-3 top-headline-column">
+            <a href="tumSporDetay.php" title="Alperen Şengün double-double yaptı! Houston Rockets farklı kazandı" target="_blank" class="top-headline-item basketbol">
+						<!-- Image-->
+						<div class="image-container">
+							<img src="images/alperenşengül.png" alt="Alperen Şengün double-double yaptı! Houston Rockets farklı kazandı" class="image">
+                           
+						</div>
+
+						<!-- Category -->
+						<span class="category">Basketbol</span>
+						<!-- Title -->
+						<div class="title">
+							<span>Alperen Şengün double-double yaptı! Houston Rockets farklı kazandı</span>
+						</div>
+             </a>
+        </div>
+            
+         <div class="col-md-3 top-headline-column">
+            <a href="tumSporDetay.php" title="Alperen Şengün double-double yaptı! Houston Rockets farklı kazandı" target="_blank" class="top-headline-item basketbol">
+						<!-- Image-->
+						<div class="image-container">
+							<img src="images/alperenşengül.png" alt="Alperen Şengün double-double yaptı! Houston Rockets farklı kazandı" class="image">
+                           
+						</div>
+
+						<!-- Category -->
+						<span class="category">Basketbol</span>
+						<!-- Title -->
+						<div class="title">
+							<span>Alperen Şengün double-double yaptı! Houston Rockets farklı kazandı</span>
+						</div>
+             </a>
+        </div>
+         <div class="col-md-3 top-headline-column">
+            <a href="tumSporDetay.php" title="Alperen Şengün double-double yaptı! Houston Rockets farklı kazandı" target="_blank" class="top-headline-item basketbol">
+						<!-- Image-->
+						<div class="image-container">
+							<img src="images/alperenşengül.png" alt="Alperen Şengün double-double yaptı! Houston Rockets farklı kazandı" class="image">
+                           
+						</div>
+
+						<!-- Category -->
+						<span class="category">Basketbol</span>
+						<!-- Title -->
+						<div class="title">
+							<span>Alperen Şengün double-double yaptı! Houston Rockets farklı kazandı
+                                Alperen Şengün double-double yaptı! Houston Rockets farklı kazandı
+                            </span>
+						</div>
+             </a>
+        </div>
+         <div class="col-md-3 top-headline-column">
+            <a href="tumSporDetay.php" title="Alperen Şengün double-double yaptı! Houston Rockets farklı kazandı" target="_blank" class="top-headline-item basketbol">
+						<!-- Image-->
+						<div class="image-container">
+							<img src="images/alperenşengül.png" alt="Alperen Şengün double-double yaptı! Houston Rockets farklı kazandı" class="image">
+						</div>
+
+						<!-- Category -->
+						<span class="category">Basketbol</span>
+						<!-- Title -->
+						<div class="title">
+							<span>Alperen Şengün double-double</span>
+						</div>
+             </a>
+        </div>
+
+    </div>
+
 </main>
 
 </div>
