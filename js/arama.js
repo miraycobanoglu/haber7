@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // TümSpor header: arama butonuna basınca alttaki paneli aç/kapat
+    // arama butonuna basınca alttaki paneli aç/kapat
     const tumSporAramaBtn = document.getElementById('tumSporAramaBtn');
     const tumSporAramaPanel = document.getElementById('tumSporAramaPanel');
     if (tumSporAramaBtn && tumSporAramaPanel) {
