@@ -3381,22 +3381,45 @@ html.dark-mode .mobil-container {
   padding-left: 20px;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   cursor: pointer;
+}
+.sagMenu__menu .close-icon {
+  display: none;
 }
 .sagMenu__menu .menu-text {
   color: black;
   font-size: 14px;
-  font-weight: 500;
-}
-.sagMenu__menu .menu-text:hover {
-  color: rgb(2, 110, 2);
+  font-weight: 600;
+  transition: color 0.2s;
 }
 .sagMenu__menu .menu-icon {
   color: black;
+  transition: color 0.2s;
 }
-.sagMenu__menu .menu-icon:hover {
-  color: rgb(2, 110, 2);
+.sagMenu__menu:hover .menu-text,
+.sagMenu__menu:hover .menu-icon,
+.sagMenu__menu:hover .close-icon, .sagMenu__menu.aktif .menu-text,
+.sagMenu__menu.aktif .menu-icon,
+.sagMenu__menu.aktif .close-icon {
+  color: #35741e;
+}
+.sagMenu__menu.aktif .hamburger-icon {
+  display: none;
+}
+.sagMenu__menu.aktif .close-icon {
+  display: block;
+}
+html.dark-mode .sagMenu__menu .menu-text,
+html.dark-mode .sagMenu__menu .menu-icon {
+  color: #ffffff;
+}
+html.dark-mode .sagMenu__menu:hover .menu-text,
+html.dark-mode .sagMenu__menu:hover .menu-icon,
+html.dark-mode .sagMenu__menu:hover .close-icon, html.dark-mode .sagMenu__menu.aktif .menu-text,
+html.dark-mode .sagMenu__menu.aktif .menu-icon,
+html.dark-mode .sagMenu__menu.aktif .close-icon {
+  color: #55a832;
 }
 
 .tumSpor-header-bottom {
@@ -3482,6 +3505,200 @@ html.dark-mode .tumSpor-arama .tumSpor-arama__etiketler {
 }
 html.dark-mode .tumSpor-arama .tumSpor-arama__etiketler a {
   color: #ccc;
+}
+
+.tumSpor-mega-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 60;
+  background-color: #ffffff;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.16);
+  margin-top: 1px;
+}
+.tumSpor-mega-menu.acik {
+  display: block;
+}
+.tumSpor-mega-menu::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: 28px;
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+  transform: rotate(45deg);
+  box-shadow: -2px -2px 3px rgba(0, 0, 0, 0.05);
+  z-index: 2;
+}
+html.dark-mode .tumSpor-mega-menu {
+  background-color: #1a1a1d;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5);
+}
+html.dark-mode .tumSpor-mega-menu::before {
+  background-color: #1a1a1d;
+}
+
+.mega-menu-ust {
+  display: flex;
+  align-items: center;
+  padding: 18px 25px;
+  gap: 25px;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 3;
+}
+.mega-menu-ust a {
+  color: #222222;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
+  position: relative;
+}
+.mega-menu-ust a:not(:first-child)::after {
+  top: -4px;
+  left: -12px;
+  width: 1px;
+  height: 23px;
+  content: "";
+  -webkit-transform: rotate(14deg);
+  -ms-transform: rotate(14deg);
+  transform: rotate(14deg);
+  background: #bfbfbf;
+  position: absolute;
+}
+.mega-menu-ust a:hover {
+  color: #35741e;
+}
+html.dark-mode .mega-menu-ust {
+  background-color: #1a1a1d;
+}
+html.dark-mode .mega-menu-ust a {
+  color: #ffffff;
+}
+html.dark-mode .mega-menu-ust a:hover {
+  color: #55a832;
+}
+
+.mega-menu-ayrac {
+  color: #e2e2e2;
+  font-size: 14px;
+  font-weight: 300;
+  user-select: none;
+}
+html.dark-mode .mega-menu-ayrac {
+  color: #36363a;
+}
+
+.mega-menu-satirlar {
+  background-color: #f3f3f3;
+  padding: 6px 0;
+}
+html.dark-mode .mega-menu-satirlar {
+  background-color: #131315;
+}
+
+.mega-menu-satir {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 25px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.mega-menu-satir:last-child {
+  border-bottom: none;
+}
+.mega-menu-satir__sol {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.mega-menu-satir__linkler {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.mega-menu-satir__linkler a {
+  color: #2b2b2b;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.mega-menu-satir__linkler a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+.mega-menu-satir__sag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  margin-left: auto;
+  transition: opacity 0.2s;
+}
+.mega-menu-satir__sag:hover {
+  opacity: 0.8;
+}
+.mega-menu-satir__sag--haber7 {
+  color: #d31d24;
+}
+.mega-menu-satir__sag--ekotrent {
+  color: #1c80b8;
+}
+.mega-menu-satir__sag--gezelim {
+  color: #4ba09b;
+}
+.mega-menu-satir__sag--yasemin {
+  color: #962862;
+}
+html.dark-mode .mega-menu-satir {
+  border-bottom-color: #222226;
+}
+html.dark-mode .mega-menu-satir__linkler a {
+  color: #c5c5c5;
+}
+html.dark-mode .mega-menu-satir__linkler a:hover {
+  color: #ffffff;
+}
+
+.link-vurgu--yasemin {
+  color: #962862 !important;
+}
+html.dark-mode .link-vurgu--yasemin {
+  color: #d15697 !important;
+}
+
+.mega-menu-badge {
+  width: 96px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 12.5px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
+.mega-menu-badge--haber7 {
+  background-color: #d31d24;
+}
+.mega-menu-badge--ekotrent {
+  background-color: #1c80b8;
+}
+.mega-menu-badge--gezelim {
+  background-color: #4ba09b;
+}
+.mega-menu-badge--yasemin {
+  background-color: #962862;
 }
 
 /* --- TümSpor manşet slider (slick slider) --- */

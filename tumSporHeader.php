@@ -8,7 +8,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap-grid.min.css" rel="stylesheet">
     <script src="js/tema.js"></script>
     <script src="js/arama.js?v=<?php echo time(); ?>"></script>
-    <!-- Slick Slider CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
 </head>
@@ -96,18 +95,20 @@
                 </svg>
             </button>  
 
-            <div class="sagMenu__menu">
+            <div class="sagMenu__menu" id="tumSporMenuBtn">
                 <span class="menu-text">MENÜ</span>
-                <svg class="menu-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M4 6H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    <path d="M4 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    <path d="M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-</svg>
+                <svg class="menu-icon hamburger-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M4 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <svg class="close-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
             </div>
 
         </div>
 
-        <!-- arama butonuna basınca altta açılan arama paneli -->
         <div class="tumSpor-arama" id="tumSporAramaPanel">
             <form action="arama.php" method="GET" class="tumSpor-arama__form">
                 <input type="text" name="q" class="tumSpor-arama__input" placeholder="Site İçinde Ara..." required>
@@ -119,13 +120,92 @@
                 </button>
             </form>
             <div class="tumSpor-arama__etiketler">
-<svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M13 0C13.3167 0 13.6167 0.0708332 13.9 0.2125C14.1833 0.354166 14.4167 0.55 14.6 0.8L20 8L14.6 15.2C14.4167 15.45 14.1833 15.6458 13.9 15.7875C13.6167 15.9292 13.3167 16 13 16H2C1.45 16 0.979166 15.8042 0.5875 15.4125C0.195833 15.0208 0 14.55 0 14V2C0 1.45 0.195833 0.979166 0.5875 0.5875C0.979166 0.195833 1.45 0 2 0H13ZM11.2875 7.2875C11.0958 7.47917 11 7.71667 11 8C11 8.28333 11.0958 8.52083 11.2875 8.7125C11.4792 8.90417 11.7167 9 12 9C12.2833 9 12.5208 8.90417 12.7125 8.7125C12.9042 8.52083 13 8.28333 13 8C13 7.71667 12.9042 7.47917 12.7125 7.2875C12.5208 7.09583 12.2833 7 12 7C11.7167 7 11.4792 7.09583 11.2875 7.2875ZM7.7875 7.2875C7.59583 7.47917 7.5 7.71667 7.5 8C7.5 8.28333 7.59583 8.52083 7.7875 8.7125C7.97917 8.90417 8.21667 9 8.5 9C8.78333 9 9.02083 8.90417 9.2125 8.7125C9.40417 8.52083 9.5 8.28333 9.5 8C9.5 7.71667 9.40417 7.47917 9.2125 7.2875C9.02083 7.09583 8.78333 7 8.5 7C8.21667 7 7.97917 7.09583 7.7875 7.2875ZM4.2875 7.2875C4.09583 7.47917 4 7.71667 4 8C4 8.28333 4.09583 8.52083 4.2875 8.7125C4.47917 8.90417 4.71667 9 5 9C5.28333 9 5.52083 8.90417 5.7125 8.7125C5.90417 8.52083 6 8.28333 6 8C6 7.71667 5.90417 7.47917 5.7125 7.2875C5.52083 7.09583 5.28333 7 5 7C4.71667 7 4.47917 7.09583 4.2875 7.2875Z" fill="#8C8C8C"/>
-</svg>
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 0C13.3167 0 13.6167 0.0708332 13.9 0.2125C14.1833 0.354166 14.4167 0.55 14.6 0.8L20 8L14.6 15.2C14.4167 15.45 14.1833 15.6458 13.9 15.7875C13.6167 15.9292 13.3167 16 13 16H2C1.45 16 0.979166 15.8042 0.5875 15.4125C0.195833 15.0208 0 14.55 0 14V2C0 1.45 0.195833 0.979166 0.5875 0.5875C0.979166 0.195833 1.45 0 2 0H13ZM11.2875 7.2875C11.0958 7.47917 11 7.71667 11 8C11 8.28333 11.0958 8.52083 11.2875 8.7125C11.4792 8.90417 11.7167 9 12 9C12.2833 9 12.5208 8.90417 12.7125 8.7125C12.9042 8.52083 13 8.28333 13 8C13 7.71667 12.9042 7.47917 12.7125 7.2875C12.5208 7.09583 12.2833 7 12 7C11.7167 7 11.4792 7.09583 11.2875 7.2875ZM7.7875 7.2875C7.59583 7.47917 7.5 7.71667 7.5 8C7.5 8.28333 7.59583 8.52083 7.7875 8.7125C7.97917 8.90417 8.21667 9 8.5 9C8.78333 9 9.02083 8.90417 9.2125 8.7125C9.40417 8.52083 9.5 8.28333 9.5 8C9.5 7.71667 9.40417 7.47917 9.2125 7.2875C9.02083 7.09583 8.78333 7 8.5 7C8.21667 7 7.97917 7.09583 7.7875 7.2875ZM4.2875 7.2875C4.09583 7.47917 4 7.71667 4 8C4 8.28333 4.09583 8.52083 4.2875 8.7125C4.47917 8.90417 4.71667 9 5 9C5.28333 9 5.52083 8.90417 5.7125 8.7125C5.90417 8.52083 6 8.28333 6 8C6 7.71667 5.90417 7.47917 5.7125 7.2875C5.52083 7.09583 5.28333 7 5 7C4.71667 7 4.47917 7.09583 4.2875 7.2875Z" fill="#8C8C8C"/>
+                </svg>
                 <a href="arama.php?q=Galatasaray">#Galatasaray</a>
                 <a href="arama.php?q=Fenerbahçe">#Fenerbahçe</a>
                 <a href="arama.php?q=Beşiktaş">#Beşiktaş</a>
                 <a href="arama.php?q=Trabzonspor">#Trabzonspor</a>
+            </div>
+        </div>
+
+        <div class="tumSpor-mega-menu" id="tumSporMegaMenu">
+            <div class="mega-menu-ust">
+                <a href="tumSporDetay.php" class="mega-menu-ust-item">Atletizm</a>
+                <a href="tumSporDetay.php" class="mega-menu-ust-item">Motor Sporları</a>
+                <a href="tumSporDetay.php" class="mega-menu-ust-item">Spor Medyası</a>
+                <a href="tumSporDetay.php" class="mega-menu-ust-item">Olimpiyat</a>
+                <a href="tumSporDetay.php" class="mega-menu-ust-item">Euro 2024</a>
+            </div>
+
+            <div class="mega-menu-satirlar">
+                <div class="mega-menu-satir">
+                    <div class="mega-menu-satir__sol">
+                        <span class="mega-menu-badge mega-menu-badge--haber7">HABER7</span>
+                        <div class="mega-menu-satir__linkler">
+                            <a href="tumSporDetay.php">Son Dakika</a>
+                            <a href="tumSporDetay.php">Gazete Manşetleri</a>
+                            <a href="tumSporDetay.php">Gündem</a>
+                        </div>
+                    </div>
+                    <a href="tumSporDetay.php" class="mega-menu-satir__sag mega-menu-satir__sag--haber7">
+                        Son Dakika Haberleri
+                        <svg width="8" height="10" viewBox="0 0 8 10" fill="currentColor">
+                            <path d="M1 1L7 5L1 9V1Z"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="mega-menu-satir">
+                    <div class="mega-menu-satir__sol">
+                        <span class="mega-menu-badge mega-menu-badge--ekotrent">EKOTRENT</span>
+                        <div class="mega-menu-satir__linkler">
+                            <a href="tumSporDetay.php" >Kobi</a>
+                        </div>
+                    </div>
+                    <a href="tumSporDetay.php" class="mega-menu-satir__sag mega-menu-satir__sag--ekotrent">
+                        Ekonomi Haberleri
+                        <svg width="8" height="10" viewBox="0 0 8 10" fill="currentColor">
+                            <path d="M1 1L7 5L1 9V1Z"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="mega-menu-satir">
+                    <div class="mega-menu-satir__sol">
+                        <span class="mega-menu-badge mega-menu-badge--gezelim">GEZELİM</span>
+                        <div class="mega-menu-satir__linkler">
+                            <a href="tumSporDetay.php">Rotalar</a>
+                            <a href="tumSporDetay.php">Dünyayı Geziyorum</a>
+                            <a href="tumSporDetay.php">Gezi Rehberi</a>
+                        </div>
+                    </div>
+                    <a href="tumSporDetay.php" class="mega-menu-satir__sag mega-menu-satir__sag--gezelim">
+                        Seyahat Haberleri
+                        <svg width="8" height="10" viewBox="0 0 8 10" fill="currentColor">
+                            <path d="M1 1L7 5L1 9V1Z"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="mega-menu-satir">
+                    <div class="mega-menu-satir__sol">
+                        <span class="mega-menu-badge mega-menu-badge--yasemin">YASEMİN</span>
+                        <div class="mega-menu-satir__linkler">
+                            <a href="tumSporDetay.php">Anne-Çocuk</a>
+                            <a href="tumSporDetay.php">Masiva</a>
+                            <a href="tumSporDetay.php">Sağlık</a>
+                            <a href="tumSporDetay.php" class="link-vurgu--yasemin">Güzellik</a>
+                        </div>
+                    </div>
+                    <a href="tumSporDetay.php" class="mega-menu-satir__sag mega-menu-satir__sag--yasemin">
+                        Yasemin.com
+                        <svg width="8" height="10" viewBox="0 0 8 10" fill="currentColor">
+                            <path d="M1 1L7 5L1 9V1Z"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
 
