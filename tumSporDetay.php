@@ -2,7 +2,6 @@
 include 'tumSporHeader.php';
 include 'tumSporVeri.php';
 
-// Linkteki ?id=... değerini al, dizide o id'li haberi bul
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 $haber = null;
 foreach ($tumSporHaberler as $h) {
