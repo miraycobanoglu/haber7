@@ -143,7 +143,7 @@
                 <div class="mega-menu-satir">
                     <div class="mega-menu-satir__sol">
                         <span class="mega-menu-badge mega-menu-badge--haber7">HABER7</span>
-                        <div class="mega-menu-satir__linkler">
+                        <div class="mega-menu-satir__linkler satir-link-haber7">
                             <a href="tumSporDetay.php">Son Dakika</a>
                             <a href="tumSporDetay.php">Gazete Manşetleri</a>
                             <a href="tumSporDetay.php">Gündem</a>
@@ -160,7 +160,7 @@
                 <div class="mega-menu-satir">
                     <div class="mega-menu-satir__sol">
                         <span class="mega-menu-badge mega-menu-badge--ekotrent">EKOTRENT</span>
-                        <div class="mega-menu-satir__linkler">
+                        <div class="mega-menu-satir__linkler satir-link-ekotrent">
                             <a href="tumSporDetay.php" >Kobi</a>
                         </div>
                     </div>
@@ -175,7 +175,7 @@
                 <div class="mega-menu-satir">
                     <div class="mega-menu-satir__sol">
                         <span class="mega-menu-badge mega-menu-badge--gezelim">GEZELİM</span>
-                        <div class="mega-menu-satir__linkler">
+                        <div class="mega-menu-satir__linkler satir-link-gezelim">
                             <a href="tumSporDetay.php">Rotalar</a>
                             <a href="tumSporDetay.php">Dünyayı Geziyorum</a>
                             <a href="tumSporDetay.php">Gezi Rehberi</a>
@@ -192,7 +192,7 @@
                 <div class="mega-menu-satir">
                     <div class="mega-menu-satir__sol">
                         <span class="mega-menu-badge mega-menu-badge--yasemin">YASEMİN</span>
-                        <div class="mega-menu-satir__linkler">
+                        <div class="mega-menu-satir__linkler satir-link-yasemin">
                             <a href="tumSporDetay.php">Anne-Çocuk</a>
                             <a href="tumSporDetay.php">Masiva</a>
                             <a href="tumSporDetay.php">Sağlık</a>

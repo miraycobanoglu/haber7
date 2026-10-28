@@ -3627,10 +3627,7 @@ html.dark-mode .mega-menu-satirlar {
   font-weight: 700;
   text-decoration: none;
   transition: color 0.2s;
-}
-.mega-menu-satir__linkler a:hover {
-  color: #000000;
-  text-decoration: underline;
+  text-decoration: none;
 }
 .mega-menu-satir__sag {
   display: inline-flex;
@@ -3667,11 +3664,20 @@ html.dark-mode .mega-menu-satir__linkler a:hover {
   color: #ffffff;
 }
 
-.link-vurgu--yasemin {
-  color: #962862 !important;
+.satir-link-haber7 a:hover {
+  color: #d31d24;
 }
-html.dark-mode .link-vurgu--yasemin {
-  color: #d15697 !important;
+
+.satir-link-ekotrent a:hover {
+  color: #1c80b8;
+}
+
+.satir-link-gezelim a:hover {
+  color: #4ba09b;
+}
+
+.satir-link-yasemin a:hover {
+  color: #962862;
 }
 
 .mega-menu-badge {
@@ -3969,6 +3975,16 @@ html.dark-mode .bolum-baslik__cizgi {
   overflow: hidden;
   text-decoration: none;
   background-color: #000000;
+  width: 100%;
+}
+.mozaik-kart--dikey {
+  height: 400px;
+}
+.mozaik-kart--kucuk, .mozaik-kart-blok2 {
+  height: 196px;
+}
+.mozaik-kart--genis {
+  height: 196px;
 }
 .mozaik-kart__resim {
   width: 100%;
@@ -4006,84 +4022,6 @@ html.dark-mode .bolum-baslik__cizgi {
 }
 .mozaik-kart:hover .mozaik-kart__baslik {
   transform: translateY(-5px);
-}
-
-.mozaik-blok-1 {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 18px;
-  height: 400px;
-  margin-bottom: 18px;
-}
-.mozaik-blok-1 .mozaik-kart--dikey {
-  height: 400px;
-}
-.mozaik-blok-1__sag {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 18px;
-  height: 400px;
-}
-.mozaik-blok-1__ust {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-}
-.mozaik-blok-1__ust .mozaik-kart {
-  flex: 1;
-  height: 100%;
-  min-width: 0;
-}
-.mozaik-blok-1 .mozaik-kart--genis {
-  height: 100%;
-}
-
-.mozaik-blok-2 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  height: 191px;
-  margin-bottom: 18px;
-}
-.mozaik-blok-2 .mozaik-kart {
-  width: 100%;
-  height: 100%;
-}
-
-.mozaik-blok-3 {
-  display: flex;
-  gap: 18px;
-  height: 400px;
-  margin-bottom: 25px;
-}
-.mozaik-blok-3__sol {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  height: 400px;
-  min-width: 0;
-}
-.mozaik-blok-3 .mozaik-kart--genis {
-  flex: 1;
-  width: 100%;
-  min-height: 0;
-}
-.mozaik-blok-3__alt {
-  display: flex;
-  gap: 18px;
-  flex: 1;
-  min-height: 0;
-}
-.mozaik-blok-3__alt .mozaik-kart {
-  flex: 1;
-  height: 100%;
-  min-width: 0;
-}
-.mozaik-blok-3 .mozaik-kart--dikey {
-  flex: 1;
-  height: 400px;
-  min-width: 0;
 }
 
 .bolum-baslik--lacivert {
@@ -4341,7 +4279,7 @@ html.dark-mode .one-cikan-kart:hover .one-cikan-kart__baslik {
   border-radius: 2px;
   background-color: #d4d4d4;
   overflow: hidden;
-  height: 625px;
+  height: 632px;
   position: relative;
 }
 .puan-durumu-kart__baslik {
@@ -4548,9 +4486,8 @@ html.dark-mode .multimedya-baslik-yazi {
 
 .multimedya-baslik-cizgi {
   flex: 1;
-  height: 3px;
+  height: 3.5px;
   background: linear-gradient(to right, #8da65a 0%, #8da65a 45%, #35741e 45%, #35741e 100%);
-  border-radius: 2px;
 }
 html.dark-mode .multimedya-baslik-cizgi {
   background: linear-gradient(to right, #405528 0%, #405528 45%, #55a832 45%, #55a832 100%);
@@ -4625,6 +4562,7 @@ html.dark-mode .multimedya-nokta {
   align-items: flex-start;
   gap: 12px;
   z-index: 2;
+  transition: transform 0.3s ease;
 }
 .multimedya-kart--buyuk .multimedya-kart__serit {
   width: 5px;
@@ -4643,7 +4581,7 @@ html.dark-mode .multimedya-nokta {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
   transition: transform 0.3s ease;
 }
-.multimedya-kart--buyuk:hover .multimedya-kart__baslik {
+.multimedya-kart--buyuk:hover .multimedya-kart__icerik {
   transform: translateY(-5px);
 }
 .multimedya-kart--kucuk {
@@ -4741,6 +4679,96 @@ html.dark-mode .multimedya-nokta {
 }
 .multimedya-rozet--play svg {
   margin-left: 2px;
+}
+
+.digerHaberler-baslikAlani {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+  margin-bottom: 15px;
+}
+.digerHaberler-baslikAlani__yazi {
+  font-size: 20px;
+  font-weight: 900;
+  color: #35741e;
+  letter-spacing: 0.5px;
+  margin: 0;
+  white-space: nowrap;
+  line-height: 1;
+}
+.digerHaberler-baslikAlani__cizgi {
+  flex: 1;
+  height: 3.5px;
+  background: linear-gradient(to right, #8da65a 0%, #8da65a 20%, #35741e 20%, #35741e 100%);
+}
+
+.digerHaberler-kart--buyuk {
+  height: 200px;
+}
+
+.digerHaberler-kart--kucuk {
+  height: 200px;
+}
+
+.digerHaberler-kart {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  background-color: #000000;
+  width: 100%;
+}
+.digerHaberler-kart__resim {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+}
+.digerHaberler-kart::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+.digerHaberler-kart__icerik {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  right: 10px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease;
+}
+.digerHaberler-kart:hover .digerHaberler-kart__icerik {
+  transform: translateY(-5px);
+}
+.digerHaberler-kart__alan {
+  font-size: 10px;
+  line-height: 10px;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  display: block;
+  font-weight: 900;
+}
+.digerHaberler-kart__baslik {
+  font-size: 15px;
+  color: white;
+}
+.digerHaberler-kart__serit {
+  width: 5px;
+  height: 42px;
+  background-color: #35741e;
+  flex-shrink: 0;
+  margin-top: 3px;
+  border-radius: 1px;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=main.css.map */

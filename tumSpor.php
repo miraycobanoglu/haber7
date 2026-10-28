@@ -106,95 +106,117 @@ include 'tumSporVeri.php'; // haber listesi
                 <span class="bolum-baslik__cizgi"></span>
             </div>
 
-            <div class="mozaik-blok-1">
-                <a href="tumSporDetay.php" class="mozaik-kart mozaik-kart--dikey">
-                    <img src="images/tumspor1.png" alt="Haber" class="mozaik-kart__resim">
-                    <div class="mozaik-kart__icerik">
-                        <h3 class="mozaik-kart__baslik">Genç oyuncunun Salah heyecanı: 'Televizyonda izleyerek büyüdük'</h3>
-                    </div>
-                </a>
-
-                <div class="mozaik-blok-1__sag">
-                    <div class="mozaik-blok-1__ust">
-                        <a href="tumSporDetay.php" class="mozaik-kart">
-                            <img src="images/tumspor2.png" alt="Haber" class="mozaik-kart__resim">
-                            <div class="mozaik-kart__icerik">
-                                <h3 class="mozaik-kart__baslik">Icardi'ye LaLiga'dan 2 talip! Transferin önünde tek engel var</h3>
-                            </div>
-                        </a>
-
-                        <a href="tumSporDetay.php" class="mozaik-kart">
-                            <img src="images/tumspor3.png" alt="Haber" class="mozaik-kart__resim">
-                            <div class="mozaik-kart__icerik">
-                                <h3 class="mozaik-kart__baslik">Crystal Palace cephesinden Beşiktaş açıklaması: Büyük şans!</h3>
-                            </div>
-                        </a>
-                    </div>
-
-                    <a href="tumSporDetay.php" class="mozaik-kart mozaik-kart--genis">
-                        <img src="images/tumspor4.png" alt="Haber" class="mozaik-kart__resim">
+            <div class="row g-2 mb-2">
+                <div class="col-4">
+                    <a href="tumSporDetay.php" class="mozaik-kart mozaik-kart--dikey">
+                        <img src="images/tumspor1.png" alt="Haber" class="mozaik-kart__resim">
                         <div class="mozaik-kart__icerik">
-                            <h3 class="mozaik-kart__baslik">TFF 2. Lig ekibinden Vincenzo Montella'ya teşekkür</h3>
+                            <h3 class="mozaik-kart__baslik">Genç oyuncunun Salah heyecanı: 'Televizyonda izleyerek büyüdük'</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-8">
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <a href="tumSporDetay.php" class="mozaik-kart mozaik-kart--kucuk">
+                                <img src="images/tumspor2.png" alt="Haber" class="mozaik-kart__resim">
+                                <div class="mozaik-kart__icerik">
+                                    <h3 class="mozaik-kart__baslik">Icardi'ye LaLiga'dan 2 talip! Transferin önünde tek engel var</h3>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-6">
+                            <a href="tumSporDetay.php" class="mozaik-kart mozaik-kart--kucuk">
+                                <img src="images/tumspor3.png" alt="Haber" class="mozaik-kart__resim">
+                                <div class="mozaik-kart__icerik">
+                                    <h3 class="mozaik-kart__baslik">Crystal Palace cephesinden Beşiktaş açıklaması: Büyük şans!</h3>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-12">
+                            <a href="tumSporDetay.php" class="mozaik-kart mozaik-kart--genis">
+                                <img src="images/tumspor4.png" alt="Haber" class="mozaik-kart__resim">
+                                <div class="mozaik-kart__icerik">
+                                    <h3 class="mozaik-kart__baslik">TFF 2. Lig ekibinden Vincenzo Montella'ya teşekkür</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-2 mb-2">
+                <div class="col-4">
+                    <a href="tumSporDetay.php" class="mozaik-kart mozaik-kart--kucuk">
+                        <img src="images/tumspor5.png" alt="Haber" class="mozaik-kart__resim">
+                        <div class="mozaik-kart__icerik">
+                            <h3 class="mozaik-kart__baslik">Galatasaray'ın gençleri Fransa'da Lille'e direnemedi!</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-4">
+                    <a href="tumSporDetay.php" class="mozaik-kart mozaik-kart--kucuk">
+                        <img src="images/tumspor1.png" alt="Haber" class="mozaik-kart__resim">
+                        <div class="mozaik-kart__icerik">
+                            <h3 class="mozaik-kart__baslik">Colin Kazım Richards'ın sözleşmesi feshedildi!</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-4">
+                    <a href="tumSporDetay.php" class="mozaik-kart mozaik-kart--kucuk">
+                        <img src="images/tumspor2.png" alt="Haber" class="mozaik-kart__resim">
+                        <div class="mozaik-kart__icerik">
+                            <h3 class="mozaik-kart__baslik">Beşiktaş Avrupa'da 267. kez sahaya çıkacak!</h3>
                         </div>
                     </a>
                 </div>
             </div>
 
-            <div class="mozaik-blok-2">
-                <a href="tumSporDetay.php" class="mozaik-kart mozaik-kart-blok2">
-                    <img src="images/tumspor5.png" alt="Haber" class="mozaik-kart__resim">
-                    <div class="mozaik-kart__icerik">
-                        <h3 class="mozaik-kart__baslik">Galatasaray'ın gençleri Fransa'da Lille'e direnemedi!</h3>
-                    </div>
-                </a>
-
-                <a href="tumSporDetay.php" class="mozaik-kart mozaik-kart-blok2">
-                    <img src="images/tumspor1.png" alt="Haber" class="mozaik-kart__resim">
-                    <div class="mozaik-kart__icerik">
-                        <h3 class="mozaik-kart__baslik">Colin Kazım Richards'ın sözleşmesi feshedildi!</h3>
-                    </div>
-                </a>
-
-                <a href="tumSporDetay.php" class="mozaik-kart mozaik-kart-blok2">
-                    <img src="images/tumspor2.png" alt="Haber" class="mozaik-kart__resim">
-                    <div class="mozaik-kart__icerik">
-                        <h3 class="mozaik-kart__baslik">Beşiktaş Avrupa'da 267. kez sahaya çıkacak!</h3>
-                    </div>
-                </a>
-            </div>
-
-            <div class="mozaik-blok-3">
-                <div class="mozaik-blok-3__sol">
-                    <a href="tumSporDetay.php" class="mozaik-kart mozaik-kart--genis">
-                        <img src="images/fatihterim.png" alt="Haber" class="mozaik-kart__resim">
-                        <div class="mozaik-kart__icerik">
-                            <h3 class="mozaik-kart__baslik">Okan Buruk Fatih Terim'i takip etmeye devam ediyor!</h3>
+            <div class="row g-2 mb-4">
+                <div class="col-8">
+                    <div class="row g-2">
+                        <div class="col-12">
+                            <a href="tumSporDetay.php" class="mozaik-kart mozaik-kart--genis">
+                                <img src="images/fatihterim.png" alt="Haber" class="mozaik-kart__resim">
+                                <div class="mozaik-kart__icerik">
+                                    <h3 class="mozaik-kart__baslik">Okan Buruk Fatih Terim'i takip etmeye devam ediyor!</h3>
+                                </div>
+                            </a>
                         </div>
-                    </a>
 
-                    <div class="mozaik-blok-3__alt">
-                        <a href="tumSporDetay.php" class="mozaik-kart">
-                            <img src="images/tumspor3.png" alt="Haber" class="mozaik-kart__resim">
-                            <div class="mozaik-kart__icerik">
-                                <h3 class="mozaik-kart__baslik">Slavia Prag'ın hocasından Kadıköy sözleri: Birbirimizi duyamadık</h3>
-                            </div>
-                        </a>
+                        <div class="col-6">
+                            <a href="tumSporDetay.php" class="mozaik-kart mozaik-kart--kucuk">
+                                <img src="images/tumspor3.png" alt="Haber" class="mozaik-kart__resim">
+                                <div class="mozaik-kart__icerik">
+                                    <h3 class="mozaik-kart__baslik">Slavia Prag'ın hocasından Kadıköy sözleri: Birbirimizi duyamadık</h3>
+                                </div>
+                            </a>
+                        </div>
 
-                        <a href="tumSporDetay.php" class="mozaik-kart">
-                            <img src="images/tumspor4.png" alt="Haber" class="mozaik-kart__resim">
-                            <div class="mozaik-kart__icerik">
-                                <h3 class="mozaik-kart__baslik">Kerem Aktürkoğlu ıslıklandı! Verdiği karşılık gündem oldu</h3>
-                            </div>
-                        </a>
+                        <div class="col-6">
+                            <a href="tumSporDetay.php" class="mozaik-kart mozaik-kart--kucuk">
+                                <img src="images/tumspor4.png" alt="Haber" class="mozaik-kart__resim">
+                                <div class="mozaik-kart__icerik">
+                                    <h3 class="mozaik-kart__baslik">Kerem Aktürkoğlu ıslıklandı! Verdiği karşılık gündem oldu</h3>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <a href="tumSporDetay.php" class="mozaik-kart mozaik-kart--dikey">
-                    <img src="images/tumspor5.png" alt="Haber" class="mozaik-kart__resim">
-                    <div class="mozaik-kart__icerik">
-                        <h3 class="mozaik-kart__baslik">UEFA Avrupa Ligi'nde 3. hafta heyecanı! İşte maç programı</h3>
-                    </div>
-                </a>
+                <div class="col-4">
+                    <a href="tumSporDetay.php" class="mozaik-kart mozaik-kart--dikey">
+                        <img src="images/tumspor5.png" alt="Haber" class="mozaik-kart__resim">
+                        <div class="mozaik-kart__icerik">
+                            <h3 class="mozaik-kart__baslik">UEFA Avrupa Ligi'nde 3. hafta heyecanı! İşte maç programı</h3>
+                        </div>
+                    </a>
+                </div>
             </div>
 
             <div class="bolum-baslik bolum-baslik--lacivert">
@@ -559,6 +581,93 @@ include 'tumSporVeri.php'; // haber listesi
                     </a>
                 </div>
             </div>
+        </section>
+
+        <section class="digerHaberler-bolumu">
+            <div class="digerHaberler-baslikAlani">
+                <h2 class="digerHaberler-baslikAlani__yazi">DİĞER HABERLER</h2>
+                <span class="digerHaberler-baslikAlani__cizgi"></span>
+            </div>
+            <div class="row g-3">
+                    <div class="col-6">
+                    <div class="row g-3">
+                    <div class="col-12 g-3">
+                    <a href="tumSporDetay.php" class="digerHaberler-kart digerHaberler-kart--buyuk">
+                        <img src="images/digerHaberler/digerHaberler1.png" alt="Haber" class="digerHaberler-kart__resim">
+                        <div class="digerHaberler-kart__icerik">
+                            <div class="digerHaberler-kart__serit"></div>
+                            <div class="baslik-container">
+                            <div class="digerHaberler-kart__alan">ALT LİGLER</div>
+                            <h3 class="digerHaberler-kart__baslik">Mardin evinde Manisayı'da devirdi!</h3>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="col-6 g-3">
+                    <a href="tumSporDetay.php" class="digerHaberler-kart digerHaberler-kart--kucuk">
+                        <img src="images/digerHaberler/digerHaberler2.png" alt="Haber" class="digerHaberler-kart__resim">
+                        <div class="digerHaberler-kart__icerik">
+                            <div class="baslik-container">
+                            <div class="digerHaberler-kart__alan">ALT LİGLER</div>
+                            <h3 class="digerHaberler-kart__baslik">Mardin evinde Manisayı'da devirdi!</h3>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="col-6 g-3">
+                    <a href="tumSporDetay.php" class="digerHaberler-kart digerHaberler-kart--kucuk">
+                        <img src="images/digerHaberler/digerHaberler2.png" alt="Haber" class="digerHaberler-kart__resim">
+                        <div class="digerHaberler-kart__icerik">
+                            <div class="baslik-container">
+                            <div class="digerHaberler-kart__alan">ALT LİGLER</div>
+                            <h3 class="digerHaberler-kart__baslik">Mardin evinde Manisayı'da devirdi!</h3>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+            </div>
+                <div class="col-6">
+                    <div class="row g-3">
+                   <div class="col-6 g-3">
+                    <a href="tumSporDetay.php" class="digerHaberler-kart digerHaberler-kart--kucuk">
+                        <img src="images/digerHaberler/digerHaberler2.png" alt="Haber" class="digerHaberler-kart__resim">
+                        <div class="digerHaberler-kart__icerik">
+                            <div class="baslik-container">
+                            <div class="digerHaberler-kart__alan">ALT LİGLER</div>
+                            <h3 class="digerHaberler-kart__baslik">Mardin evinde Manisayı'da devirdi!</h3>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="col-6 g-3">
+                    <a href="tumSporDetay.php" class="digerHaberler-kart digerHaberler-kart--kucuk">
+                        <img src="images/digerHaberler/digerHaberler2.png" alt="Haber" class="digerHaberler-kart__resim">
+                        <div class="digerHaberler-kart__icerik">
+                             <div class="baslik-container">
+                            <div class="digerHaberler-kart__alan">ALT LİGLER</div>
+                            <h3 class="digerHaberler-kart__baslik">Mardin evinde Manisayı'da devirdi!</h3>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                     <div class="col-12 g-3">
+                    <a href="tumSporDetay.php" class="digerHaberler-kart digerHaberler-kart--buyuk">
+                        <img src="images/digerHaberler/digerHaberler1.png" alt="Haber" class="digerHaberler-kart__resim">
+                        <div class="digerHaberler-kart__icerik">
+                            <div class="digerHaberler-kart__serit"></div>
+                            <div class="baslik-container">
+                            <div class="digerHaberler-kart__alan">ALT LİGLER</div>
+                            <h3 class="digerHaberler-kart__baslik">Mardin evinde Manisayı'da devirdi!</h3>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+            </div>
+                </div>
+
+            </div>
+            
         </section>
 
 </main>
