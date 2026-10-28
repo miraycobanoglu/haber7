@@ -39,6 +39,10 @@
    height:35px;
    width:110px;
    border-radius:3px;
+   transition: all 0.3 ease;
+   &:hover{
+    background-color: rgb(193, 159, 118);
+   }
     &__icerik{
         font-size:10px;
         font-weight:bold;
@@ -1598,6 +1602,10 @@
     }
 }
 
+.digerHaberler-bolumu{
+    margin-bottom:30px;
+}
+
 .digerHaberler-baslikAlani{
     display: flex;
     align-items: center;
@@ -1695,6 +1703,144 @@
     }
 }
 
+.tumSpor-footer {
+    width: 100%;
+    flex-shrink: 0;
+    background-color: #282828;
+    border-top: 3.5px solid #4a9129;
+    color: #ffffff;
+    margin-top: 40px;
 
+    &__ust {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 26px 20px 22px;
+        gap: 55px;
+    }
 
+    &__logo-alani {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 32px;
+
+        img {
+            width: 124px;
+            max-width: 124px;
+            height: auto;
+            display: block;
+        }
+    }
+
+    &__kolon {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__baslik {
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        margin: 0 0 12px;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+
+        svg {
+            color: #ffffff;
+        }
+    }
+
+    &__liste {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        li a {
+            color: #8c8c8c;
+            font-size: 11px;
+            font-weight: 500;
+            text-decoration: none;
+            line-height: 1.35;
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: #ffffff;
+            }
+        }
+    }
+
+    &__market-butonlar {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__market-link {
+        display: inline-block;
+        transition: opacity 0.2s ease;
+
+        img {
+            height: 30px;
+            width: auto;
+            display: block;
+            border-radius: 4px;
+        }
+
+        &:hover {
+            opacity: 0.85;
+        }
+    }
+
+    &__alt {
+        background-color: #242424;
+        border-top: 1px solid #303030;
+        height: 46px;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__markalar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 29px;
+    }
+
+    &__marka {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        transition: opacity 0.2s ease;
+
+        img {
+            height: 23px;
+            width: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    html.dark-mode & {
+        background-color: #161616;
+        border-top-color: #3e7c1e;
+
+        .tumSpor-footer__alt {
+            background-color: #111111;
+            border-top-color: #222222;
+        }
+    }
+}
 
