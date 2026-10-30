@@ -37,10 +37,10 @@
             <h4 class="tumSpor-footer__baslik">UYGULAMALAR</h4>
             <div class="tumSpor-footer__market-butonlar">
                 <a href="#" class="tumSpor-footer__market-link">
-                    <img src="images/logo.png" alt="App Store">
+                    <img src="images/app-store.png" alt="App Store">
                 </a>
                 <a href="#" class="tumSpor-footer__market-link">
-                    <img src="images/logo.png" alt="Google Play">
+                    <img src="images/app-store.png" alt="Google Play">
                 </a>
             </div>
         </div>

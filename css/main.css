@@ -146,8 +146,7 @@ html.dark-mode .mobile-container {
 .onboarding__logo {
   width: 180px;
   height: 40px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .onboarding__preview {
   flex: 1;
@@ -161,8 +160,7 @@ html.dark-mode .mobile-container {
 .onboarding__preview .onboarding__image {
   width: 286px;
   height: 574px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   border-radius: 8px;
 }
 .onboarding .preview-2 {
@@ -540,8 +538,7 @@ html.dark-mode .ust-bar .header-title {
   display: block;
   flex: 0 0 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   scroll-snap-align: start;
 }
 .ana-icerik .foto-sayac {
@@ -713,8 +710,7 @@ html.dark-mode .ana-icerik .haber-listesi-bolumu {
   width: 100% !important;
   height: 100px;
   border-radius: 6px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .ana-icerik .haber-listesi-bolumu .haber-kartlari-grid .haber-karti__guncelDurum {
   font-size: 10px;
@@ -791,8 +787,7 @@ html.dark-mode .ana-icerik .haber-listesi-bolumu .haber-kartlari-grid .haber-kar
 .ana-icerik .ikinci-manset-alani .banner-slider-wrapper .banner-slide .banner-gorsel {
   width: 100%;
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .ana-icerik .ikinci-manset-alani .banner-slider-wrapper .slick-prev,
 .ana-icerik .ikinci-manset-alani .banner-slider-wrapper .slick-next {
@@ -871,8 +866,7 @@ html.dark-mode .ana-icerik .spor-bolumu {
 }
 .ana-icerik .spor-bolumu .spor-karti img {
   height: 100px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 4px;
   margin-bottom: 8px;
 }
@@ -1030,8 +1024,7 @@ html.dark-mode .gallery-card {
 .gallery-card__image-wrapper img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .gallery-card__content {
   padding-top: 10px;
@@ -1156,8 +1149,7 @@ html.dark-mode .detay-header .detay-baslik-ust {
 .video-wrapper video {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .haber-detay-metin {
@@ -1365,8 +1357,7 @@ html.dark-mode .yorum-yap-alani {
   flex: 0 0 100%;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   scroll-snap-align: start;
 }
 
@@ -1469,8 +1460,7 @@ html.dark-mode .gazete-icerik-alani .gazete-stack-wrapper .gazete-container {
   width: 100%;
   height: auto;
   max-height: 440px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   border-radius: 6px;
   display: block;
 }
@@ -1908,8 +1898,7 @@ html.dark-mode .gorunum-icerik .tema-secim {
 .gorunum-icerik .tema-secim__kart__gorsel img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .gorunum-icerik .tema-secim__kart__isim {
   font-size: 14px;
@@ -2248,9 +2237,7 @@ html.dark-mode .bildirim-icerik__kategoriler {
   justify-content: space-between;
   padding: 12px 20px;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 .ligler__metin {
   font-size: 16px;
@@ -2340,8 +2327,7 @@ html.dark-mode .yazarlar-icerik .yazarlar-listesi .yazar-karti {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   background-color: #e5e5ea;
   display: block;
   margin-left: 10px;
@@ -2500,8 +2486,7 @@ html.dark-mode .yazar-modal__profilKarti {
   width: 67px;
   height: 75px;
   border-radius: 20%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   background-color: #e5e5ea;
   border: 2px solid #ffffff;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
@@ -2714,10 +2699,8 @@ html.dark-mode .kategori-icerik {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 .kategori-icerik .kategori-manset .manset-slider .manset-slayt .manset-baslik {
   position: absolute;
@@ -2781,8 +2764,7 @@ html.dark-mode .kategori-icerik .haber-listesi .haber-satir {
   width: 70px;
   height: 70px;
   border-radius: 6px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .kategori-icerik .haber-listesi .haber-satir .haber-yazi {
   display: flex;
@@ -2956,8 +2938,7 @@ html.dark-mode .arama-kart__resim-alani {
 .arama-kart__resim {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
 }
 .arama-kart__detay {
@@ -3096,8 +3077,7 @@ html.dark-mode .ezan-sehir-bar {
   align-items: center;
 }
 .ezan-sehir-bar .ezan-sehir-secim-sarmal .ezan-sehir-select {
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   -webkit-appearance: none;
   background: none;
   border: none;
@@ -3588,6 +3568,8 @@ html.dark-mode .tumSpor-mega-menu::before {
   width: 1px;
   height: 23px;
   content: "";
+  -webkit-transform: rotate(14deg);
+  -ms-transform: rotate(14deg);
   transform: rotate(14deg);
   background: #bfbfbf;
   position: absolute;
@@ -3609,9 +3591,7 @@ html.dark-mode .mega-menu-ust a:hover {
   color: #e2e2e2;
   font-size: 14px;
   font-weight: 300;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 html.dark-mode .mega-menu-ayrac {
   color: #36363a;
@@ -3772,8 +3752,7 @@ html.dark-mode .tumSpor-icerik {
   display: block;
   width: 100%;
   height: 450px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .tumSpor-slayt__yazi {
   position: absolute;
@@ -3880,8 +3859,7 @@ html.dark-mode .tumSpor-icerik {
 .top-headline-item .image-container .image {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
 }
 .top-headline-item .category {
@@ -4015,8 +3993,7 @@ html.dark-mode .bolum-baslik__cizgi {
 .mozaik-kart__resim {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
 }
@@ -4097,8 +4074,7 @@ html.dark-mode .bolum-baslik--lacivert .bolum-baslik__cizgi {
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   flex-shrink: 0;
   background-color: #e0e0e0;
 }
@@ -4185,7 +4161,7 @@ html.dark-mode .yazar-kart__baslik {
   position: relative;
   text-decoration: none;
   height: 62px;
-  padding-left: 22px;
+  padding-left: 15px;
   box-sizing: border-box;
 }
 .one-cikan-kart__sira {
@@ -4234,8 +4210,7 @@ html.dark-mode .yazar-kart__baslik {
 .one-cikan-kart__resim {
   width: 76px;
   height: 70px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   flex-shrink: 0;
   border-radius: 2px;
   background-color: #cccccc;
@@ -4566,8 +4541,7 @@ html.dark-mode .multimedya-nokta {
 .multimedya-kart__resim {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
 }
 .multimedya-kart::after {
@@ -4756,8 +4730,7 @@ html.dark-mode .multimedya-nokta {
 .digerHaberler-kart__resim {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
   position: relative;
 }
@@ -4904,8 +4877,7 @@ html.dark-mode .multimedya-nokta {
   width: 95px;
   display: block;
   border-radius: 4px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   opacity: 1;
   transition: opacity 0.3s ease;
 }
@@ -5000,3 +4972,5 @@ html.dark-mode .tum-spor-footer .tumSpor-footer__alt {
   background-color: #111111;
   border-top-color: #222222;
 }
+
+/*# sourceMappingURL=main.css.map */
