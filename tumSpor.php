@@ -671,11 +671,4 @@ include 'tumSporVeri.php'; // haber listesi
         </section>
 
 </main>
-</div>
-
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<script src="js/tumSpor.js?v=<?php echo time(); ?>"></script>
-</body>
-</html>
+<?php include 'tumSporFooter.php'; ?>

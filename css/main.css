@@ -146,7 +146,8 @@ html.dark-mode .mobile-container {
 .onboarding__logo {
   width: 180px;
   height: 40px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .onboarding__preview {
   flex: 1;
@@ -160,7 +161,8 @@ html.dark-mode .mobile-container {
 .onboarding__preview .onboarding__image {
   width: 286px;
   height: 574px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 8px;
 }
 .onboarding .preview-2 {
@@ -538,7 +540,8 @@ html.dark-mode .ust-bar .header-title {
   display: block;
   flex: 0 0 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   scroll-snap-align: start;
 }
 .ana-icerik .foto-sayac {
@@ -710,7 +713,8 @@ html.dark-mode .ana-icerik .haber-listesi-bolumu {
   width: 100% !important;
   height: 100px;
   border-radius: 6px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .ana-icerik .haber-listesi-bolumu .haber-kartlari-grid .haber-karti__guncelDurum {
   font-size: 10px;
@@ -787,7 +791,8 @@ html.dark-mode .ana-icerik .haber-listesi-bolumu .haber-kartlari-grid .haber-kar
 .ana-icerik .ikinci-manset-alani .banner-slider-wrapper .banner-slide .banner-gorsel {
   width: 100%;
   display: block;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .ana-icerik .ikinci-manset-alani .banner-slider-wrapper .slick-prev,
 .ana-icerik .ikinci-manset-alani .banner-slider-wrapper .slick-next {
@@ -866,7 +871,8 @@ html.dark-mode .ana-icerik .spor-bolumu {
 }
 .ana-icerik .spor-bolumu .spor-karti img {
   height: 100px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 4px;
   margin-bottom: 8px;
 }
@@ -1024,7 +1030,8 @@ html.dark-mode .gallery-card {
 .gallery-card__image-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .gallery-card__content {
   padding-top: 10px;
@@ -1149,7 +1156,8 @@ html.dark-mode .detay-header .detay-baslik-ust {
 .video-wrapper video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .haber-detay-metin {
@@ -1357,7 +1365,8 @@ html.dark-mode .yorum-yap-alani {
   flex: 0 0 100%;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   scroll-snap-align: start;
 }
 
@@ -1460,7 +1469,8 @@ html.dark-mode .gazete-icerik-alani .gazete-stack-wrapper .gazete-container {
   width: 100%;
   height: auto;
   max-height: 440px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 6px;
   display: block;
 }
@@ -1898,7 +1908,8 @@ html.dark-mode .gorunum-icerik .tema-secim {
 .gorunum-icerik .tema-secim__kart__gorsel img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .gorunum-icerik .tema-secim__kart__isim {
   font-size: 14px;
@@ -2237,7 +2248,9 @@ html.dark-mode .bildirim-icerik__kategoriler {
   justify-content: space-between;
   padding: 12px 20px;
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .ligler__metin {
   font-size: 16px;
@@ -2327,7 +2340,8 @@ html.dark-mode .yazarlar-icerik .yazarlar-listesi .yazar-karti {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-color: #e5e5ea;
   display: block;
   margin-left: 10px;
@@ -2486,7 +2500,8 @@ html.dark-mode .yazar-modal__profilKarti {
   width: 67px;
   height: 75px;
   border-radius: 20%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-color: #e5e5ea;
   border: 2px solid #ffffff;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
@@ -2699,8 +2714,10 @@ html.dark-mode .kategori-icerik {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .kategori-icerik .kategori-manset .manset-slider .manset-slayt .manset-baslik {
   position: absolute;
@@ -2764,7 +2781,8 @@ html.dark-mode .kategori-icerik .haber-listesi .haber-satir {
   width: 70px;
   height: 70px;
   border-radius: 6px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .kategori-icerik .haber-listesi .haber-satir .haber-yazi {
   display: flex;
@@ -2938,7 +2956,8 @@ html.dark-mode .arama-kart__resim-alani {
 .arama-kart__resim {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
 }
 .arama-kart__detay {
@@ -3077,7 +3096,8 @@ html.dark-mode .ezan-sehir-bar {
   align-items: center;
 }
 .ezan-sehir-bar .ezan-sehir-secim-sarmal .ezan-sehir-select {
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   -webkit-appearance: none;
   background: none;
   border: none;
@@ -3568,8 +3588,6 @@ html.dark-mode .tumSpor-mega-menu::before {
   width: 1px;
   height: 23px;
   content: "";
-  -webkit-transform: rotate(14deg);
-  -ms-transform: rotate(14deg);
   transform: rotate(14deg);
   background: #bfbfbf;
   position: absolute;
@@ -3591,7 +3609,9 @@ html.dark-mode .mega-menu-ust a:hover {
   color: #e2e2e2;
   font-size: 14px;
   font-weight: 300;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 html.dark-mode .mega-menu-ayrac {
   color: #36363a;
@@ -3752,7 +3772,8 @@ html.dark-mode .tumSpor-icerik {
   display: block;
   width: 100%;
   height: 450px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .tumSpor-slayt__yazi {
   position: absolute;
@@ -3859,7 +3880,8 @@ html.dark-mode .tumSpor-icerik {
 .top-headline-item .image-container .image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
 }
 .top-headline-item .category {
@@ -3993,7 +4015,8 @@ html.dark-mode .bolum-baslik__cizgi {
 .mozaik-kart__resim {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
 }
@@ -4074,7 +4097,8 @@ html.dark-mode .bolum-baslik--lacivert .bolum-baslik__cizgi {
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   flex-shrink: 0;
   background-color: #e0e0e0;
 }
@@ -4210,7 +4234,8 @@ html.dark-mode .yazar-kart__baslik {
 .one-cikan-kart__resim {
   width: 76px;
   height: 70px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   flex-shrink: 0;
   border-radius: 2px;
   background-color: #cccccc;
@@ -4541,7 +4566,8 @@ html.dark-mode .multimedya-nokta {
 .multimedya-kart__resim {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
 }
 .multimedya-kart::after {
@@ -4730,7 +4756,8 @@ html.dark-mode .multimedya-nokta {
 .digerHaberler-kart__resim {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
   position: relative;
 }
@@ -4779,40 +4806,53 @@ html.dark-mode .multimedya-nokta {
   z-index: 2;
 }
 
-.tumSpor-footer {
+.tumSpor-footer,
+.tum-spor-footer {
   width: 100%;
   flex-shrink: 0;
   background-color: #282828;
   border-top: 3.5px solid #4a9129;
-  color: #ffffff;
-  margin-top: 40px;
 }
-.tumSpor-footer__ust {
+.tumSpor-footer__ust,
+.tum-spor-footer__ust {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   padding: 26px 20px 22px;
-  gap: 55px;
+  gap: 50px;
 }
-.tumSpor-footer__logo-alani {
+.tumSpor-footer__logo-alani,
+.tum-spor-footer__logo-alani {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 32px;
+  padding-top: 50px;
 }
-.tumSpor-footer__logo-alani img {
-  width: 124px;
-  max-width: 124px;
+.tumSpor-footer__logo-alani img,
+.tum-spor-footer__logo-alani img {
+  width: 200px;
   height: auto;
   display: block;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
-.tumSpor-footer__kolon {
+.tumSpor-footer__logo-alani img:hover,
+.tum-spor-footer__logo-alani img:hover {
+  opacity: 0.6;
+}
+.tumSpor-footer__kolon,
+.tum-spor-footer__kolon {
   display: flex;
   flex-direction: column;
 }
-.tumSpor-footer__baslik {
+.tumSpor-footer__kolon--uygulamalar,
+.tum-spor-footer__kolon--uygulamalar {
+  min-width: 95px;
+}
+.tumSpor-footer__baslik,
+.tum-spor-footer__baslik {
   color: #ffffff;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.5px;
   margin: 0 0 12px;
@@ -4821,10 +4861,12 @@ html.dark-mode .multimedya-nokta {
   align-items: center;
   gap: 6px;
 }
-.tumSpor-footer__baslik svg {
+.tumSpor-footer__baslik svg,
+.tum-spor-footer__baslik svg {
   color: #ffffff;
 }
-.tumSpor-footer__liste {
+.tumSpor-footer__liste,
+.tum-spor-footer__liste {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -4832,7 +4874,8 @@ html.dark-mode .multimedya-nokta {
   flex-direction: column;
   gap: 5px;
 }
-.tumSpor-footer__liste li a {
+.tumSpor-footer__liste li a,
+.tum-spor-footer__liste li a {
   color: #8c8c8c;
   font-size: 11px;
   font-weight: 500;
@@ -4840,64 +4883,120 @@ html.dark-mode .multimedya-nokta {
   line-height: 1.35;
   transition: color 0.2s ease;
 }
-.tumSpor-footer__liste li a:hover {
+.tumSpor-footer__liste li a:hover,
+.tum-spor-footer__liste li a:hover {
   color: #ffffff;
 }
-.tumSpor-footer__market-butonlar {
+.tumSpor-footer__market-butonlar,
+.tum-spor-footer__market-butonlar {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.tumSpor-footer__market-link {
+.tumSpor-footer__market-link,
+.tum-spor-footer__market-link {
   display: inline-block;
-  transition: opacity 0.2s ease;
 }
-.tumSpor-footer__market-link img {
+.tumSpor-footer__market-link img,
+.tum-spor-footer__market-link img {
   height: 30px;
   width: auto;
+  width: 95px;
   display: block;
   border-radius: 4px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
-.tumSpor-footer__market-link:hover {
-  opacity: 0.85;
+.tumSpor-footer__market-link:hover img,
+.tum-spor-footer__market-link:hover img {
+  opacity: 0.6;
 }
-.tumSpor-footer__alt {
+.tumSpor-footer__alt,
+.tum-spor-footer__alt {
   background-color: #242424;
   border-top: 1px solid #303030;
-  height: 46px;
+  height: 54px;
   padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.tumSpor-footer__markalar {
+.tumSpor-footer__markalar,
+.tum-spor-footer__markalar {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 29px;
+  gap: 28px;
 }
-.tumSpor-footer__marka {
+.tumSpor-footer__marka,
+.tum-spor-footer__marka {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  transition: opacity 0.2s ease;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
-.tumSpor-footer__marka img {
-  height: 23px;
-  width: auto;
-  display: block;
-  object-fit: contain;
+.tumSpor-footer__marka:hover,
+.tum-spor-footer__marka:hover {
+  opacity: 0.6;
 }
-.tumSpor-footer__marka:hover {
-  opacity: 0.8;
+.tumSpor-footer__sprite,
+.tum-spor-footer__sprite {
+  display: inline-block;
+  height: 39px;
+  background-image: url("../images/footer-brands.png");
+  background-repeat: no-repeat;
+  background-size: 891px 39px;
 }
-html.dark-mode .tumSpor-footer {
+.tumSpor-footer__sprite--kanal7,
+.tum-spor-footer__sprite--kanal7 {
+  width: 45px;
+  background-position: 0 0;
+}
+.tumSpor-footer__sprite--radyo7,
+.tum-spor-footer__sprite--radyo7 {
+  width: 77px;
+  background-position: -73.5px 0;
+}
+.tumSpor-footer__sprite--avrupa7,
+.tum-spor-footer__sprite--avrupa7 {
+  width: 36px;
+  background-position: -184.5px 0;
+}
+.tumSpor-footer__sprite--tvt,
+.tum-spor-footer__sprite--tvt {
+  width: 50px;
+  background-position: -267px 0;
+}
+.tumSpor-footer__sprite--ulke,
+.tum-spor-footer__sprite--ulke {
+  width: 58px;
+  background-position: -364px 0;
+}
+.tumSpor-footer__sprite--izle7,
+.tum-spor-footer__sprite--izle7 {
+  width: 119px;
+  background-position: -468.5px 0;
+}
+.tumSpor-footer__sprite--radyohome,
+.tum-spor-footer__sprite--radyohome {
+  width: 142px;
+  background-position: -623px 0;
+}
+.tumSpor-footer__sprite--yasemin,
+.tum-spor-footer__sprite--yasemin {
+  width: 98px;
+  background-position: -792.5px 0;
+}
+html.dark-mode .tumSpor-footer,
+html.dark-mode .tum-spor-footer {
   background-color: #161616;
   border-top-color: #3e7c1e;
 }
-html.dark-mode .tumSpor-footer .tumSpor-footer__alt {
+html.dark-mode .tumSpor-footer .tumSpor-footer__alt,
+html.dark-mode .tum-spor-footer .tumSpor-footer__alt {
   background-color: #111111;
   border-top-color: #222222;
 }
-
-/*# sourceMappingURL=main.css.map */

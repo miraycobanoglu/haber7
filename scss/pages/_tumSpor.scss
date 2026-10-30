@@ -1703,44 +1703,53 @@
     }
 }
 
-.tumSpor-footer {
+.tumSpor-footer,
+.tum-spor-footer {
     width: 100%;
     flex-shrink: 0;
     background-color: #282828;
     border-top: 3.5px solid #4a9129;
-    color: #ffffff;
-    margin-top: 40px;
+
 
     &__ust {
         display: flex;
         align-items: flex-start;
         justify-content: center;
         padding: 26px 20px 22px;
-        gap: 55px;
+        gap: 50px;
     }
 
     &__logo-alani {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-top: 32px;
+        padding-top: 50px;
 
         img {
-            width: 124px;
-            max-width: 124px;
+            width: 200px;
             height: auto;
             display: block;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+
+            &:hover {
+                opacity: 0.6;
+            }
         }
     }
 
     &__kolon {
         display: flex;
         flex-direction: column;
+
+        &--uygulamalar {
+            min-width: 95px;
+        }
     }
 
     &__baslik {
         color: #ffffff;
-        font-size: 12px;
+        font-size: 11px;
         font-weight: 800;
         letter-spacing: 0.5px;
         margin: 0 0 12px;
@@ -1784,24 +1793,27 @@
 
     &__market-link {
         display: inline-block;
-        transition: opacity 0.2s ease;
 
         img {
             height: 30px;
             width: auto;
+            width: 95px;
             display: block;
             border-radius: 4px;
+            object-fit: contain;
+            opacity: 1;
+            transition: opacity 0.3s ease;
         }
 
-        &:hover {
-            opacity: 0.85;
+        &:hover img {
+            opacity: 0.6;
         }
     }
 
     &__alt {
         background-color: #242424;
         border-top: 1px solid #303030;
-        height: 46px;
+        height: 54px;
         padding: 0 20px;
         display: flex;
         align-items: center;
@@ -1812,24 +1824,66 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 29px;
+        gap: 28px;
     }
 
     &__marka {
         display: inline-flex;
         align-items: center;
         text-decoration: none;
-        transition: opacity 0.2s ease;
-
-        img {
-            height: 23px;
-            width: auto;
-            display: block;
-            object-fit: contain;
-        }
+        opacity: 1;
+        transition: opacity 0.3s ease;
 
         &:hover {
-            opacity: 0.8;
+            opacity: 0.6;
+        }
+    }
+
+    &__sprite {
+        display: inline-block;
+        height: 39px;
+        background-image: url('../images/footer-brands.png');
+        background-repeat: no-repeat;
+        background-size: 891px 39px;
+
+        &--kanal7 {
+            width: 45px;
+            background-position: 0 0;
+        }
+
+        &--radyo7 {
+            width: 77px;
+            background-position: -73.5px 0;
+        }
+
+        &--avrupa7 {
+            width: 36px;
+            background-position: -184.5px 0;
+        }
+
+        &--tvt {
+            width: 50px;
+            background-position: -267px 0;
+        }
+
+        &--ulke {
+            width: 58px;
+            background-position: -364px 0;
+        }
+
+        &--izle7 {
+            width: 119px;
+            background-position: -468.5px 0;
+        }
+
+        &--radyohome {
+            width: 142px;
+            background-position: -623px 0;
+        }
+
+        &--yasemin {
+            width: 98px;
+            background-position: -792.5px 0;
         }
     }
 
@@ -1843,4 +1897,5 @@
         }
     }
 }
+
 

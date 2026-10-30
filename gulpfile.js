@@ -5,25 +5,23 @@ const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
+const rename = require('gulp-rename');
 const browserSync = require('browser-sync').create();
 
-// 1. SCSS Derleme (Sourcemaps ve Autoprefixer eklenmiş hali)
 function compileScss() {
     return gulp
         .src('scss/main.scss')
-        .pipe(sourcemaps.init()) 
+        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
-        .pipe(autoprefixer({
-            cascade: false
-        }))
+        .pipe(autoprefixer())
+        .pipe(gulp.dest('css'))
         .pipe(cleanCSS())
-        .pipe(concat('main.min.css'))
-        .pipe(sourcemaps.write('.')) // Harita dosyasını (map) oluştur
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('css'))
         .pipe(browserSync.stream());
 }
 
-// 2. JS Birleştirme ve Sıkıştırma
 function minifyJs() {
     return gulp
         .src(['js/**/*.js', '!js/**/*.min.js'])
@@ -35,7 +33,6 @@ function minifyJs() {
         .pipe(browserSync.stream());
 }
 
-// 3. İzleme ve MAMP Bağlantısı
 function watchFiles(done) {
     browserSync.init({
         proxy: "http://localhost:8888/HABER7",
@@ -49,7 +46,6 @@ function watchFiles(done) {
     done();
 }
 
-// Görevler
 exports.default = gulp.series(
     gulp.parallel(compileScss, minifyJs),
     watchFiles
